@@ -1,0 +1,23 @@
+mixin main-menu
+  mixin item(link, text)
+    a.top-menu__link(href="#{link}", data-hover="#{text}") #{text}
+  +item("#", "Client Projects")
+  +item("#", "Products")
+  +item("#", "Developer's Handbook")
+  +item("#", "Career")
+  +item("#", "Team")
+  +item("#", "Contact")
+
+mixin top-menu(hide)
+  if hide
+    .top-menu(id="top-menu", nav-top-menu='#first-segment')
+      .top-menu__container
+        a.top-menu__logo(href="/", alt="Home")
+        nav.top-menu__nav
+          +main-menu
+  else
+    .top-menu
+      .top-menu__container
+        a.top-menu__logo(href="/", alt="Home")
+        nav.top-menu__nav
+          +main-menu

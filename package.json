@@ -1,0 +1,18 @@
+{
+  "name": "trifork.se",
+  "version": "1.0.0",
+  "description": "Trifork Stockholm Website",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Thomas Anagrius",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.11.2",
+    "jade": "^1.9.2",
+    "morgan": "^1.5.1",
+    "nib": "^1.1.0",
+    "stylus": "^0.50.0"
+  }
+}

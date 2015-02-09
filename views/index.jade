@@ -1,0 +1,84 @@
+extend layout
+
+block content
+  .segment.segment--primary.segment--frontpage
+    .segment__menu
+      nav.top-menu__nav.top-menu__nav--inverse
+        +main-menu
+    .logo-icon--transparent
+      include ../public/img/logo-transparent.svg
+    h1.segment__heading Hello Sweden, Trifork Here
+    button.segment__bottom-icon(nav-scroll-to="#first-segment")
+      .icon-down-open
+    .think-software.think-software--frontpage
+      include ../public/img/think-software.svg
+
+  .segment#first-segment.segment--secondary
+    h1.segment__heading Who we are
+    p.segment__lead
+      | We are a software company and a group of passionat people. We are passionat about software development
+      | and about building stuff that make other people's lifes easier. At Trifork we beleave that the key to producing quality software is having a good team of focused individuals.
+
+    .u-text-center
+      a.read-more-link.segment__button(href="/team")
+        | Meet the Stockholm Team
+
+
+  .segment
+    h1.segment__heading What we do
+    p.segment__lead
+      | Trifork specializes in creating state of the art mobile apps for iOS, Android and Windows Phone.
+      | We are masters of the web and produce both in-house tools that our clients can rely on and our own products.
+      | We have extensive experience with high-speed messaging back-ends for the gaming industry, finance and healthcare in Java, Erlang and Clojure.
+
+    .u-text-center
+      a.read-more-link.segment__button(href="/clients")
+        | Read our Case Studies
+
+    .faded-icon-row
+      .faded-icon(data-img="/img/danskebank.svg")
+      .faded-icon(data-img="/img/vastas.svg")
+      .faded-icon(data-img="/img/tmobile.svg")
+      .faded-icon(data-img="/img/danskebank.svg")
+      .faded-icon(data-img="/img/danskebank.svg")
+
+  .segment.segment--secondary
+    h1.segment__heading We Preach what we Practice
+    p.segment__lead
+      | Every year Trifork hosts world class IT conferences called <em>GOTO; Conferences</em> across the world.
+      | Conferances made for developers, by developers. Check them out on our conference website or YouTube channel where
+      | you can find many of our previous sessions.
+
+    .u-text-center.link-list
+      a.link-list__link(href="http://gotocon.com/") GOTO; Conf Website
+      a.link-list__link(href="https://www.youtube.com/user/GotoConferences") GOTO; YouTube Channel
+
+  .segment.segment--primary
+    nav.list-menu
+      div.list-menu__list
+        h4.list-menu__heading Projects
+        a.list-menu__item(href="#") Case Studies
+      div.list-menu__list
+        h4.list-menu__heading Products
+        a.list-menu__item(href="#") Mobile Pay
+        a.list-menu__item(href="#") Notify
+        a.list-menu__item(href="#") More...
+      div.list-menu__list
+        h4.list-menu__heading Open Source
+        a.list-menu__item(href="#") Erjang
+        a.list-menu__item(href="#") More...
+      div.list-menu__list
+        h4.list-menu__heading For Devs
+        a.list-menu__item(href="#") Developer's Handbook
+        a.list-menu__item(href="#") Events
+        a.list-menu__item(href="#") Blog
+      div.list-menu__list
+        h4.list-menu__heading Our Team
+        a.list-menu__item(href="#") People
+        a.list-menu__item(href="#") Office
+        a.list-menu__item(href="#") Jobs
+      div.list-menu__list
+        h4.list-menu__heading Contact
+        a.list-menu__item(href="#") Stockholm
+        a.list-menu__item(href="#") Global
+    .cf

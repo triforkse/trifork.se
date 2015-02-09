@@ -1,0 +1,115 @@
+/*
+ * Import nib
+ */
+@import 'nib'
+
+@import 'grid'
+
+column-width = 60
+gutter-width = 20
+columns = 12
+
+/*
+ * Grab a custom font from Google
+ */
+@import url('http://fonts.googleapis.com/css?family=Quicksand')
+
+/*
+ * Nib provides a CSS reset
+ */
+global-reset()
+
+
+space-unit = 30px
+
+
+font-imposing()
+  font-family: jaf-bernino-sans, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif
+
+font-content()
+  font-family: freight-text-pro, Georgia, Cambria, "Times New Roman", Times, serif;
+
+font-default()
+  font-family: proxima-nova, Georgia, Cambria, "Times New Roman", Times, serif;
+
+/*
+ * Store the main color and
+ * background color as variables
+ */
+main-color = #fa5b4d
+color-bg = #faf9f0
+
+color-bg-dark = black
+color-bg-dark-secondary = #272422
+color-primary = #ff9115
+
+color-text = black
+color-text-inverse = white
+
+color-link-inverse = color-text-inverse
+color-link-inverse-hover = color-primary
+
+@import top-menu
+@import segment
+@import icons
+@import list-menu
+
+@import "pages/frontpage"
+
+@import util
+
+body
+  -webkit-font-smoothing: antialiased;
+  font-default()
+  background-color color-bg
+  color #444
+  font-size 18px
+
+h1, h2, h3
+  font-imposing()
+
+h1
+  font-size: 36px
+
+h2
+  font-size: 31.5px
+
+h3
+  font-size: 18px
+
+h4
+  font-size: 16px
+
+.container
+  width 500px
+  margin 50px auto
+  overflow hidden
+
+.main-content
+  float left
+  width 300px
+  font-content()
+
+  p
+    margin-bottom 20px
+
+p
+  line-height 1.8
+
+footer
+  text-align center
+  color color-text-inverse
+
+.read-more-link
+  border solid 1px color-primary
+  display inline-block
+  padding 15px 40px
+  text-decoration none
+  color color-primary
+  margin (space-unit * 2) 0 0
+  border-radius 5px
+  transition: background-color 100ms, color 100ms
+
+.read-more-link:hover
+  color color-text
+  background-color color-primary

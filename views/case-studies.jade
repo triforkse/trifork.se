@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  +top-menu(false)
+
+  .segment.segment--blank.segment--offset
+    h1.segment__heading Some of our Happy Clients
+    p.segment__lead
+      | Trifork works with a large number of clients from many different industries. Everything from small startups to big international organization, and governmental institutions. Every project is unique, and we want to provide the best result for our clients.
+      | We have processes in place to ensure, quality and well-tested code, clean interfaces and that we use the right tools for the job.
+
+  a.case-study.case-study--fmk.case-study--right
+    .case-study__content
+      .case-study__logo
+        include ../public/img/case-study-fmk-logo.svg
+      .case-study__description
+      .case-study__work Web Interface, Design, Monitoring, High-Availibility System Archetecture, Third-party Certifications

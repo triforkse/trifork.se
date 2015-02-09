@@ -1,0 +1,69 @@
+
+top-menu-height = 70px
+
+
+.top-menu
+  background color-bg-dark
+  height top-menu-height
+  width 100%
+  position fixed
+  top 0
+  z-index 300
+  transition top 0.4s
+
+.top-menu__logo
+  background-image url(/img/logo.svg)
+  background-repeat no-repeat
+  size = 70px
+  background-size size size
+  width size
+  height size
+  display block
+  position absolute
+  top 35px
+  margin-left space-unit
+
+.top-menu__container
+  margin 0 space-unit
+  position relative
+  text-align center
+
+.top-menu__nav
+  list-style-type none
+  font-size 18px
+  font-default()
+
+
+.top-menu__link
+  display inline-block
+  padding 0 20px
+  line-height top-menu-height
+  color color-link-inverse
+  text-decoration none
+  transition color 0.2s
+
+  &:hover
+    color color-link-inverse-hover
+
+    .top-menu__nav--inverse &
+      color black
+
+  &:before
+    transform-style preserve-3d
+    position absolute
+    bottom -20px
+    color: rgba(color-bg-dark, 0)
+    content attr(data-hover)
+    transform rotateZ(180deg) rotateY(180deg) rotateX(30deg)
+    transition: color 0.4s, bottom 0.4s
+    transition-delay 0.1s
+
+  &:hover:before
+    color darken(color-link-inverse-hover, 50%);
+    bottom -16px
+
+    .top-menu__nav--inverse &
+      color #9f8229
+
+.top-menu--hidden
+  top -120px

@@ -1,0 +1,26 @@
+include common
+doctype html5
+html(ng-app="triforkse")
+  head
+    meta(charset="utf-8")
+    title #{title} - Trifork Stockholm
+    link(rel='stylesheet', href='/css/main.css')
+
+    meta(name="viewport", content="width=device-width initial-scale=1")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+
+    script(src="/libs/jquery/dist/jquery.min.js")
+    script(src="/libs/angularjs/angular.min.js")
+    script(src="/js/app.js")
+    script(src="//use.typekit.net/uek3wnc.js")
+    script
+      | try { Typekit.load(); } catch (e) {}
+  body
+    +top-menu(true)
+
+    block content
+      div Empty Page
+
+    footer.segment.segment--secondary.u-text-center
+      | Copyright &copy; 2015 -
+      em  Trifork AB

@@ -1,0 +1,75 @@
+.segment
+  padding space-unit * 3
+  position relative
+  z-index 100
+
+.segment--offset
+  margin-top top-menu-height
+
+.segment--primary
+  background-color color-primary
+
+.segment__heading
+  text-align center
+
+.segment__subheading
+  font-default()
+  font-size 28px
+  color darken(color-primary, 10%)
+
+.segment__bottom-icon
+  color black
+  position absolute
+  bottom space-unit
+  width 100%
+  text-align center
+  left 0
+  outline none
+  background-color transparent
+  border none
+  font-size 30px
+  cursor pointer
+
+.segment__bottom-icon:hover
+  color color-text-inverse
+
+.segment__menu
+  position absolute
+  width 100%
+  top 0
+  left 0
+  right 0
+  text-align center
+
+.segment__lead
+  text-align center
+  margin (space-unit * 2) (space-unit * 4) 0
+
+.segment--secondary
+  background-color color-bg-dark-secondary
+
+.segment--secondary .segment__heading
+  color: color-text-inverse
+
+.segment--secondary .segment__lead
+  color darken(color-text-inverse, 20%)
+
+
+// FIXME: MOVE TO OWN FILE
+
+container-width = 1100px
+
+.case-study
+  display block
+  height 500px
+  background-color: red
+
+.case-study__content
+  margin 0 auto
+  width container-width
+
+.case-study--fmk
+  background-image url(../img/case_study_fmk.jpg);
+  background-origin center center
+  background-repeat no-repeat
+  background-size cover
