@@ -10,6 +10,8 @@
                 element.addClass('top-menu--hidden');
 
                 var targetEl = $(attrs.navTopMenu);
+                if (!targetEl[0]) return;
+
                 var wasVisibleLastTime = false;
                 var initial = true;
 

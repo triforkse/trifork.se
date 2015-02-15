@@ -36,4 +36,12 @@ app.get('/clients', function (req, res) {
     );
 });
 
+
+app.get('/events', function (req, res) {
+    res.render('events',
+        { title : 'Events' }
+    );
+});
+
+
 app.listen(8080);

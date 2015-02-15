@@ -3,7 +3,7 @@ top-menu-height = 70px
 
 
 .top-menu
-  background color-bg-dark
+  background-color rgba(color-bg-dark, 85%)
   height top-menu-height
   width 100%
   position fixed
@@ -22,6 +22,15 @@ top-menu-height = 70px
   position absolute
   top 35px
   margin-left space-unit
+
+.top-menu__logo:hover
+  animation rumble linear 0.3s 0s infinite
+
+
+@keyframes rumble {
+  0%, 100% {}
+  50% { transform: rotate(7deg) }
+}
 
 .top-menu__container
   margin 0 space-unit

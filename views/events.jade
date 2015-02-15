@@ -1,0 +1,43 @@
+extends layouts/page-with-menu
+
+block page-content
+
+  .segment.segment--header
+    .content
+      h1.segment__heading Community Events
+      p.segment__lead
+        | We love being a part of communities that share their ideas, techniques,
+        | and war stories. We have benefited immensely over the years by reading and watching the materials of others.
+        | In return, it only seems fair to contribute back what we've learned.
+
+  .segment.segment--secondary
+    .container
+      h1.segment__heading GOTO; Night Meetups
+      p.segment__lead
+        | In Stockholm we have over the past year held regular meetups with topics similar to
+        | those at our GOTO; Conferences. You can think of them as a small taste of what to expect
+        | at the conferences. We enjoy hearing
+
+
+      h2.segment__section-heading Upcoming Events in Stockholm
+
+      mixin event(title, icon, description, date, done)
+        li.event-list__item
+          .event-list__col-image
+            img.event-list__thumbnail(src="img/events/#{icon}.png")
+          .event-list__col-description
+            h3.event-list__header #{title}
+            p.event-list__text #{description}
+            unless done
+              a.pretty-link(href="#") Book your seat now!
+          .cf
+
+      ul.event-list
+        +event("Neo4j", "neo4j", "Foo bar bas.", "2015-02-19", false)
+        +event("Docker", "docker", "Foo bar bas.", "2014-11-18", false)
+
+      h2.segment__section-heading Recent Completed Events
+
+      ul.event-list
+        +event("Docker", "docker", "Foo bar bas.", "2014-11-18", true)
+        +event("Docker", "docker", "Foo bar bas.", "2014-11-18", true)

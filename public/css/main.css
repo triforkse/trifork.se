@@ -116,7 +116,7 @@ a img {
  * background color as variables
  */
 .top-menu {
-  background: #000;
+  background-color: rgba(0,0,0,0.85);
   height: 70px;
   width: 100%;
   position: fixed;
@@ -140,6 +140,13 @@ a img {
   position: absolute;
   top: 35px;
   margin-left: 30px;
+}
+.top-menu__logo:hover {
+  -webkit-animation: rumble linear 0.3s 0s infinite;
+  -moz-animation: rumble linear 0.3s 0s infinite;
+  -o-animation: rumble linear 0.3s 0s infinite;
+  -ms-animation: rumble linear 0.3s 0s infinite;
+  animation: rumble linear 0.3s 0s infinite;
 }
 .top-menu__container {
   margin: 0 30px;
@@ -204,6 +211,42 @@ a img {
 }
 .top-menu--hidden {
   top: -120px;
+}
+@-moz-keyframes rumble {
+  50% {
+    -webkit-transform: rotate(7deg);
+    -moz-transform: rotate(7deg);
+    -o-transform: rotate(7deg);
+    -ms-transform: rotate(7deg);
+    transform: rotate(7deg);
+  }
+}
+@-webkit-keyframes rumble {
+  50% {
+    -webkit-transform: rotate(7deg);
+    -moz-transform: rotate(7deg);
+    -o-transform: rotate(7deg);
+    -ms-transform: rotate(7deg);
+    transform: rotate(7deg);
+  }
+}
+@-o-keyframes rumble {
+  50% {
+    -webkit-transform: rotate(7deg);
+    -moz-transform: rotate(7deg);
+    -o-transform: rotate(7deg);
+    -ms-transform: rotate(7deg);
+    transform: rotate(7deg);
+  }
+}
+@keyframes rumble {
+  50% {
+    -webkit-transform: rotate(7deg);
+    -moz-transform: rotate(7deg);
+    -o-transform: rotate(7deg);
+    -ms-transform: rotate(7deg);
+    transform: rotate(7deg);
+  }
 }
 .segment {
   padding: 90px;
@@ -347,6 +390,16 @@ a img {
   text-align: left;
   max-width: none;
   margin-top: 15px;
+}
+.segment--header {
+  padding: 310px 240px 240px;
+}
+.segment__section-heading {
+  margin: 60px 0;
+  text-align: center;
+}
+.segment--secondary .segment__section-heading {
+  color: #fff;
 }
 @font-face {
   font-family: 'trifork-icons';
@@ -663,6 +716,49 @@ a img {
   transform: rotate(15deg);
   color: #fff;
 }
+.pretty-link {
+  display: inline-block;
+  color: #fa5b4d;
+  text-decoration: none;
+}
+.pretty-link:hover {
+  text-decoration: underline;
+}
+.pretty-link:before {
+  content: '\e805';
+  font-family: "trifork-icons";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  text-align: center;
+/* opacity: .8; */
+/* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+/* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+/* Animation center compensation - margins should be symmetric */
+/* remove if not needed */
+  margin-left: 0.2em;
+  margin-right: 5px;
+  text-decoration: none;
+  -webkit-transition: -webkit-transform 0.1s, color 0.5s;
+  -moz-transition: -moz-transform 0.1s, color 0.5s;
+  -o-transition: -o-transform 0.1s, color 0.5s;
+  -ms-transition: -ms-transform 0.1s, color 0.5s;
+  transition: transform 0.1s, color 0.5s;
+}
+.pretty-link:hover:before {
+  -webkit-transform: rotate(15deg);
+  -moz-transform: rotate(15deg);
+  -o-transform: rotate(15deg);
+  -ms-transform: rotate(15deg);
+  transform: rotate(15deg);
+  color: #fff;
+}
 .video-list {
   background-color: #272422;
   overflow-x: scroll;
@@ -711,6 +807,56 @@ a img {
 .video-list__speaker {
   color: #fff;
   font-size: 16px;
+  font-weight: 400;
+}
+.event-list__item {
+  display: block;
+  width: 979.9999999999998px;
+  margin: 0 -10.00000000000032px;
+  *width: 979.9999999999998px -correction;
+  *margin: 0 -10.00000000000032px -correction;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  padding: 30px;
+  border: solid 1px #564f4b;
+  margin-left: auto;
+  margin-right: auto;
+}
+.event-list__col-image {
+  display: inline;
+  float: left;
+  overflow: hidden;
+  width: 220.0000000000003px;
+  margin: 0 10.00000000000032px;
+  *width: 220.0000000000003px -correction;
+  *margin: 0 10.00000000000032px -correction;
+  text-align: center;
+}
+.event-list__col-description {
+  display: inline;
+  float: left;
+  overflow: hidden;
+  width: 700.0000000000002px;
+  margin: 0 10.00000000000032px;
+  *width: 700.0000000000002px -correction;
+  *margin: 0 10.00000000000032px -correction;
+}
+.event-list__item:not(:last-child) {
+  margin-bottom: 30px;
+}
+.event-list__thumbnail {
+  width: 150px;
+}
+.event-list__header {
+  font-size: 26px;
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 15px;
+}
+.event-list__text {
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
 }
 .area-chart__area {
   fill: #ff9115;
@@ -770,6 +916,9 @@ a img {
 .segment--frontpage-goto {
   background-image: url("../img/goto_bg.jpg");
 }
+.segment--event-header {
+  background-image: url("../img/gotonight_bg.jpg");
+}
 .u-text-center {
   text-align: center;
 }
@@ -784,7 +933,7 @@ a img {
 body {
   -webkit-font-smoothing: antialiased;
   font-family: proxima-nova, Georgia, Cambria, "Times New Roman", Times, serif;
-  background-color: #faf9f0;
+  background-color: #fffef5;
   color: #444;
   font-size: 18px;
 }
@@ -794,7 +943,7 @@ h3 {
   font-family: jaf-bernino-sans, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
 }
 h1 {
-  font-size: 36px;
+  font-size: 42px;
 }
 h2 {
   font-size: 31.5px;
