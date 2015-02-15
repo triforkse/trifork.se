@@ -7,51 +7,79 @@ block content
         +main-menu
     .logo-icon--transparent
       include ../public/img/logo-transparent.svg
-    h1.segment__heading Hello Sweden, Trifork Here
+    h1.segment__heading Hire us to help you plan, design, and build your product.
+    p.segment__lead
+      | We help your make sure your software ideas make it to release.
+      br
+      | We reduce your risk and
+      | focus on building the right thing, keeping the project on track with a solid process and frequent iterations.
     button.segment__bottom-icon(nav-scroll-to="#first-segment")
       .icon-down-open
     .think-software.think-software--frontpage
       include ../public/img/think-software.svg
 
-  .segment#first-segment.segment--secondary
-    h1.segment__heading Who we are
+  .segment#first-segment.segment--secondary(ng-class="{'segment--expanded': expanded1}")
+    h1.segment__heading So, who is Trifork?
     p.segment__lead
-      | We are a software company and a group of passionat people. We are passionat about software development
-      | and about building stuff that make other people's lifes easier. At Trifork we beleave that the key to producing quality software is having a good team of focused individuals.
+      | We are a software company and a group of passionat individuals. We are passionat about software development
+      | and about building products that make other people's lives easier. At Trifork we believe that the key to
+      | producing quality software is having a good team of focused people.
 
     .u-text-center
-      a.read-more-link.segment__button(href="/team")
+      a.read-more-link.read-more-link--expandable.segment__button(href="/team", segment-expand, container="#first-segment" ng-model="expanded1")
         | Meet the Stockholm Team
+
 
 
   .segment
     h1.segment__heading What we do
     p.segment__lead
-      | Trifork specializes in creating state of the art mobile apps for iOS, Android and Windows Phone.
-      | We are masters of the web and produce both in-house tools that our clients can rely on and our own products.
-      | We have extensive experience with high-speed messaging back-ends for the gaming industry, finance and healthcare in Java, Erlang and Clojure.
+      | Trifork specializes in creating state of the art Mobile Apps, and we are masters of web technology, like AngularJS and ReactJS.
+      | We do data visualization, interactivity design, system integrations as well as agile certification and training for programmers.
+      | In our Customer Innovation sessions we help our clients realize the posibilities and pin-point the needs and priorities.
 
     .u-text-center
-      a.read-more-link.segment__button(href="/clients")
-        | Read our Case Studies
+      a.read-more-link.segment__button(href="/team", ng-mouseover="maxedOut(true); graphHover = true" ng-mouseout="maxedOut(false); graphHover = false")
+        | Open Case Studies
 
-    .faded-icon-row
-      .faded-icon(data-img="/img/danskebank.svg")
-      .faded-icon(data-img="/img/vastas.svg")
-      .faded-icon(data-img="/img/tmobile.svg")
-      .faded-icon(data-img="/img/danskebank.svg")
-      .faded-icon(data-img="/img/danskebank.svg")
+    svg(ng-class="{'frontpageTeamGraph--active': graphHover}")#frontpageTeamGraph(team-graph, maxed-out="maxedOut")
+
 
   .segment.segment--secondary
-    h1.segment__heading We Preach what we Practice
+    h1.segment__heading GOTO; Conferences
     p.segment__lead
-      | Every year Trifork hosts world class IT conferences called <em>GOTO; Conferences</em> across the world.
-      | Conferances made for developers, by developers. Check them out on our conference website or YouTube channel where
-      | you can find many of our previous sessions.
+      | Our GOTO; conferences are designed for software developers, IT architects, product owners, agilists and project managers.
+      | Last year we had more than 5'000 attendees. Our Dev Tracks include emerging languages, concurrent and distributed systems,
+      | new database technologies, front-end web, and security.
+      | Our Strategy Tracks include agile techniques, UX, progressive enhancement, team dynamics, and archetecture topics.
 
     .u-text-center.link-list
       a.link-list__link(href="http://gotocon.com/") GOTO; Conf Website
       a.link-list__link(href="https://www.youtube.com/user/GotoConferences") GOTO; YouTube Channel
+      a.link-list__link(href="https://www.youtube.com/user/GotoConferences") GOTO; Nights Stockholm
+
+
+  .segment.segment--half.segment--bg-img.segment--frontpage-goto.segment--left-shadowed
+    .container
+      h1.segment__heading Featured Conference Sessions
+      p.segment__lead
+        | Here is a small selection some of the sessions at previous conferences. You can find many more
+        | on our YouTube channel.
+  ul.video-list
+    mixin video(youtubeId, imageId, title, speaker)
+      li.video-list__item
+        a(href="//www.youtube.com/watch?v=#{youtubeId}", title="#{title}")
+          img.video-list__thumbnail(src="/img/videos/#{imageId}.jpg")
+        .video-list__title #{title}
+        .video-list__speaker #{speaker}
+
+    +video("MTawgp3SKy8", "david", "ClojureScript: Lisp's Revenge", "David Nolan")
+    +video("7OSkB4BCx00", "jjj", "UX Techniques", "Janne Jul Jensen")
+    +video("qI_g07C_Q5I", "mf", "Introduction to NoSQL", "Martin Fowler")
+    +video("GpXsQ-NIKXY", "func", "Functional Principles", "Jessica Kerr")
+    +video("Sg2BjFQnr9s", "live", "Live Coding for Performances", "Andrew Sorensen")
+    +video("mrHjHdyRDNY", "linda", "Professional Productivity", "Linda Rising")
+
 
   .segment.segment--primary
     nav.list-menu
@@ -62,23 +90,23 @@ block content
         h4.list-menu__heading Products
         a.list-menu__item(href="#") Mobile Pay
         a.list-menu__item(href="#") Notify
-        a.list-menu__item(href="#") More...
+        a.list-menu__item(href="//trifork.com/products") More...
       div.list-menu__list
         h4.list-menu__heading Open Source
-        a.list-menu__item(href="#") Erjang
-        a.list-menu__item(href="#") More...
+        a.list-menu__item(href="//github.com/trifork/erjang") Erjang
+        a.list-menu__item(href="//github.com/trifork") More...
       div.list-menu__list
         h4.list-menu__heading For Devs
-        a.list-menu__item(href="#") Developer's Handbook
-        a.list-menu__item(href="#") Events
-        a.list-menu__item(href="#") Blog
+        a.list-menu__item(href="/handbook") Handbook
+        a.list-menu__item(href="/events") Events
+        //- a.list-menu__item(href="/blog") Blog
       div.list-menu__list
         h4.list-menu__heading Our Team
-        a.list-menu__item(href="#") People
-        a.list-menu__item(href="#") Office
-        a.list-menu__item(href="#") Jobs
+        a.list-menu__item(href="/team") People
+        a.list-menu__item(href="/office") Office
+        a.list-menu__item(href="/career") Jobs
       div.list-menu__list
         h4.list-menu__heading Contact
-        a.list-menu__item(href="#") Stockholm
-        a.list-menu__item(href="#") Global
+        a.list-menu__item(href="/contact") Stockholm
+        a.list-menu__item(href="//www.trifork.com/trifork-contact-page/") Global
     .cf

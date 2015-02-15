@@ -1,0 +1,43 @@
+.link-list
+  margin-top space-unit * 2
+
+.link-list__link
+  display inline-block
+  padding (space-unit / 2) space-unit
+  color color-goto
+  text-decoration none
+
+.link-list__link:hover
+  text-decoration underline
+
+.link-list__link:before
+  content: '\e805'
+  font-family: "trifork-icons";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  text-align: center;
+  /* opacity: .8; */
+
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  margin-right 5px
+  text-decoration none
+  transition transform 0.1s, color 0.5s
+
+.link-list__link:hover:before
+  transform: rotate(15deg)
+  color white
+

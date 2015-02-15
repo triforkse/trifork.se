@@ -1,12 +1,12 @@
 mixin main-menu
   mixin item(link, text)
     a.top-menu__link(href="#{link}", data-hover="#{text}") #{text}
-  +item("#", "Client Projects")
-  +item("#", "Products")
-  +item("#", "Developer's Handbook")
-  +item("#", "Career")
-  +item("#", "Team")
-  +item("#", "Contact")
+  +item("/clients", "Client Projects")
+  +item("/events", "Events")
+  +item("/handbook", "Developer's Handbook")
+  +item("/job", "Career")
+  +item("/team", "Team")
+  +item("/contact", "Contact")
 
 mixin top-menu(hide)
   if hide

@@ -12,3 +12,22 @@
   position absolute
   bottom space-unit
   right space-unit
+
+#frontpageTeamGraph
+  position absolute
+  height 80px
+  left 0
+  right 0
+  bottom 0
+  width 100%
+  overflow visible
+
+.frontpageTeamGraph--active .area-chart__area
+  fill color-goto
+  opacity 1
+
+.frontpageTeamGraph--active  .area-chart__line
+  stroke darken(color-goto, 20%)
+
+.segment--frontpage-goto
+  background-image url(../img/goto_bg.jpg)

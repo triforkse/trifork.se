@@ -32,12 +32,20 @@ font-content()
 font-default()
   font-family: proxima-nova, Georgia, Cambria, "Times New Roman", Times, serif;
 
+font-mb()
+  font-size 16px
+  font-weight 700
+
+font-m()
+  font-size 16px
+
 /*
  * Store the main color and
  * background color as variables
  */
-main-color = #fa5b4d
+main-color = #fa4f8a
 color-bg = #faf9f0
+color-goto = #fa5b4d
 
 color-bg-dark = black
 color-bg-dark-secondary = #272422
@@ -53,6 +61,9 @@ color-link-inverse-hover = color-primary
 @import segment
 @import icons
 @import list-menu
+@import link-list
+@import video-list
+@import charts
 
 @import "pages/frontpage"
 
@@ -81,9 +92,8 @@ h4
   font-size: 16px
 
 .container
-  width 500px
-  margin 50px auto
-  overflow hidden
+  row(12)
+  margin 0 auto
 
 .main-content
   float left
@@ -108,8 +118,15 @@ footer
   color color-primary
   margin (space-unit * 2) 0 0
   border-radius 5px
-  transition: background-color 100ms, color 100ms
 
 .read-more-link:hover
   color color-text
   background-color color-primary
+
+.read-more-link--expandable
+  color color-text-inverse
+  background-color color-primary
+  transition: background-color 100ms, color 100ms
+
+.read-more-link--expandable:hover
+  color color-text-inverse

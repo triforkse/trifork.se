@@ -2,6 +2,7 @@
   padding space-unit * 3
   position relative
   z-index 100
+  overflow hidden
 
 .segment--offset
   margin-top top-menu-height
@@ -11,6 +12,8 @@
 
 .segment__heading
   text-align center
+  position relative
+  z-index 2
 
 .segment__subheading
   font-default()
@@ -41,9 +44,16 @@
   right 0
   text-align center
 
+.segment__heading
+  transition color 1s
+
 .segment__lead
   text-align center
-  margin (space-unit * 2) (space-unit * 4) 0
+  max-width 900px
+  position relative
+  z-index 2
+  margin (space-unit * 2) auto 0
+  transition color 1s
 
 .segment--secondary
   background-color color-bg-dark-secondary
@@ -62,14 +72,60 @@ container-width = 1100px
 .case-study
   display block
   height 500px
-  background-color: red
+  background-origin center center
+  background-repeat no-repeat
+  background-size cover
 
 .case-study__content
   margin 0 auto
   width container-width
 
 .case-study--fmk
-  background-image url(../img/case_study_fmk.jpg);
-  background-origin center center
-  background-repeat no-repeat
+  background-image url(../img/case_study_fmk.jpg)
+
+.case-study--db
+  background-image url(../img/case/mobilepay.png)
+
+.case-study--cs
+  background-image url(../img/case/credit_suisse.png)
+
+// Expand Animation
+
+.segment__button
+  position relative
+  z-index 2
+
+.segment__expand
+  border-radius 5px
+  speed = 1s
+  position absolute
+  z-index 1
+  transition top (speed/1.5), bottom (speed/2), left speed, right speed
+  background-color color-primary
+
+.segment--expanded .segment__heading
+  color color-text-inverse
+
+.segment--expanded .segment__lead
+  color color-text-inverse
+
+.segment--half
+  padding (space-unit * 3)
+
+.segment--bg-img
+  background-repeat: no-repeat
+  background-position: center
   background-size cover
+
+.segment--left-shadowed
+  text-align left
+  color color-text-inverse
+  text-shadow 0 0 5px #000
+
+.segment--left-shadowed .segment__heading
+  text-align left
+
+.segment--left-shadowed .segment__lead
+  text-align left
+  max-width none
+  margin-top (space-unit / 2)
