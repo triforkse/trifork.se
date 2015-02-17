@@ -11,6 +11,18 @@ top-menu-height = 70px
   z-index 300
   transition top 0.4s
 
+.top-menu--alternative
+  c = darken(color-bg, 5%)
+  background-color rgba(c, 85%)
+  border-bottom solid 1px c
+
+
+.top-menu--alternative .top-menu__link
+  color color-text
+
+  &:before
+    background-color color-text
+
 .top-menu__logo
   background-image url(/img/logo.svg)
   background-repeat no-repeat
@@ -45,34 +57,28 @@ top-menu-height = 70px
 
 .top-menu__link
   display inline-block
-  padding 0 20px
+  margin 0 20px
   line-height top-menu-height
   color color-link-inverse
   text-decoration none
   transition color 0.2s
-
-  &:hover
-    color color-link-inverse-hover
-
-    .top-menu__nav--inverse &
-      color black
+  position relative
+  box-sizing content-box
 
   &:before
-    transform-style preserve-3d
-    position absolute
-    bottom -20px
-    color: rgba(color-bg-dark, 0)
-    content attr(data-hover)
-    transform rotateZ(180deg) rotateY(180deg) rotateX(30deg)
-    transition: color 0.4s, bottom 0.4s
-    transition-delay 0.1s
+    content ""
+    width 100%
+    height 2px
+    background-color white
+    position: absolute
+    bottom: 10px
+    left 0
+    opacity 0
+    transition bottom 0.2s 0.1s, opacity 0.1s 0.1s
 
   &:hover:before
-    color darken(color-link-inverse-hover, 50%);
-    bottom -16px
-
-    .top-menu__nav--inverse &
-      color #9f8229
+    opacity 0.9
+    bottom: 19px
 
 .top-menu--hidden
   top -120px

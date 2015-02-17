@@ -21,23 +21,24 @@ block page-content
 
       h2.segment__section-heading Upcoming Events in Stockholm
 
-      mixin event(title, icon, description, date, done)
-        li.event-list__item
-          .event-list__col-image
-            img.event-list__thumbnail(src="img/events/#{icon}.png")
-          .event-list__col-description
-            h3.event-list__header #{title}
-            p.event-list__text #{description}
-            unless done
-              a.pretty-link(href="#") Book your seat now!
-          .cf
+      mixin event(title, description, date, url, done)
+        li.jumbo-list__item
+          .jumbo-list__datetime
+            b Time<br>
+            != format_date(date)
+            br
+            br
+            b Place<br>
+            | Ferkens Gränd 3<br>
+            | Gamla Stan<br>
+            | 111 30 Stockholm
+          h3.jumbo-list__header!= title
+          p.jumbo-list__text!= description
+          unless done
+            .u-text-center
+              a.read-more-link(href="#{url}") Book your seat now!
 
-      ul.event-list
-        +event("Neo4j", "neo4j", "Foo bar bas.", "2015-02-19", false)
-        +event("Docker", "docker", "Foo bar bas.", "2014-11-18", false)
+      ul.jumbo-list
+        for event in events
+          +event(event.name, event.description, event.time, event.event_url, false)
 
-      h2.segment__section-heading Recent Completed Events
-
-      ul.event-list
-        +event("Docker", "docker", "Foo bar bas.", "2014-11-18", true)
-        +event("Docker", "docker", "Foo bar bas.", "2014-11-18", true)

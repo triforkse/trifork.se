@@ -1,23 +1,31 @@
-mixin main-menu
-  mixin item(link, text)
-    a.top-menu__link(href="#{link}", data-hover="#{text}") #{text}
-  +item("/clients", "Client Projects")
-  +item("/events", "Events")
-  +item("/handbook", "Developer's Handbook")
-  +item("/job", "Career")
-  +item("/team", "Team")
-  +item("/contact", "Contact")
+mixin menu-item(link, text)
+  a.top-menu__link(href="#{link}", data-hover="#{text}")&attributes(attributes)!= text
 
-mixin top-menu(hide)
+
+mixin main-menu-items
+  +menu-item("/clients", "Client Projects")
+  +menu-item("/events", "Events")
+  +menu-item("/handbook", "The Handbook")
+  +menu-item("/job", "Career")
+  +menu-item("/team", "Team")
+  +menu-item("/contact", "Contact")
+
+
+mixin top-menu
+  .top-menu&attributes(attributes)
+    .top-menu__container
+      a.top-menu__logo(href="/", alt="Home")
+      nav.top-menu__nav
+        block
+
+
+mixin main-menu(hide)
   if hide
-    .top-menu(id="top-menu", nav-top-menu='#first-segment')
+    .top-menu(id="top-menu", nav-top-menu='#first-segment')&attributes(attributes)
       .top-menu__container
         a.top-menu__logo(href="/", alt="Home")
         nav.top-menu__nav
-          +main-menu
+          +main-menu-items
   else
-    .top-menu
-      .top-menu__container
-        a.top-menu__logo(href="/", alt="Home")
-        nav.top-menu__nav
-          +main-menu
+    +top-menu&attributes(attributes)
+      +main-menu-items

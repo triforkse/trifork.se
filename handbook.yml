@@ -1,0 +1,188 @@
+---
+
+title: Trifork Handbook
+
+introduction:
+  You work at Trifork. This is your handbook there are many like it but this one is yours.
+  The handbook details how we choose run things, how we work together, and which techniques and tools we prefer.
+
+
+  The handbook is a living document and should be updated constantly. The world is contantly changing
+  and so should we. But we have to agree on how we do things to ensure we can work effectivly and
+  make out customers happy.
+
+
+  The handbook is Open-Source and hand can be freely distributed to your friends and and our clients,
+  just remember to say where it came from. If you think parts of the handbook is outdated please do
+  not hasitate to send us a pull-request on Github.
+
+
+  If you are looking for specific technical topics like recommended frameworks in NodeJS or Java,
+  this is not the place for it. The handbook is general topics about out way of working with each other
+  and our clients. You are welecome to make a dedicated handbook for technical topics. Just add them
+  to our github account and link to them in the handbook.
+
+sections:
+  - title: Sales
+    introduction:
+      We need to sell hours!
+    content: Doo
+    sections:
+      - title: Do and Don't
+        content:
+          Thomas is awesome lorem ipsum dolor.
+          Foo this __is__ great.
+
+
+          Blah
+
+  - title: Continuous Delivery
+    introduction:
+          Blah
+    content: Doo
+    sections:
+      - title: Do and Don't
+        content:
+          Thomas is awesome lorem ipsum dolor.
+          Foo this __is__ great.
+
+  - title: Morning Meeting
+    introduction:
+      Blah
+    content: Doo
+    sections:
+      - title: Do and Don't
+        content:
+          Thomas is awesome lorem ipsum dolor.
+          Foo this __is__ great.
+
+  - title: Foo Bar
+    introduction:
+      We need to sell hours!
+    content: Doo
+    sections:
+      - title: Do and Don't
+        content:
+          Thomas is awesome lorem ipsum dolor.
+          Foo this __is__ great.
+
+
+          Blah
+
+  - title: Ching 1
+    introduction:
+      We need to sell hours!
+    content: Doo
+    sections:
+      - title: Do and Don't
+        content:
+          Thomas is awesome lorem ipsum dolor.
+          Foo this __is__ great.
+
+
+          Blah
+
+  - title: Ching 2
+    introduction:
+      We need to sell hours!
+    content: Doo
+    sections:
+      - title: Do and Don't
+        content:
+          Thomas is awesome lorem ipsum dolor.
+          Foo this __is__ great.
+
+
+          Blah
+
+  - title: Ching 3
+    introduction:
+      We need to sell hours!
+    content: Doo
+    sections:
+      - title: Do and Don't
+        content:
+          Thomas is awesome lorem ipsum dolor.
+          Foo this __is__ great.
+
+
+          Blah
+
+  - title: Ching 3
+    introduction:
+      We need to sell hours!
+    content: Doo
+    sections:
+      - title: Do and Don't
+        content:
+          Thomas is awesome lorem ipsum dolor.
+          Foo this __is__ great.
+
+
+          Blah
+
+  - title: Ching 3
+    introduction:
+      We need to sell hours!
+    content: Doo
+    sections:
+      - title: Do and Don't
+        content:
+          Thomas is awesome lorem ipsum dolor.
+          Foo this __is__ great.
+
+
+          Blah
+
+  - title: Foo Tom 12
+    introduction:
+      We need to sell hours!
+    content: Doo
+    sections:
+      - title: Do and Don't
+        content:
+          Thomas is awesome lorem ipsum dolor.
+          Foo this __is__ great.
+
+
+          Blah
+
+  - title: Goo Moo, Yoda
+    introduction:
+      We need to sell hours!
+    content: Doo
+    sections:
+      - title: Do and Don't
+        content:
+          Thomas is awesome lorem ipsum dolor.
+          Foo this __is__ great.
+
+
+          Blah
+
+  - title: Goo Moo, Yoda
+    introduction:
+      We need to sell hours!
+    content: Doo
+    sections:
+      - title: Do and Don't
+        content:
+          Thomas is awesome lorem ipsum dolor.
+          Foo this __is__ great.
+
+
+          Blah
+
+
+  - title: Goo Moo, Yoda
+    introduction:
+      We need to sell hours!
+    content: Doo
+    sections:
+      - title: Do and Don't
+        content:
+          Thomas is awesome lorem ipsum dolor.
+          Foo this __is__ great.
+
+
+          Blah

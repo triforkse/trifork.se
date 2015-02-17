@@ -1,7 +1,13 @@
 var express = require('express')
     , stylus = require('stylus')
     , nib = require('nib')
-    , morgan = require('morgan');
+    , morgan = require('morgan')
+    , yaml = require('js-yaml')
+    , fs = require('fs')
+    , _ = require('lodash')
+    , md = require('marked')
+    , datetime = require('./lib/datetime')
+    , meetup = require('./lib/meetup');
 
 
 var app = express();
@@ -36,11 +42,26 @@ app.get('/clients', function (req, res) {
     );
 });
 
+app.get('/handbook', function (req, res) {
+    var data = yaml.safeLoad(fs.readFileSync('handbook.yml', 'utf8'));
+    res.render('handbook', {
+            md: md,
+            chunk: function(coll, n) { var size = Math.ceil(coll.length / n); return _.chunk(coll, size); },
+            handbook: data
+        }
+    );
+});
 
 app.get('/events', function (req, res) {
-    res.render('events',
-        { title : 'Events' }
-    );
+    meetup.fetch_events().then(function(events) {
+        res.render('events',
+            {
+                events: events,
+                title: 'Events',
+                format_date: datetime.format
+            }
+        );
+    });
 });
 
 

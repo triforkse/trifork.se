@@ -1,29 +1,30 @@
-.event-list__item
-  row(12)
+.jumbo-list__item
   border-radius 20px
-  padding space-unit
+  padding space-unit * 3
+  background-color color-bg
   border solid 1px lighten(color-bg-dark-secondary, 20%)
   margin-left auto
   margin-right auto
+  max-width 900px
+  box-sizing border-box
 
-.event-list__col-image
-  column(3)
-  text-align center
-
-.event-list__col-description
-  column(9)
-
-.event-list__item:not(:last-child)
+.jumbo-list__item:not(:last-child)
   margin-bottom space-unit
 
-.event-list__thumbnail
-  width 150px
-
-.event-list__header
+.jumbo-list__header
   font-ln()
-  color color-text-inverse
+  color color-text
   margin-bottom (space-unit / 2)
 
-.event-list__text
+.jumbo-list__text
   font-m()
   color color-text-inverse
+
+.jumbo-list__datetime
+  float right
+  margin-right -100px
+  margin-top -70px
+  transform rotate(10deg)
+  background-color color-primary
+  color color-text-inverse
+  padding space-unit

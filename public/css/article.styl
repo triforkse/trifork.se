@@ -1,0 +1,88 @@
+.article
+  counter-reset article-h1, article-h2, article-h3
+
+.article h1
+  font-imposing()
+  margin-bottom space-unit * 2
+  counter-reset article-h2
+  counter-increment article-h1
+
+.article p
+  font-content()
+  text-align justify
+
+.article p:not(:last-child)
+  margin-bottom (space-unit / 2)
+
+.article h2
+  font-imposing()
+  margin-top space-unit * 2
+  margin-bottom space-unit
+  counter-reset article-h3
+  counter-increment article-h2
+
+  &:before
+    content counter(article-h2)
+    margin-right (space-unit / 2)
+
+.article h3
+  font-default()
+  font-m()
+  margin-top space-unit
+  margin-bottom (space-unit / 4)
+  counter-increment article-h3
+  margin-right (space-unit / 2)
+
+  &:before
+    content counter(article-h2) "." counter(article-h3)
+    margin-right (space-unit / 2)
+
+.toc
+  position fixed
+  width 100%
+  z-index 3
+  perspective 100
+  transform-style preserve-3d
+  transition transform 0.5s
+  transition-timing-function ease-in-out
+  transform-origin center top
+
+.toc__container
+  margin 0 auto
+  max-width 900px
+  padding (top-menu-height + space-unit * 2) (space-unit * 2) (space-unit * 2)
+  background-color white
+  box-shadow 0 0 5px #d3d3d3;
+
+.toc--hidden
+  transform translateY(-100%)
+
+.toc__column
+  column(4)
+  +screen-sm()
+    column(12)
+
+.toc__title
+  font-lb()
+  text-transform uppercase
+  color color-primary
+  margin-bottom space-unit
+
+.toc__entry
+  width 100%
+  display block
+
+.toc__entry:hover
+  color color-primary
+
+.toc__entry:not(:last-child)
+  margin-bottom 10px
+
+.toc__entry-title
+  float left
+
+.toc__entry-number
+  float right
+  width 40px
+  text-align right
+  font-monospace()
