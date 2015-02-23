@@ -3,7 +3,7 @@
 This is the source for the Swedish Trifork Website. You are welcome to copy or get inspired by it. We have a MIT license
 on it see the LICENSE file.
 
-# Developer Setup
+## Developer Setup
 
 1. Make sure you have [NodeJS](http://nodejs.org/) installed.
 
@@ -14,7 +14,7 @@ make setup
 make run
 ```
 
-# Contributing
+## Contributing
 
 This mostly applies to Trifork employees, but everyone is welcome to contribute.
 Just send a pull-request here on GitHub -- that's it.
