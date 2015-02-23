@@ -9,8 +9,10 @@ on it see the LICENSE file.
 
 2. Run these commands and you will be up and running:
 
+
     $ make setup
     $ make run
+
 
 # Contributing
 
