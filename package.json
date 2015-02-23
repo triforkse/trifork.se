@@ -4,7 +4,7 @@
   "description": "Trifork Stockholm Website",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "make test"
   },
   "author": "Thomas Anagrius",
   "license": "MIT",
