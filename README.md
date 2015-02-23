@@ -1,5 +1,7 @@
 # Trifork Stockholm's Website
 
+[![Circle CI](https://circleci.com/gh/triforkse/trifork.se.svg?style=svg)](https://circleci.com/gh/triforkse/trifork.se)
+
 This is the source for the Swedish Trifork Website. You are welcome to copy or get inspired by it. We have a MIT license
 on it see the LICENSE file.
 
