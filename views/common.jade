@@ -1,12 +1,15 @@
 mixin menu-item(link, text)
   a.top-menu__link(href="#{link}", data-hover="#{text}")&attributes(attributes)!= text
 
+mixin menu-click-item(handler, text)
+  a.top-menu__link(href="javascript:;", ng-click="#{handler}", data-hover="#{text}")&attributes(attributes)!= text
+
 
 mixin main-menu-items
-  +menu-item("/clients", "Client Projects")
+  +menu-click-item("gotoClientWork()", "Client Projects")
   +menu-item("/events", "Events")
   +menu-item("/handbook", "The Handbook")
-  +menu-item("/job", "Career")
+  +menu-item("/jobs", "Career")
   +menu-item("/team", "Team")
   +menu-item("/contact", "Contact")
 
@@ -19,13 +22,13 @@ mixin top-menu
         block
 
 
-mixin main-menu(hide)
-  if hide
-    .top-menu(id="top-menu", nav-top-menu='#first-segment')&attributes(attributes)
+mixin main-menu(hidden)
+  if hidden
+    .top-menu(id="top-menu", ng-controller="MainMenuCtrl", nav-top-menu='#first-segment')&attributes(attributes)
       .top-menu__container
         a.top-menu__logo(href="/", alt="Home")
         nav.top-menu__nav
           +main-menu-items
   else
-    +top-menu&attributes(attributes)
+    +top-menu(id="top-menu", ng-controller="MainMenuCtrl")&attributes(attributes)
       +main-menu-items

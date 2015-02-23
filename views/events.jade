@@ -39,6 +39,9 @@ block page-content
               a.read-more-link(href="#{url}") Book your seat now!
 
       ul.jumbo-list
+        if events.length === 0
+          .jumbo-list__empty-label
+            b No Events Currently Planned
         for event in events
           +event(event.name, event.description, event.time, event.event_url, false)
 

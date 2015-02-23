@@ -8,6 +8,7 @@
 
 .segment--primary
   background-color color-primary
+  color color-text-primary
 
 .segment__heading
   text-align center
@@ -63,7 +64,6 @@
 .segment--secondary .segment__lead
   color darken(color-text-inverse, 20%)
 
-
 // FIXME: MOVE TO OWN FILE
 
 container-width = 1100px
@@ -99,7 +99,7 @@ container-width = 1100px
   speed = 1s
   position absolute
   z-index 1
-  transition top (speed/1.5), bottom (speed/2), left speed, right speed
+  transition top (speed/ 1.5), bottom (speed/ 2), left speed, right speed
   background-color color-primary
 
 .segment--expanded .segment__heading
@@ -129,9 +129,15 @@ container-width = 1100px
   max-width none
   margin-top (space-unit / 2)
 
+side-padding-size = space-unit * 8
+
 .segment--header
   padding-size = space-unit * 8
-  padding (top-menu-height + padding-size) padding-size padding-size
+  padding (top-menu-height + padding-size) side-padding-size padding-size
+
+.segment--header-half
+  padding-size = space-unit * 5
+  padding (top-menu-height + padding-size) side-padding-size padding-size
 
 .segment__section-heading
   margin (space-unit * 2) 0

@@ -1,0 +1,46 @@
+extends layouts/page-with-menu
+
+block page-content
+  .segment.segment--header-half
+    h1.segment__heading We're Hiring
+    p.segment__lead
+      | At Trifork we are always looking for new talent to join in the fun.<br>
+      | You think you've got what it takes or are up for the challenge in making us better, you should call us.<br>
+      | We think Trifork is a great place to work. That's why we work here! : )<br><br>
+      a(href="mailto:stockholm@trifork.com") stockholm@trifork.com
+
+  .thumbnail-list
+    for i in [1,2,3,4,5,6,7]
+      .thumbnail-list__item
+        img(src="/img/office/#{i}.jpg").thumbnail-list__thumbnail
+
+
+  .map
+    #map(style="width: 100%; height: 400px")
+    .map__label
+      .map__title Smack Dab in the Middle
+      p
+      | It does not get much more central than the Trifork Office. In Gamla Stan (Old Town)
+      | with the subway a few minutes walk away. The central station one stop away.
+  script(type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyLw04OfhQAPKR1Vbnwi6YHu_kwc3mO-s")
+  script(type="text/javascript", src="/js/map.js")
+
+  .segment
+    .column-6
+      h2 Why Work for Trifork
+      ul
+        li
+          h3 Travel to GOTO; Conference with us
+          p
+            | Every year Trifork hosts some on the World's best
+            | IT-conferences. As a Triforker you are ofcourse
+
+
+    .column-6
+      h2 What we work with
+      p Foo
+
+  .segment
+    a.read-more-link(href="mailto:stockholm@trifork.com")
+      b Want to work for us?
+      div Send us an email and tell us!

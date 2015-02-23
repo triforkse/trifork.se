@@ -19,9 +19,8 @@ columns = 12
  */
 global-reset()
 
-
 space-unit = 30px
-
+ipad-content-max = 1024px
 
 font-imposing()
   font-family: jaf-bernino-sans, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif
@@ -59,7 +58,6 @@ screen-sm()
   @media screen and (max-width: 960px)
     {block}
 
-
 /*
  * Store the main color and
  * background color as variables
@@ -70,7 +68,9 @@ color-goto = #fa5b4d
 
 color-bg-dark = black
 color-bg-dark-secondary = #272422
+color-bg-medium = #747474
 color-primary = #ff9115
+color-text-primary = darken(color-primary, 60%)
 
 color-text = black
 color-text-inverse = white
@@ -83,10 +83,13 @@ color-link-inverse-hover = color-primary
 @import icons
 @import list-menu
 @import link-list
-@import video-list
+@import thumbnail-list
 @import jumbo-list
 @import charts
 @import article
+@import "columns"
+@import notifications
+@import map
 
 @import "pages/frontpage"
 @import "pages/events"
@@ -94,12 +97,13 @@ color-link-inverse-hover = color-primary
 @import util
 
 body
-  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing antialiased
   font-default()
   background-color color-bg
   font-size 18px
 
-h1, h2, h3
+h1, h2, h3, h4
+  -webkit-font-smoothing subpixel-antialiased
   font-imposing()
 
 h1

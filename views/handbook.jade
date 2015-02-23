@@ -4,33 +4,28 @@ block content
   div(ng-init="showToc=false")
     +top-menu.top-menu--alternative
       +menu-item("javascript:;", "Table of Contents <span class='icon-down-open'></span>")(ng-click="showToc = !showToc")
+      a.top-menu__link(href="handbook", type="application/pdf", download="handbook.pdf") Download PDF
 
     .toc(ng-class="{'toc--hidden': !showToc}")
       .toc__container
         .toc__title Contents
         - var itemIndex = 1
-        for column, i in chunk(handbook.sections, 3)
+        for column, i in chunk(handbookToc, 3)
           .toc__column
-            for section, j in column
-              a.toc__entry(href="#section-#{itemIndex}", ng-click="showToc = false")
+            for section in column
+              a.toc__entry.toc__entry--level-1(href="##{section.id}", ng-click="showToc = false")
                 .toc__entry-title!= section.title
-                .toc__entry-number!= itemIndex++
+                .toc__entry-number!= itemIndex
                 .cf
+
+              for subsection, k in section.subsections
+                a.toc__entry.toc__entry--level-2(href="##{subsection.id}", ng-click="showToc = false")
+                  .toc__entry-title!= subsection.title
+                  .toc__entry-number!= itemIndex + "." + padNum(k + 1)
+                  .cf
+
+              - itemIndex += 1
             .cf
         .cf
 
-    .segment.segment--header.article
-      h1!= handbook.title
-      div!= md(handbook.introduction)
-
-      for section, i in handbook.sections
-        //- For the TOC links to jump to the right offset we add a seperate (offset) anchor,
-        //- that way the top of the screen aligns with the title.
-        a(id="section-#{i+1}") &nbsp;
-        h2!= section.title
-        div!= md(section.introduction)
-        div!= md(section.content)
-
-        for subsection in section.sections
-          h3!= subsection.title
-          div!= md(subsection.content)
+    .segment.segment--header.article!= handbookHtml

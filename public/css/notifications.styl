@@ -1,0 +1,49 @@
+.notification
+  position fixed
+  top 0
+  left 0
+  right 0
+  bottom 0
+  z-index 1000
+  background-color rgba(black, 0);
+  transition background-color 1s
+
+.notification--visible
+  background-color rgba(black, 0.6);
+
+.notification__window
+  background-color color-bg
+  padding space-unit
+  max-width 600px
+  margin 100px auto
+  transform translateY(-1000%)
+  transition transform 0.5s
+
+.notification--visible .notification__window
+  transform none
+
+.notification__title
+  font-ln()
+  margin-bottom space-unit
+
+.notification__description
+  margin-bottom space-unit
+
+.notification__buttons
+  display flex
+  align-items center
+  justify-content space-between
+
+.notification__button
+  display inline-block
+  padding (space-unit / 2) space-unit
+  background-color color-bg-medium
+  text-decoration none
+  color color-text-inverse
+  cursor pointer
+  font-default()
+  font-m()
+  border none
+
+.notification__button--primary
+  background-color color-primary

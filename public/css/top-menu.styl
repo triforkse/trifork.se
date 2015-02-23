@@ -1,6 +1,4 @@
-
 top-menu-height = 70px
-
 
 .top-menu
   background-color rgba(color-bg-dark, 85%)
@@ -15,7 +13,6 @@ top-menu-height = 70px
   c = darken(color-bg, 5%)
   background-color rgba(c, 85%)
   border-bottom solid 1px c
-
 
 .top-menu--alternative .top-menu__link
   color color-text
@@ -38,10 +35,12 @@ top-menu-height = 70px
 .top-menu__logo:hover
   animation rumble linear 0.3s 0s infinite
 
-
 @keyframes rumble {
-  0%, 100% {}
-  50% { transform: rotate(7deg) }
+  0%, 100% {
+  }
+  50% {
+    transform: rotate(7deg)
+  }
 }
 
 .top-menu__container
@@ -53,7 +52,6 @@ top-menu-height = 70px
   list-style-type none
   font-size 18px
   font-default()
-
 
 .top-menu__link
   display inline-block

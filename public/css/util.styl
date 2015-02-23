@@ -13,12 +13,23 @@
 .cf:before,
 .cf:after
   content: " "; /* 1 */
-  display: table; /* 2 */
+  display: table;
 
+/* 2 */
 
 .cf:after
   clear: both;
 
-
 .u-hidden
   display none
+
+.u-disable-scrolling
+  height 100%
+  overflow hidden
+
+.u-anchor
+  // If the anchor does not have a size the browser will
+  // jump passed it when you navigate to it using the URL.
+  display inline-block
+  height 1px
+  width 1px

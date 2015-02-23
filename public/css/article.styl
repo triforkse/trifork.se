@@ -1,13 +1,24 @@
 .article
-  counter-reset article-h1, article-h2, article-h3
+  max-width ipad-content-max
+  padding-left space-unit
+  padding-right space-unit
+  box-sizing border-box
+  margin 0 auto
 
 .article h1
-  font-imposing()
   margin-bottom space-unit * 2
   counter-reset article-h2
   counter-increment article-h1
 
-.article p
+.article h4
+  font-default()
+  font-size 22px
+  font-weight 400
+  margin-top space-unit
+  margin-bottom (space-unit / 4)
+  border-bottom solid 1px color-bg-medium
+
+.article
   font-content()
   text-align justify
 
@@ -72,6 +83,12 @@
   width 100%
   display block
 
+.toc__entry--level-1
+  font-weight 700
+
+.toc__entry--level-2
+  font-size 14px
+
 .toc__entry:hover
   color color-primary
 
@@ -86,3 +103,37 @@
   width 40px
   text-align right
   font-monospace()
+
+.article ol,
+.article ul
+  padding 0 (space-unit / 2)
+  margin space-unit 0
+
+.article ul li
+  list-style-type disc
+  margin-left space-unit
+
+  &:not(:last-child)
+    margin-bottom (space-unit / 3)
+
+.article ol li
+  list-style-type decimal
+  margin-left space-unit
+
+  &:not(:last-child)
+    margin-bottom (space-unit / 3)
+
+
+.article blockquote
+  padding space-unit
+  font-default()
+
+.article blockquote p
+  line-height 1.1
+  margin-bottom 0 !important
+
+.article .u-anchor
+  // This makes the TOC links jump to a position so the headers
+  // are shown. Else the heading will be covered by the top menu.
+  position relative
+  margin-top -50px

@@ -1,16 +1,26 @@
+MOCHA=./node_modules/.bin/mocha
+
 all: run
 
-db:
-	docker run --name triforkse_db -e POSTGRES_PASSWORD=$TRIFORKSE_PASSWORD -d postgres
-
-db-console:
-	docker exec -it triforkse_db 'exec psql -h "$POSTGRES_PORT_5432_TCP_ADDR" -p "$POSTGRES_PORT_5432_TCP_PORT" -U postgres'
+setup:
+	npm install -d
 
 run:
-	nodemon app.js
+	gulp dev
 
 test:
-	gulp test
+	$(MOCHA)
 
+autotest:
+	$(MOCHA) -w
 
-.PHONY: run test
+lint:
+	gulp lint
+
+ci:
+	@mkdir -p ./tmp
+	@JUNIT_REPORT_PATH=tmp/test-report.xml JUNIT_REPORT_STACK=1 $(MOCHA) --reporter mocha-jenkins-reporter || true
+	@gulp lint || true
+
+.PHONY: run test autotest lint ci
+
