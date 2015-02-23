@@ -9,10 +9,17 @@ on it see the LICENSE file.
 
 2. Run these commands and you will be up and running:
 
-```
-make setup
-make run
-```
+   ```bash
+   make setup
+   make run
+   ```
+
+3. Some settings are done through environment variable to not include them in the source code.
+   You should add the following to your `.bashrc`, `.zshrc` or `.profile` depending on your setup:
+
+   ```bash
+   export TF_MEETUP_API_KEY="[...]" # Where [...] is our API key from meetup.com
+   ```
 
 ## Contributing
 
