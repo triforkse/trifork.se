@@ -1,8 +1,8 @@
-#!/bin/sh
+#!/bin/bash
 
-for f in public/handbook.* do
-  if [[ "$f" -nt "public/handbook.md" ]]; then
-    echo "You have not generated the handbook!"
-    exit 1
-  fi
+for f in public/handbook.*; do
+if [[ "$f" -nt "public/handbook.md" ]]; then
+  echo "\nCommit failed: You have not generated the handbook!\n"
+  exit 1
+fi
 done

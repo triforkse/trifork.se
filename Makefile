@@ -4,7 +4,7 @@ all: run
 
 setup:
 	@echo "\nGit Hooks Installed\n"
-	-ln etc/git-hooks/pre-commit .git/hooks/pre-commit
+	-ln -s -f etc/git-hooks/pre-commit .git/hooks/pre-commit
 	@echo "\nInstalling automatic installed dependencies.\n"
 	npm install -d
 	@echo "\nDone! Check the README.md for dependencies that must be manually installed.\n"
