@@ -1,11 +1,20 @@
 var expect = require('chai').expect
   , sinon = require('sinon')
-  , cache = require("../lib/cache");
+  , cache = require("../lib/cache")
+  , testUtil = require('./test_util');
 
 
 describe('cache', function () {
 
   var clock, f, i, cached_f;
+
+  before(function() {
+    testUtil.disableLogging();
+  });
+
+  after(function() {
+    testUtil.enableLogging();
+  });
 
   beforeEach(function () {
     clock = sinon.useFakeTimers();
