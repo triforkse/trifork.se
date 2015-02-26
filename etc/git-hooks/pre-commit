@@ -1,0 +1,8 @@
+#!/bin/sh
+
+for f in public/handbook.* do
+  if [[ "$f" -nt "public/handbook.md" ]]; then
+    echo "You have not generated the handbook!"
+    exit 1
+  fi
+done

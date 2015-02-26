@@ -1,14 +1,13 @@
 # Trifork Handbook
-You work at Trifork. This is your handbook there are many like it but this one is yours. The handbook details how we
-choose run things, how we work together, and which techniques and tools we prefer.
 
-The handbook is a living document and should be updated constantly. The world is constantly changing and so should we.
-But we have to agree on how we do things to ensure we can work effectively and make out customers happy.
+You work at Trifork and this is your handbook. The handbook details how we work together,
+which processes we have established, and tools we prefer to work with.
+The handbook is a living document and will be updated often. Our business is constantly changing and this document should reflect that.
 
 The handbook is Open-Source and hand can be freely distributed to your friends and and our clients, just remember to say
-where it came from. If you think parts of the handbook is outdated please do not hasitate to send us a pull-request on
-Github.
-
+where it came from. If you think parts of the handbook is outdated please do not hesitate to send us a pull-request on
+GitHub.
+  
 If you are looking for specific technical topics like recommended frameworks in NodeJS or Java, this is not the place
 for it. The handbook is general topics about out way of working with each other and our clients. You are welcome to
 make a dedicated handbook for technical topics. Just add them to our github account and link to them in the handbook.
@@ -67,13 +66,63 @@ Usually the kind of projects we take on are:
 ## Planning
 
 
-### Customer Innovation
-TODO
+### Project Process
+
+
+1. Find and Eliminate Risk
+
+  - Defining and testing a set hypotheses.
+  
+  This was important in that it allowed us to follow what we saw and learnt
+  rather than simply following assumptions or common beliefs about the customers.
+  
+  - Doing Research
+  
+  Information Gathering / Interviews / Sketches / Artifacts
+  Cognitive vs Emotional Empathy
+   
+  Emotional
+  
+  This is often the most radical in its effect on executives and as a source of insight.
+  
+  This combined with the Client's Hypothesis lead to insight.
+  
+2. Design
+
+  The question is "how do we build something fantastic".
+  
+  Innovation Workshop
+  - Bring in customers.
+  - Stakeholders.
+  
+  We are now confident that we are solving the right problem we set a limited amount of time
+  and start to develop a solution.
+  
+3. Prototyping
+
+   Paper or HTML
+   
+   HTML
+    - Dislike Colors
+    - Slower
+    - Scales
+    - WOrking at a distance
+    
+  Paper
+    - Abstract
+    - Focus on features
+    - Quick
+    
+  
 
 ### Work Pace
 
 We work at a sustainable pace. This means that we
 
+
+### Service Level Agreement
+
+TODO (flg): I think you had some stuff that could fit here.
 
 ### Morning Meeting
 
@@ -101,13 +150,12 @@ TODO
 
 TODO
 
-
 ### Interview Process
 
 We keep track of our applicants in JIRA. When we receive an application it is entered into JIRA so we can keep track
 of the progress.
 
-The Manager, Thomas, is responsible for the hiring process. He makes sure that we reply to everyone as soon as we can.
+Our Manager, Thomas, is responsible for the hiring process. He makes sure that we reply to everyone as soon as we can.
 We want to keep our standards high and Thomas also leads most interviews and ensures that the applications are up to the
 task.
 
@@ -165,7 +213,7 @@ Your mentor is meant to help ease your first time at the company and help answer
 
 ### Salary Review
 
-Salary review is done on a annual basis --- usually in August. We encourage our team members to know their market
+Salary review is done on a annual basis — usually in August. We encourage our team members to know their market
 so we can come to a fair arrangement that all parties can be happy with. It is in the interest of the company
 to pay people what they are worth. We don't want our employees to discover down the road that they have been under-paid.
 
@@ -235,7 +283,7 @@ signature like the following:
 > Trifork AB  
 > Phone: +46 000 0000  
 >
-> ![Trifork - Think Software](/img/trifork-logo.png)
+> ![Trifork - Think Software](img/trifork-logo.png)
 
 Email is probably your most important tool. It contains an enormous amount of data e.g. project details, accounts info,
 attachment. It is also one of your main resources for getting in contact with people. You will find yourself looking

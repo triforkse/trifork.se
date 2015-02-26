@@ -59,23 +59,35 @@ app.get('/jobs', function (req, res) {
 app.get('/handbook', function (req, res) {
   var handbookData = handbook.content();
   var handbookHtml = handbook.html(handbookData);
-  if (req.accepts("html")) {
-    res.render('handbook', {
-        chunk: function (coll, n) {
-          var size = Math.ceil(coll.length / n);
-          return _.chunk(coll, size);
-        },
-        handbookHtml: handbookHtml,
-        handbookToc: handbook.toc(handbookData)
-      }
-    );
-  }
-  else if (req.accepts("pdf")) {
-    res.sendfile = "handbook/handbook.pdf"
-  }
-  else if (req.accepts("yaml")) {
-    res.sendfile = "handbook/handbook.md";
-  }
+  res.render('handbook',
+    {
+      chunk: function (coll, n) {
+        var size = Math.ceil(coll.length / n);
+        return _.chunk(coll, size);
+      },
+      handbookHtml: handbookHtml,
+      handbookToc: handbook.toc(handbookData)
+    }
+  );
+});
+
+app.get('/handbook', function (req, res) {
+  var handbookData = handbook.content();
+  var handbookHtml = handbook.html(handbookData);
+  res.render('handbook',
+    {
+      chunk: function (coll, n) {
+        var size = Math.ceil(coll.length / n);
+        return _.chunk(coll, size);
+      },
+      handbookHtml: handbookHtml,
+      handbookToc: handbook.toc(handbookData)
+    }
+  );
+});
+
+app.get('/handbook.epub', function (req, res) {
+  res.sendFile("public/handbook.epub");
 });
 
 app.get('/events', function (req, res) {

@@ -25,22 +25,79 @@ block page-content
   script(type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyLw04OfhQAPKR1Vbnwi6YHu_kwc3mO-s")
   script(type="text/javascript", src="/js/map.js")
 
-  .segment
+  .segment.content
     .column-6
-      h2 Why Work for Trifork
-      ul
-        li
-          h3 Travel to GOTO; Conference with us
-          p
-            | Every year Trifork hosts some on the World's best
-            | IT-conferences. As a Triforker you are ofcourse
+      :markdown
+        ## Interested in working at Trifork?
+
+        You should swing by at one of our [Events](/events).
+        Most of them we host at the office in Gamla Stan.
+        These events are a great way to learn more about what
+        it's like to work with us, and you'll get to meet us in person.
+
+        ### Interview Process
+
+        If you have heard that our interviews are tough and technical
+        you heard right — we are _tough but fair_.
+        Our environment has a high level of competence, and we want it to remain
+        that way.
+
+        We value kind, thoughful, and considerate people. And our interview
+        process is designed around finding a good fit the team as well.
+
+        So don't be afraid to apply! We welcome all applications.
+        You can read more about our [Interview Process](/handbook#interview-process)
+        in our handbook.
+
+        ### Code Retreat
+
+        A couple of times a year teams rent a car and go out into the wilderness.
+        Here people have a chance to work on non-client-related projects,
+        hacking on some cool projects together. Some of our most innovative stuff
+        have resulted from these trips — and that is great fun is just an added bonus!
+
+        ### Knowledge Sharing
+
+        At Trifork we believe that it is very important that we always Leaning, Teaching,
+        and Evolving. We aim to use roughly 10% of our time for sharing and teaching.
+        For instance
+        och vara med på nyaste utvecklingen. Vi håller därför Tech Lunches för varandra
+        på kontoret och berättar oformellt om ramverk, språk, och hobbyprojekt vi håller på med eller tycker är bra. Trifork bjuder på mat och underhållning.
 
 
     .column-6
-      h2 What we work with
-      p Foo
+      h2 We choose to work with
+      ul.img-list
+        mixin tech(img, text)
+          li.img-list__item
+            img(src="/img/tech/#{img}.png").img-list__img
+            div.img-list__text
+              | #{text}
+        +tech("clojure", "Clojure & Datomic")
+        +tech("objc", "Objective-C & Swift for iOS")
+        +tech("html5", "HTML5 & JS like AngularJS")
+        +tech("postgresql", "PostgreSQL")
+        +tech("ruby", "Ruby on Rails & Ruby Scripting")
+        +tech("python", "Django & Python Scripting")
+        +tech("erlang", "Erlang & XMPP")
+        +tech("java", "Java, Spring & Gradle")
+        +tech("android", "Android")
+        +tech("riak", "Riak Riak & other NoSQL databases")
 
-  .segment
+      :markdown
+        ### Helping our Client Evolve
+
+        It is important to note that while _we_ may be on the forefront of tech our clients are usual not.
+        All our developers are provisient in languages like `Java` and `C#` and these great technologies are
+        the cornorstone of Today's IT systems.
+
+        We are very open to learn new things and adapt. We love
+        new programming languages and frameworks and we reevaluate our choices constantly.
+        We think it is important that we choose the _Right Tool for The Job™_ but to
+        do that you have to know all the tools at your disposal!
+
+    .cf
+
     a.read-more-link(href="mailto:stockholm@trifork.com")
       b Want to work for us?
       div Send us an email and tell us!

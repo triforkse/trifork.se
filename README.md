@@ -9,6 +9,7 @@ on it see the LICENSE file.
 ## Developer Setup
 
 1. Make sure you have [NodeJS](http://nodejs.org/) installed.
+   Make sure you have [Pandoc](http://johnmacfarlane.net/pandoc/) installed.
 
 2. Run these commands and you will be up and running:
 

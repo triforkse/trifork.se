@@ -1,10 +1,18 @@
 extends layouts/layout
 
 block content
-  div(ng-init="showToc=false")
+  div(ng-init="showToc=false; showDownload=false")
     +top-menu.top-menu--alternative
       +menu-item("javascript:;", "Table of Contents <span class='icon-down-open'></span>")(ng-click="showToc = !showToc")
-      a.top-menu__link(href="handbook", type="application/pdf", download="handbook.pdf") Download PDF
+      button.dropdown.dropdown--top-menu(ng-click="showDownload = !showDownload", ng-class="{'dropdown--hidden': !showDownload}")
+        | Download
+        ul.dropdown__frame(ng-h)
+          mixin link(format, text)
+            li.dropdown__item
+              a(href="handbook.#{format}", download="Trifork-Handbook.#{format}") #{text}
+          +link("pdf", "PDF")
+          +link("epub", "EPub")
+          +link("docx", "Word Document")
 
     .toc(ng-class="{'toc--hidden': !showToc}")
       .toc__container
