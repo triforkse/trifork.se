@@ -8,7 +8,7 @@ CLEAR='\033[0m'
 make test
 
 for f in public/handbook.*; do
-if [[ "$f" -nt "public/handbook.md" ]]; then
+if [[ "$f" -ot "public/handbook.md" ]]; then
   echo ""
   echo -e "${RED}Commit failed: You have not generated the handbook!${CLEAR}"
   echo ""
