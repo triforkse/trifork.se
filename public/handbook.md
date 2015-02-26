@@ -7,7 +7,7 @@ The handbook is a living document and will be updated often. Our business is con
 The handbook is Open-Source and hand can be freely distributed to your friends and and our clients, just remember to say
 where it came from. If you think parts of the handbook is outdated please do not hesitate to send us a pull-request on
 GitHub.
-  
+
 If you are looking for specific technical topics like recommended frameworks in NodeJS or Java, this is not the place
 for it. The handbook is general topics about out way of working with each other and our clients. You are welcome to
 make a dedicated handbook for technical topics. Just add them to our github account and link to them in the handbook.

@@ -1,8 +1,18 @@
 #!/bin/bash
 
+set -e
+
+RED='\033[0;31m'
+CLEAR='\033[0m'
+
+make test
+
 for f in public/handbook.*; do
 if [[ "$f" -nt "public/handbook.md" ]]; then
-  echo "\nCommit failed: You have not generated the handbook!\n"
+  echo ""
+  echo -e "${RED}Commit failed: You have not generated the handbook!${CLEAR}"
+  echo ""
+  echo -en "\007"
   exit 1
 fi
 done
