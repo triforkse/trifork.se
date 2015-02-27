@@ -3,7 +3,7 @@
 You work at Trifork and this is your handbook. The handbook details how we work together,
 which processes we have established, and tools we prefer to work with.
 The handbook is a living document and will be updated often. Our business is constantly changing and this document should reflect that.
-
+s
 The handbook is Open-Source and hand can be freely distributed to your friends and and our clients, just remember to say
 where it came from. If you think parts of the handbook is outdated please do not hesitate to send us a pull-request on
 GitHub.
