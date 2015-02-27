@@ -45,7 +45,7 @@ collaborate across teams. Therefore this Handbook.
 
 We prefer not making Fixed-Price contracts. It puts the client and us against each other right from the start of a
 project. You can end up arguing over "what it said in the initial contract" while the project has evolved. To be able to
-work in a flexble and agile manner working on projects on a week-by-week model, allows both to focus on what they really
+work in a flexible and agile manner working on projects on a week-by-week model, allows both to focus on what they really
 want. It is impossible to know every phaset of a project and there are always new idea and realizations that happen
 along the way.
 
@@ -208,6 +208,14 @@ familiarizing yourself with our internal services like [webmail](//webmail.trifo
 and time registration.
 
 Your mentor is meant to help ease your first time at the company and help answer any questions you might have.
+
+
+### Your First Week
+
+You should have been introduced to the first project that you are going to work on. You should also have made your first
+commit to this project — it doen't have have to be anything major. You should get a copy of the classic book "Extreme
+ Programming" and gotten started reading it. It is a classic and explains many of the methods that we value highly 
+
 
 ## Management
 
