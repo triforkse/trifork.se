@@ -36,4 +36,15 @@ block content
             .cf
         .cf
 
-    .segment.segment--header.article!= handbookHtml
+    .segment.article
+      .preview
+        h1 Early Preview
+        p
+          | The Trifork handbook is not yet completed, this is a preview.
+          | We are currently working very hard to ship out our first version
+          | of our handbook. We expect to have the first version out in March.
+        p
+          | Until it is done you are welcome to look it through and get an
+          | idea of what the future will bring.
+
+    .segment.article!= handbookHtml
