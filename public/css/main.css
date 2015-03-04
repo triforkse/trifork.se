@@ -1438,6 +1438,10 @@ a img {
   font-weight: 400;
   color: #fff;
 }
+.letter__send:hover {
+  background-color: #eb7c00;
+  cursor: pointer;
+}
 .logo-icon--transparent {
   margin-top: 170px;
   text-align: center;
