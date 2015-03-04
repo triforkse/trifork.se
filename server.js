@@ -2,6 +2,7 @@ var express = require('express')
   , stylus = require('stylus')
   , nib = require('nib')
   , morgan = require('morgan')
+  , fs = require('fs')
   , yaml = require('js-yaml')
   , handbook = require('./lib/handbook')
   , _ = require('lodash')
@@ -17,12 +18,21 @@ app.locals.padNum = function (n) {
     return "0" + n;
   }
   return "" + n;
-}
+};
 
 function compile(str, path) {
-  return stylus(str)
+  var style = stylus(str)
     .set('filename', path)
+    .set('sourcemap', {basePath: "public/css", sourceRoot: "../"})
     .use(nib());
+
+  // Write a source map.
+
+  style.render(function() {
+    fs.writeFileSync("public/css/main.css.map", JSON.stringify(style.sourcemap));
+  });
+
+  return style;
 }
 
 app.set('views', __dirname + '/views');
@@ -53,6 +63,12 @@ app.get('/clients', function (req, res) {
 app.get('/jobs', function (req, res) {
   res.render('jobs',
     {title: 'Jobs'}
+  );
+});
+
+app.get('/contact', function (req, res) {
+  res.render('contact',
+    {title: 'Contact'}
   );
 });
 

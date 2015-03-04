@@ -223,9 +223,9 @@
 
   module.controller('MainMenuCtrl', ['$scope', 'notify', function ($scope, notify) {
     $scope.gotoClientWork = function () {
-      notify("Visit Trifork.com to see our Case Studies",
-        "Our Swedish website is still under construction, but luckly our global site has many examples of our work. You should head over and take a look.",
-        [["Nah, Stay Here!", "stay", false], ["Visit Trifork.com", "go", true]]).then(function (notification) {
+      notify("Our Case Studies are hosted at Trifork.com",
+        "In an effort to not repeat ourselves, we host all our case studies at our global website. Visit it to read about all our happy customers.",
+        [["No Thanks, Stay Here!", "stay", false], ["Visit Trifork.com", "go", true]]).then(function (notification) {
           if (notification.value === "stay") {
             notification.dismiss();
           }

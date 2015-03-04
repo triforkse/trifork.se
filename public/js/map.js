@@ -1,4 +1,4 @@
-function initialize() {
+function initializeMap() {
   var mapOptions = {
     center: {lat: 59.323, lng: 18.03},
     zoom: 13,
@@ -37,4 +37,5 @@ function initialize() {
     icon: image
   });
 }
-google.maps.event.addDomListener(window, 'load', initialize);
+
+google.maps.event.addDomListener(window, 'load', initializeMap);

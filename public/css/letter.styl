@@ -1,0 +1,62 @@
+letter-padding = 60px
+stamp-width = 150px
+stamp-height = 139px
+item-inset = 20px
+
+.letter
+  padding letter-padding
+  background linear-gradient(to bottom, #FFF, #f7f7f8)
+  box-shadow 0 5px 10px rgba(#000, 0.8)
+  transition: transform 5s;
+  position relative
+  z-index 2
+  justify-content space-between
+  max-width 600px
+  margin (space-unit*2) auto 0
+  border-image url(../img/letter_top.png) 100% 0 round
+  border-width 10px 0 10px 0
+  border-radius 3px
+
+.letter.letter--send
+  transform: translate(9999px, -4200px) rotate(-90deg);
+
+.letter__content
+  margin-right stamp-width
+
+.letter__stamp
+  background-image url(../img/stamp.png)
+  width stamp-width
+  height stamp-height
+  position absolute
+  right 30px
+  top item-inset
+
+.letter-container
+  position relative
+
+.letter-container__thanks
+  position absolute
+  z-index 1
+  display flex
+  align-items center
+  justify-content center
+  width 100%
+  height 100%
+  font-imposing()
+  font-ln()
+
+.segment--secondary .letter-container__thanks
+  color white
+
+.letter__send
+  position absolute
+  right letter-padding
+  bottom letter-padding
+  align-items center
+  justify-content center
+  border none
+  height text-group__height
+  width text-group__height
+  background-color color-primary
+  font-ln()
+  color white

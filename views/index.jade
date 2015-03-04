@@ -27,7 +27,8 @@ block content
       | producing good software is having a team of good people.
 
     .u-text-center
-      a.read-more-link.read-more-link--expandable.segment__button(href="/team", segment-expand, container="#first-segment" ng-model="expanded1")
+      a.read-more-link.read-more-link--expandable.segment__button(href="/jobs", segment-expand,
+      container="#first-segment" ng-model="expanded1")
         | Meet the Stockholm Office
 
 
@@ -40,8 +41,9 @@ block content
       | In our Customer Innovation sessions we help our clients realize the posibilities and pin-point the needs and priorities.
 
     .u-text-center
-      a.read-more-link.segment__button(href="/team", ng-mouseover="maxedOut(true); graphHover = true" ng-mouseout="maxedOut(false); graphHover = false")
-        | Open Case Studies
+      a.read-more-link.segment__button(href="//trifork.com/Industries/#all", target="_black" ng-mouseover="maxedOut(true);graphHover = true"
+      ng-mouseout="maxedOut(false); graphHover = false")
+        | Go to Case Studies
 
     svg(ng-class="{'frontpageTeamGraph--active': graphHover}")#frontpageTeamGraph(team-graph, maxed-out="maxedOut")
 

@@ -1,0 +1,82 @@
+extends layouts/page-with-menu
+
+block page-content
+  .map.map--large
+    #worldMap
+    .map__label
+      .map__title 19 Offices in 9 Countries
+      p
+      | Trifork Sweden is one office of many in Trifork.<br>
+      | If you are looking for one of our other offices, head over
+      | to our&nbsp;
+      a(href="//trifork.com/offices/") Global Website.
+
+
+  .segment
+    h1.segment__heading Contact Trifork Stockholm
+
+    .segment__inset
+      .column-6
+        .vcard
+          .vcard__name
+            span.vcard__field
+            | Trifork AB
+          .vcard__street
+            span.vcard__field Street
+            | Ferkens Gränd 3
+          .vcard__city
+            span.vcard__field City
+            | SE-111 30 Stockholm
+          .vcard__country
+            span.vcard__field Country
+            | Sweden
+          .vcard__email
+            span.vcard__field Email
+            a(href="mailto:stockholm@trifork.com") stockholm@trifork.com
+
+      .column-6
+        .vcard
+          .vcard__name
+            span.vcard__field
+            | Thomas Anagrius
+          .vcard__title
+            span.vcard__field Title
+            | VD, Managing Director
+          .vcard__phone
+            span.vcard__field Phone
+            | +46 70 445 0863
+          .vcard__email
+            span.vcard__field Email
+            a(href="mailto:thb@trifork.com") thb@trifork.com
+
+      .cf
+
+  .segment.segment--secondary
+    h2.segment__heading How can we help you?
+    .segment__lead
+      | The first set to building great software meeting each other.<br>
+      | If you're aiming to grow your business,
+      | change your industry, or the world. We want to help.
+    .letter-container
+      .letter-container__thanks
+        | Thank You &#x2764;
+      .letter
+        form.letter__content(method="POST", action="/email")
+          mixin field(name, text)
+            .field-group
+              label.field-group__label(for="#{name}") #{text}
+              input.field-group__field(type="text", name="#{name}")
+
+          +field("name", "Your Name")
+          +field("email", "Your Email")
+
+          .text-group.text-group__field--medium
+            textarea.text-group__field(placeholder="Message")
+
+        button.letter__send(type="button", onclick="sendLetter()") Send
+
+
+
+
+  script(type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyLw04OfhQAPKR1Vbnwi6YHu_kwc3mO-s")
+  script(type="text/javascript", src="/js/pages/contact.js")
