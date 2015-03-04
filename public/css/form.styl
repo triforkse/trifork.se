@@ -1,9 +1,10 @@
 field-group__field__border-color = #d3d3d3
 field-group__field__bg-color = #ffffff
+field-group__field__margin = (space-unit / 2)
 
 .field-group
   display block
-  margin-bottom (space-unit / 2)
+  margin-bottom field-group__field__margin
 
 .field-group__label
   display block
@@ -34,3 +35,8 @@ text-group__height = 120px
 .text-group__field--medium .text-group__field
   height 120px
 
+// Google Recapcha
+.g-recaptcha
+  margin-bottom field-group__field__margin
+  // To avoid the widgets flashing in, we set the height.
+  height 74px

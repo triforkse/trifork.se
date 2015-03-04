@@ -70,10 +70,13 @@ block page-content
           +field("name", "Your Name")
           +field("email", "Your Email")
 
+          .g-recaptcha(data-sitekey="6LdtAAMTAAAAAMlJbUgINabbqfzPfJdgS-LlSxZT")
+
           .text-group.text-group__field--medium
             textarea.text-group__field(placeholder="Message")
 
         button.letter__send(type="button", onclick="sendLetter()") Send
 
-  script(type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyLw04OfhQAPKR1Vbnwi6YHu_kwc3mO-s")
+  script(type="text/javascript", src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyLw04OfhQAPKR1Vbnwi6YHu_kwc3mO-s")
   script(type="text/javascript", src="/js/pages/contact.js")
+  script(type="text/javascript", src='https://www.google.com/recaptcha/api.js')
