@@ -2,5 +2,6 @@
 /bower_components/
 /.idea/
 /public/css/main.css
+*.map
 /tmp/
 .DS_Store
