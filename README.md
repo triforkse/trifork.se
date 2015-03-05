@@ -10,6 +10,7 @@ on it see the LICENSE file.
 ## Developer Setup
 
 1. Make sure you have [NodeJS](http://nodejs.org/) installed.
+   Make sure you have [Gulp](http://gulpjs.com/) installed.
    Make sure you have [Pandoc](http://johnmacfarlane.net/pandoc/) installed.
 
 2. Run these commands and you will be up and running:
@@ -28,6 +29,20 @@ on it see the LICENSE file.
    export TF_MANDRILL_API_KEY_="[...]" # Where [...] is our mandrill API key.
    export TF_ENV="dev" # Use a developer setup, not production.
    ```
+
+## The Handbook
+
+Compilation of our handbook is handled a little specially. Since we cannot compile the handbook into
+all the formats required on deployment we have to check all the formatted versions in as well.
+To ensure the different version are never out of sync with the master file (e.i. `handbook.md`) a git
+hook enforces that the handbook.{ext} must be newer than `handbook.md`.
+
+During development a `gulp` task will ensure that they are always in sync. But if you change the
+handbook while not running the server, you can explicitly update them using:
+
+```bash
+gulp handbook
+```
 
 ## Contributing
 
