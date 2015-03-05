@@ -56,7 +56,7 @@ mixin top-menu
 
 mixin main-menu(hidden)
   if hidden
-    .top-menu(ng-class="{'top-menu--expanded': topMenuExpanded}", id="top-menu", ng-controller="MainMenuCtrl",nav-top-menu='#first-segment')&attributes(attributes)
+    .top-menu(ng-class="{'top-menu--expanded': topMenuExpanded}", id="top-menu", nav-top-menu='#first-segment')&attributes(attributes)
       +top-menu-button
       +menu-dropdown
       .top-menu__container
@@ -64,7 +64,7 @@ mixin main-menu(hidden)
         nav.top-menu__nav
           +main-menu-items
   else
-    +top-menu(id="top-menu", ng-controller="MainMenuCtrl")&attributes(attributes)
+    +top-menu(id="top-menu")&attributes(attributes)
       +top-menu-button
       +menu-dropdown
       +main-menu-items

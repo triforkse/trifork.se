@@ -221,7 +221,7 @@
     };
   }]);
 
-  module.controller('MainMenuCtrl', ['$scope', 'notify', function ($scope, notify) {
+  module.controller('ApplicationController', ['$scope', 'notify', function ($scope, notify) {
     $scope.gotoClientWork = function () {
       notify("Our Case Studies are hosted at Trifork.com",
         "In an effort to not repeat ourselves, we host all our case studies at our global website. Visit it to read about all our happy customers.",
