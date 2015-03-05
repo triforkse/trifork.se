@@ -3,7 +3,7 @@
 function initializeWorldMap() {
   var mapOptions = {
     center: {lat: 59.323, lng: 18.03},
-    zoom: 3,
+    zoom: 4,
     scrollwheel: false,
     navigationControl: false,
     mapTypeControl: false,
@@ -65,7 +65,7 @@ function initializeWorldMap() {
       "elementType": "all",
       "stylers": [
         {
-          "visibility": "on"
+          "visibility": "off"
         }
       ]
     },
@@ -172,13 +172,87 @@ function initializeWorldMap() {
 
   map.setOptions({styles: styles});
 
-  var image = 'img/pin.png';
-  var myLatLng = new google.maps.LatLng(59.323, 18.07433);
-  var beachMarker = new google.maps.Marker({
-    position: myLatLng,
-    map: map,
-    icon: image
+  var placeMarker = function(element) {
+    var icon = (!!element.thisIsUs)? 'img/pin.png':'img/pin-small.png';
+    new google.maps.Marker({
+      position: new google.maps.LatLng(element.lat, element.long),
+      map: map,
+      icon: icon
+    });
+  };
+
+  var markerData = [
+      {
+        "lat": 56.152759,
+        "long": 10.195402
+      },
+      {
+        "lat": 56.218600,
+        "long": 10.145964
+      },
+      {
+        "lat": 55.684649,
+        "long": 12.586092
+      },
+      {
+        "lat": 55.527404,
+        "long": 8.449280
+      },
+      {
+        "lat": 52.516903,
+        "long": 13.389893
+      },
+      {
+        "lat": 47.481089,
+        "long": 19.065776
+      },
+      {
+        "lat": 52.347796,
+        "long": 4.850765
+      },
+      {
+        "lat": 51.445583,
+        "long": 5.460362
+      },
+      {
+        "lat": 52.366384,
+        "long": 4.877263
+      },
+      {
+        "lat": 50.064152,
+        "long": 19.942219
+      },
+      {
+        "thisIsUs": true,
+        "lat": 59.323125,
+        "long": 18.075935
+      },
+      {
+        "lat": 47.177497,
+        "long": 8.710227
+      },
+      {
+        "lat": 53.790796,
+        "long": -1.552236
+      },
+      {
+        "lat": 51.512893,
+        "long": -0.067163
+      },
+      {
+        "lat": 51.505091,
+        "long": -0.100208
+      },
+      {
+        "lat": 37.787191,
+        "long": -122.399027
+      }
+    ];
+
+  markerData.forEach(function(element) {
+    placeMarker(element);
   });
+
 }
 
 google.maps.event.addDomListener(window, 'load', initializeWorldMap);
