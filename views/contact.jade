@@ -1,8 +1,7 @@
 extends layouts/page-with-menu
 
 block page-content
-  //- TODO: figure out the right hiding class for anything below medium size.
-  .map.map--large.hidden-sm.hidden-xs
+  .map.map--large.hidden-xs
     #worldMap
     .map__label
       .map__title 19 Offices in 9 Countries
@@ -17,40 +16,36 @@ block page-content
     h1.segment__heading Contact Trifork Stockholm
 
     .segment__inset
-      .col-sm-6
-        .vcard
-          .vcard__name
-            span.vcard__field
-            | Trifork AB
-          .vcard__street
-            span.vcard__field Street
-            | Ferkens Gränd 3
-          .vcard__city
-            span.vcard__field City
-            | SE-111 30 Stockholm
-          .vcard__country
-            span.vcard__field Country
-            | Sweden
-          .vcard__email
-            span.vcard__field Email
-            a(href="mailto:stockholm@trifork.com") stockholm@trifork.com
+      .vcard
+        .vcard__name
+          span.vcard__field
+          | Trifork AB
+        .vcard__street
+          span.vcard__field Street
+          | Ferkens Gränd 3
+        .vcard__city
+          span.vcard__field City
+          | SE-111 30 Stockholm
+        .vcard__country
+          span.vcard__field Country
+          | Sweden
+        .vcard__email
+          span.vcard__field Email
+          a(href="mailto:stockholm@trifork.com") stockholm@trifork.com
 
-      .col-sm-6
-        .vcard
-          .vcard__name
-            span.vcard__field
-            | Thomas Anagrius
-          .vcard__title
-            span.vcard__field Title
-            | VD, Managing Director
-          .vcard__phone
-            span.vcard__field Phone
-            | +46 70 445 0863
-          .vcard__email
-            span.vcard__field Email
-            a(href="mailto:thb@trifork.com") thb@trifork.com
-
-      .cf
+      .vcard
+        .vcard__name
+          span.vcard__field
+          | Thomas Anagrius
+        .vcard__title
+          span.vcard__field Title
+          | VD, Managing Director
+        .vcard__phone
+          span.vcard__field Phone
+          | +46 70 445 0863
+        .vcard__email
+          span.vcard__field Email
+          a(href="mailto:thb@trifork.com") thb@trifork.com
 
   .segment.segment--secondary
     h2.segment__heading How can we help you?

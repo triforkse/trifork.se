@@ -1,9 +1,22 @@
+screen-xs-min = 480px
+screen-sm-min = 768px
+screen-xs-max = (screen-sm-min - 1)
+screen-md-min = 992px
+screen-sm-max = (screen-md-min - 1)
+screen-lg-min = 1200px
+screen-md-max = (screen-lg-min - 1)
+
+
+.hidden-xs
+  @media screen and (max-width: screen-xs-max)
+    display none
+
 /*
  * Import nib
  */
 @import 'nib'
 
-@import 'grid.css'
+@import 'grid'
 
 column-width = 60
 gutter-width = 20
@@ -14,6 +27,10 @@ columns = 12
  */
 @import url('http://fonts.googleapis.com/css?family=Quicksand')
 
+/*
+ * Nib provides a CSS reset
+ */
+global-reset()
 
 space-unit = 30px
 ipad-content-max = 1024px
@@ -49,10 +66,6 @@ font-lb()
 font-m()
   font-size 22px
   font-weight 400
-
-screen-sm()
-  @media screen and (max-width: 960px)
-    {block}
 
 /*
  * Store the main color and

@@ -1,6 +1,10 @@
 .vcard
   max-width 600px
   text-align left
+  column(6)
+  @media screen and (max-width: screen-xs-max)
+    column(12)
+    margin-bottom space-unit
 
 .vcard > div:not(:last-child)
   margin-bottom 10px

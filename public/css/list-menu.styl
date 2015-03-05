@@ -1,9 +1,12 @@
 .list-menu
-  row(12)
+  max-width screen-lg-min
   margin 0 auto
 
 .list-menu__list
   column(2)
+  @media screen and (max-width: screen-xs-max)
+    column(12)
+    margin-bottom space-unit
 
 .list-menu__heading
   font-weight bold
