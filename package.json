@@ -4,7 +4,8 @@
   "description": "Trifork Stockholm Website",
   "main": "app.js",
   "scripts": {
-    "test": "make test"
+    "test": "make test",
+    "postinstall": "make setup"
   },
   "author": "Thomas Anagrius",
   "license": "MIT",
