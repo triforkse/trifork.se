@@ -1,11 +1,16 @@
 {
   "name": "trifork.se",
   "version": "1.0.0",
+  "private": true,
   "description": "Trifork Stockholm Website",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
     "test": "make test",
     "postinstall": "bower install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com:triforkse/trifork.se.git"
   },
   "author": "Thomas Anagrius",
   "license": "MIT",
