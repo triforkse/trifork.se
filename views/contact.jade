@@ -1,7 +1,8 @@
 extends layouts/page-with-menu
 
 block page-content
-  .map.map--large
+  //- TODO: figure out the right hiding class for anything below medium size.
+  .map.map--large.hidden-sm.hidden-xs
     #worldMap
     .map__label
       .map__title 19 Offices in 9 Countries
