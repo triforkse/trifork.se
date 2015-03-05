@@ -1,0 +1,82 @@
+[
+  {
+    "address": "Trifork A/S\nargrethepladsen 4 (Entrance from Sonnesgade)\n000 Aarhus C",
+    "lat": 56.152759,
+    "long": 10.195402
+  },
+  {
+    "address": "Trifork A/S\nyssen 1\n200 Aarhus N",
+    "lat": 56.218600,
+    "long": 10.145964
+  },
+  {
+    "address": "Trifork A/S\norgergade 24B, 1.\n300 København K",
+    "lat": 55.684649,
+    "long": 12.586092
+  },
+  {
+    "address": "Trifork A/S\nukkerten 21\n715 Esbjerg N",
+    "lat": 55.527404,
+    "long": 8.449280
+  },
+  {
+    "address": "Trifork GmbH\nnter den Linden 21\n0117 Berlin",
+    "lat": 52.516903,
+    "long": 13.389893
+  },
+  {
+    "address": "Erlang Solutions\niverPark irodák / RiverPark offices\nX. kerület, Budapest\nözraktár utca 32\n093 Budapest",
+    "lat": 47.481089,
+    "long": 19.065776
+  },
+  {
+    "address": "Trifork B.V\nijnsburgstraat 9-11\n059 AT, Amsterdam",
+    "lat": 52.347796,
+    "long": 4.850765
+  },
+  {
+    "address": "Trifork B.V\norenallee 20\ntrijp-S 5e verdieping, Wonderlab\nindhoven",
+    "lat": 51.445583,
+    "long": 5.460362
+  },
+  {
+    "address": "Container Solutions\norte Leidsedwarsstraat 12\n017 RC Amsterdam",
+    "lat": 52.366384,
+    "long": 4.877263
+  },
+  {
+    "address": "Erlang Solutions\nzpitalna 38/3A\n1-024 Krakow",
+    "lat": 50.064152,
+    "long": 19.942219
+  },
+  {
+    "address": "Trifork AB\nerkens Gränd 3, 1tr.\n1130 Stockholm",
+    "lat": 59.323125,
+    "long": 18.075935
+  },
+  {
+    "address": "Trifork GmbH\neuhofstrasse 8\n834 Schindellegi",
+    "lat": 47.177497,
+    "long": 8.710227
+  },
+  {
+    "address": "Trifork\nound Foundry Media Centre\noundry St\needs, West Yorkshire LS11 5QP",
+    "lat": 53.790796,
+    "long": -1.552236
+  },
+  {
+    "address": "Trifork\new Loom House\n01 Back Church Lane\nondon, E1 1LU",
+    "lat": 51.512893,
+    "long": -0.067163
+  },
+  {
+    "address": "Opencredo\n-11 Lavington Street\nondon, SE1 0NZ",
+    "lat": 51.505091,
+    "long": -0.100208
+  },
+  {
+    "address": "Trifork\n56, 2nd street\nA 94105 San Francisco",
+    "lat": 37.787191,
+    "long": -122.399027
+  }
+]
