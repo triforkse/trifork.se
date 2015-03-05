@@ -38,4 +38,6 @@ function initializeMap() {
   });
 }
 
-google.maps.event.addDomListener(window, 'load', initializeMap);
+if (window.google) {
+  google.maps.event.addDomListener(window, 'load', initializeMap);
+}

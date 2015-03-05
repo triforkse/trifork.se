@@ -24,6 +24,8 @@ on it see the LICENSE file.
    ```bash
    export TF_MEETUP_API_KEY="[...]" # Where [...] is our API key from meetup.com
    export TF_RECAPTCHA_SECRET_KEY="[...]" # Where [...] is our recaptcha key from google.com
+   export TF_MANDRILL_USERNAME="[...]" # Where [...] is our mandrill username.
+   export TF_MANDRILL_API_KEY_="[...]" # Where [...] is our mandrill API key.
    ```
 
 ## Contributing

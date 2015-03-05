@@ -3,25 +3,27 @@ var express = require('express')
   , nib = require('nib')
   , morgan = require('morgan')
   , fs = require('fs')
-  , yaml = require('js-yaml')
+  , ip = require('./lib/ip')
+  , mailer = require('./lib/mailer')
+  , recaptcha = require('./lib/recaptcha')
   , handbook = require('./lib/handbook')
   , _ = require('lodash')
   , datetime = require('./lib/datetime')
-  , meetup = require('./lib/meetup');
+  , meetup = require('./lib/meetup')
+  , bodyParser = require('body-parser')
+  , viewHelpers = require('./lib/view_helpers');
 
 
 var app = express();
 app.set('port', (process.env.PORT || 9090));
+app.set('dev', (process.env.TF_ENV || "production"));
 
+app.use(bodyParser.json());
+app.use(morgan('dev'));
 
-app.locals.padNum = function (n) {
-  if (n < 10) {
-    return "0" + n;
-  }
-  return "" + n;
-};
+viewHelpers.init(app);
 
-function compile(str, path) {
+var cssCompile = function (str, path) {
   var style = stylus(str)
     .set('filename', path)
     .set('sourcemap', {basePath: "public/css", sourceRoot: "../"})
@@ -34,30 +36,25 @@ function compile(str, path) {
   });
 
   return style;
-}
+};
 
-app.set('views', __dirname + '/views');
-app.set('view engine', 'jade');
-app.use(morgan('dev'));
 app.use(stylus.middleware(
   {
     src: __dirname + '/public'
-    , compile: compile
+    , compile: cssCompile
   }
 ));
 
+app.set('views', __dirname + '/views');
+app.set('view engine', 'jade');
+
 app.use(express.static(__dirname + '/public'));
+
 app.use('/libs', express.static(__dirname + '/bower_components'));
 
 app.get('/', function (req, res) {
   res.render('index',
     {title: 'Home'}
-  );
-});
-
-app.get('/clients', function (req, res) {
-  res.render('case-studies',
-    {title: 'Case Studies'}
   );
 });
 
@@ -78,21 +75,7 @@ app.get('/handbook', function (req, res) {
   var handbookHtml = handbook.html(handbookData);
   res.render('handbook',
     {
-      chunk: function (coll, n) {
-        var size = Math.ceil(coll.length / n);
-        return _.chunk(coll, size);
-      },
-      handbookHtml: handbookHtml,
-      handbookToc: handbook.toc(handbookData)
-    }
-  );
-});
-
-app.get('/handbook', function (req, res) {
-  var handbookData = handbook.content();
-  var handbookHtml = handbook.html(handbookData);
-  res.render('handbook',
-    {
+      title: 'Trifork Handbook',
       chunk: function (coll, n) {
         var size = Math.ceil(coll.length / n);
         return _.chunk(coll, size);
@@ -105,6 +88,18 @@ app.get('/handbook', function (req, res) {
 
 app.get('/handbook.epub', function (req, res) {
   res.sendFile("public/handbook.epub");
+});
+
+app.get('/handbook.docx', function (req, res) {
+  res.sendFile("public/handbook.docx");
+});
+
+app.get('/handbook.pdf', function (req, res) {
+  res.sendFile("public/handbook.pdf");
+});
+
+app.get('/handbook.md', function (req, res) {
+  res.sendFile("public/handbook.md");
 });
 
 app.get('/events', function (req, res) {
@@ -124,6 +119,62 @@ app.get('/events', function (req, res) {
   };
 
   meetup.fetch_events().then(render, handleError);
+});
+
+app.post('/email', function (req, res) {
+
+  var message =
+    "Name: " + req.body.name + "\n\n" +
+    "Email: " + req.body.email + "\n\n" +
+    "Message:\n\n" + req.body.message;
+
+  console.log("Contact Form Message", message);
+
+  var handler = function(remote_ip) {
+    var recaptchaToken = req.body.recaptchaToken;
+
+    var mailOk = function() {
+      console.log("Email Sent");
+      res
+        .json({ message: "Email sent."})
+        .end();
+    };
+
+    var mailError = function() {
+      res
+        .status(500)
+        .json({ message: "Mail failed to send."})
+        .end();
+    };
+
+    var recaptchaOk = function() {
+      console.log("Sending email");
+
+      var to = 'thb@trifork.com';
+      var from = 'contact-form@trifork.se';
+      var subject = 'Trifork.se - Contact Form Submission';
+
+      mailer.send(from, to, subject, message)
+        .then(mailOk, mailError);
+    };
+
+    var recaptchaError = function(e) {
+      console.warn("reCaptche validation failed", e);
+      res.status(400).json({ message: "Invalid reCaptcha"}).end();
+    };
+
+    console.log("Checking reCaptcha", remote_ip, recaptchaToken);
+    recaptcha.verify(recaptchaToken, remote_ip).then(recaptchaOk, recaptchaError);
+  };
+
+  if (process.env.TF_ENV === 'dev') {
+    console.warn("DEV MODE: Using Server External IP for reCaptcha");
+    ip.getExternalIp().then(handler);
+  }
+  else {
+    console.log("PRODUCTION MODE: Remote IP for reCaptcha");
+    ip.getRemoteIp(req).then(handler);
+  }
 });
 
 

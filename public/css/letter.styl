@@ -7,7 +7,7 @@ item-inset = 20px
   padding letter-padding
   background linear-gradient(to bottom, #FFF, #f7f7f8)
   box-shadow 0 5px 10px rgba(#000, 0.8)
-  transition: transform 5s;
+  transition: transform 5s, opacity 0.2s;
   position relative
   z-index 2
   justify-content space-between
@@ -17,8 +17,24 @@ item-inset = 20px
   border-width 10px 0 10px 0
   border-radius 3px
 
-.letter.letter--send
+.letter.letter--sending:before
+  content: 'Sending...'
+  text-align center
+  padding: 100px;
+  font-size 36px
+  display: block
+  background-color rgba(#FFF, 0.5)
+  position absolute
+  left 0
+  right 0
+  top 0
+  bottom 0
+
+
+.letter.letter--sent
   transform: translate(9999px, -4200px) rotate(-90deg);
+  opacity: 1
+
 
 .letter__content
   margin-right stamp-width
@@ -33,6 +49,10 @@ item-inset = 20px
 
 .letter-container
   position relative
+  background-color darken(color-bg-dark-secondary, 10%)
+  box-shadow 0 0 10px darken(color-bg-dark-secondary, 20%) inset;
+  max-width: 900px;
+  margin 0 auto
 
 .letter-container__thanks
   position absolute
