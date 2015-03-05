@@ -11,6 +11,7 @@ var express = require('express')
 
 
 var app = express();
+app.set('port', (process.env.PORT || 9090));
 
 
 app.locals.padNum = function (n) {
@@ -126,4 +127,4 @@ app.get('/events', function (req, res) {
 });
 
 
-app.listen(9090);
+app.listen(app.get('port'));
