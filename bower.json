@@ -1,0 +1,25 @@
+{
+  "name": "trifork.se",
+  "version": "1.0.0",
+  "homepage": "https://github.com/triforkse/trifork.se",
+  "authors": [
+    "Thomas Anagrius <thb@trifork.com>"
+  ],
+  "description": "Trifork Sweden Webpage",
+  "main": "server.js",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angularjs": "~1.3.12",
+    "d3": "~3.5.5",
+    "jquery": "~2.1.3",
+    "lodash": "~3.2.0"
+  }
+}
