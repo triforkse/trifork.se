@@ -19,7 +19,7 @@ html(ng-app="triforkse")
     script(src="//use.typekit.net/uek3wnc.js")
     script
       | try { Typekit.load(); } catch (e) {}
-  body
+  body(ng-cloak)
     +main-menu(true)
 
     block content

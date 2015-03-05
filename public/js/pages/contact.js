@@ -258,7 +258,19 @@ if (window.google) {
 }
 
 app = angular.module('triforkse');
-app.controller('ContactController', ['$scope', 'notify', '$http', function ($scope, notify, $http) {
+app.controller('ContactController', ['$scope', 'notify', '$http', '$interval', function ($scope, notify, $http, $interval) {
+
+  $scope.data = {
+    message: null,
+    email: null,
+    name: null,
+    recaptchaToken: null
+  };
+
+  $scope.isFormValid = function() {
+    var form = $scope.contactForm;
+    return form.$valid && !form.$pristine && $scope.data.recaptchaToken;
+  };
 
   $scope.sendLetter = function () {
 
@@ -266,19 +278,10 @@ app.controller('ContactController', ['$scope', 'notify', '$http', function ($sco
 
     letterEl.addClass("letter--sending");
 
-    var form = document.getElementById("contactForm");
-
-    var data = {
-      'name': form.name.value,
-      'email': form.email.value,
-      'message': form.message.value,
-      'recaptchaToken': form["g-recaptcha-response"].value
-    };
-
     var req = $http({
       method: 'POST',
       url: '/email',
-      data: data,
+      data: $scope.data,
       headers: {"Content-Type": "application/json"}
     });
 
@@ -294,8 +297,22 @@ app.controller('ContactController', ['$scope', 'notify', '$http', function ($sco
     };
 
     req.then(success, error);
-
-    return false;
   };
 
+  var injectInterval = $interval(function() {
+
+    var getField = function(key) {
+      var el = document.getElementById("contactForm");
+      return el && el[key] && el[key].value;
+    };
+
+    var value = getField("g-recaptcha-response");
+
+    if (value) {
+      $scope.data.recaptchaToken = value;
+      $interval.cancel(injectInterval);
+    }
+  }, 1000);
+
 }]);
+

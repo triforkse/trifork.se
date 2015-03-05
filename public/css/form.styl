@@ -40,3 +40,12 @@ text-group__height = 120px
   margin-bottom field-group__field__margin
   // To avoid the widgets flashing in, we set the height.
   height 74px
+
+button:disabled,
+input:disabled
+  cursor not-allowed
+
+button:disabled
+  c = color-bg-medium
+  background-color c
+  color darken(c, 20%)

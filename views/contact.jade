@@ -58,21 +58,24 @@ block page-content
         .letter-container__thanks
           | Thank You &#x2764;
         .letter
-          form#contactForm.letter__content(method="POST", action="/email")
-            mixin field(name, text)
-              .field-group
-                label.field-group__label(for="#{name}") #{text}
-                input.field-group__field(type="text", name="#{name}")
+          form#contactForm.letter__content(name="contactForm")
+            .field-group
+              label.field-group__label(for="name") Your Name
+              input.field-group__field(tabindex="100", type="text", name="name", required, ng-model="data.name")
 
-            +field("name", "Your Name")
-            +field("email", "Your Email")
+            .field-group
+              label.field-group__label(for="email") Your Email
+              input.field-group__field(tabindex="200", type="email", name="email", required, ng-model="data.email")
 
-            .g-recaptcha(data-sitekey="6LdtAAMTAAAAAMlJbUgINabbqfzPfJdgS-LlSxZT")
+            .g-recaptcha(tabindex="300", data-sitekey="6LdtAAMTAAAAAMlJbUgINabbqfzPfJdgS-LlSxZT")
 
             .text-group.text-group__field--medium
-              textarea.text-group__field(name="message", placeholder="Message...")
+              textarea.text-group__field(tabindex="400", name="message", placeholder="Message...", required,
+              ng-model="data.message")
 
-          button.letter__send(type="button", ng-click="sendLetter()") Send
+            button.letter__send(tabindex="500", type="submit", ng-click="sendLetter()",
+              disabled,
+              ng-disabled="!isFormValid()") Send
 
     script(type="text/javascript", src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyLw04OfhQAPKR1Vbnwi6YHu_kwc3mO-s")
     script(type="text/javascript", src="/js/pages/contact.js")
