@@ -26,7 +26,7 @@ mixin main-menu-items
 
 
 mixin top-menu-button
-  button.top-menu__button(ng-click="topMenuExpanded = !topMenuExpanded")
+  button.top-menu__button.top-menu__button--resonsive-menu(ng-click="topMenuExpanded = !topMenuExpanded")
     span.icon-menu
 
 
@@ -45,14 +45,10 @@ mixin menu-dropdown
 
 mixin top-menu
   .top-menu(ng-class="{'top-menu--expanded': topMenuExpanded}").hidden-sm&attributes(attributes)
-    +top-menu-button
-    +menu-dropdown
-
     .top-menu__container
       a.top-menu__logo(href="/", alt="Home")
       nav.top-menu__nav
         block
-
 
 mixin main-menu(hidden)
   if hidden

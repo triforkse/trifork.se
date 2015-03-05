@@ -2,17 +2,21 @@ extends layouts/layout
 
 block content
   div(ng-init="showToc=false; showDownload=false")
-    +top-menu.top-menu--alternative
-      +menu-item("javascript:;", "Table of Contents <span class='icon-down-open'></span>")(ng-click="showToc = !showToc")
-      button.dropdown.dropdown--top-menu(ng-click="showDownload = !showDownload", ng-class="{'dropdown--hidden': !showDownload}")
-        | Download
-        ul.dropdown__frame(ng-h)
-          mixin link(format, text)
-            li.dropdown__item
-              a(href="handbook.#{format}", download="Trifork-Handbook.#{format}") #{text}
-          +link("pdf", "PDF")
-          +link("epub", "EPub")
-          +link("docx", "Word Document")
+    .top-menu.top-menu--alternative(ng-class="{'top-menu--expanded': showDownload}")
+      .top-menu__container
+        a.top-menu__logo(href="/", alt="Home")
+        nav.top-menu__nav
+          +menu-item("javascript:;", "Table of Contents <span class='icon-down-open'></span>")(ng-click="showToc = !showToc")
+          button.top-menu__button(ng-click="showDownload = !showDownload")
+            | Download
+            ul.top-menu__dropdown(ng-h)
+              mixin link(format, text)
+                li.top-menu__dropdown-item
+                  a(href="handbook.#{format}", download="Trifork-Handbook.#{format}")!= text
+              +link("pdf", "PDF")
+              +link("epub", "EPub")
+              +link("docx", "Word Document")
+              +link("md", "Markdown")
 
     .toc(ng-class="{'toc--hidden': !showToc}")
       .toc__container
