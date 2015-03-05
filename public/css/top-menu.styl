@@ -53,6 +53,9 @@ top-menu-height = 70px
   font-size 18px
   font-default()
 
+  @media screen and (max-width: screen-sm-max)
+    display none
+
 .top-menu__link
   display inline-block
   margin 0 20px
@@ -80,3 +83,46 @@ top-menu-height = 70px
 
 .top-menu--hidden
   top -120px
+  @media screen and (max-width: screen-sm-max)
+    top 0
+
+.top-menu__button
+  position absolute
+  right 0
+  top 0
+  bottom 0
+  width top-menu-height
+  background-color black
+  color white
+  border none
+  font-size 30px
+  cursor pointer
+  z-index 2
+  display none
+
+  @media screen and (max-width screen-sm-max)
+    display block
+
+.top-menu--expanded .top-menu__button
+  background-color #262626
+
+.top-menu__dropdown
+  display none
+  background black
+  position absolute
+  top top-menu-height
+  right 0
+  width 300px
+
+.top-menu--expanded .top-menu__dropdown
+  display block
+
+.top-menu__dropdown-item a
+  color white
+  padding (space-unit / 2)
+  display block
+  text-decoration none
+
+.top-menu__dropdown-item a:hover
+  background-color #404040
+

@@ -5,16 +5,49 @@ mixin menu-click-item(handler, text)
   a.top-menu__link(href="javascript:;", ng-click="#{handler}", data-hover="#{text}")&attributes(attributes)!= text
 
 
-mixin main-menu-items
-  +menu-item("/events", "Tech Events")
-  +menu-click-item("gotoClientWork()", "Client Projects")
-  +menu-item("/handbook", "The Handbook")
-  +menu-item("/jobs", "Career")
-  +menu-item("/contact", "Contact")
+- var menuData = [];
+- var menuItem = function(link, text, type) {return { link: link, text: text, type: type}; };
+- menuData[0] = menuItem("/events", "Tech Events");
+- menuData[1] = menuItem("gotoClientWork()", "Client Projects", "onclick")
+- menuData[2] = menuItem("/handbook", "The Handbook");
+- menuData[3] = menuItem("/jobs", "Career")
+- menuData[4] = menuItem("/contact", "Contact")
 
+mixin data-menu-item(data)
+  if data.type === "onclick"
+    +menu-click-item(data.link, data.text)
+  else
+    +menu-item(data.link, data.text)
+
+
+mixin main-menu-items
+  for d in menuData
+    +data-menu-item(d)
+
+
+mixin top-menu-button
+  button.top-menu__button(ng-click="topMenuExpanded = !topMenuExpanded")
+    span.icon-menu
+
+
+mixin dropdown-item(data)
+  if data.type === "onclick"
+    li.top-menu__dropdown-item
+      a(href="javascript:;", ng-click!=data.link)!= data.text
+  else
+    li.top-menu__dropdown-item
+      a(href!=data.link)!= data.text
+
+mixin menu-dropdown
+  ul.top-menu__dropdown
+    for d in menuData
+      +dropdown-item(d)
 
 mixin top-menu
-  .top-menu.hidden-sm&attributes(attributes)
+  .top-menu(ng-class="{'top-menu--expanded': topMenuExpanded}").hidden-sm&attributes(attributes)
+    +top-menu-button
+    +menu-dropdown
+
     .top-menu__container
       a.top-menu__logo(href="/", alt="Home")
       nav.top-menu__nav
@@ -23,11 +56,15 @@ mixin top-menu
 
 mixin main-menu(hidden)
   if hidden
-    .top-menu(id="top-menu", ng-controller="MainMenuCtrl", nav-top-menu='#first-segment')&attributes(attributes)
+    .top-menu(ng-class="{'top-menu--expanded': topMenuExpanded}", id="top-menu", ng-controller="MainMenuCtrl",nav-top-menu='#first-segment')&attributes(attributes)
+      +top-menu-button
+      +menu-dropdown
       .top-menu__container
         a.top-menu__logo(href="/", alt="Home")
         nav.top-menu__nav
           +main-menu-items
   else
     +top-menu(id="top-menu", ng-controller="MainMenuCtrl")&attributes(attributes)
+      +top-menu-button
+      +menu-dropdown
       +main-menu-items
