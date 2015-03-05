@@ -6,6 +6,7 @@
 This is the source for the Swedish Trifork Website. You are welcome to copy or get inspired by it. We have a MIT license
 on it see the LICENSE file.
 
+
 ## Developer Setup
 
 1. Make sure you have [NodeJS](http://nodejs.org/) installed.
@@ -24,11 +25,22 @@ on it see the LICENSE file.
    ```bash
    export TF_MEETUP_API_KEY="[...]" # Where [...] is our API key from meetup.com
    export TF_RECAPTCHA_SECRET_KEY="[...]" # Where [...] is our recaptcha key from google.com
-   export TF_MANDRILL_USERNAME="[...]" # Where [...] is our mandrill username.
    export TF_MANDRILL_API_KEY_="[...]" # Where [...] is our mandrill API key.
+   export TF_ENV="dev" # Use a developer setup, not production.
    ```
 
 ## Contributing
 
 This mostly applies to Trifork employees, but everyone is welcome to contribute.
 Just send a pull-request here on GitHub -- that's it.
+
+
+## Deployment
+
+The `make setup` script will install a Heroku git-remote. When the project is pushed to it
+the website is deployed. You will have to be granted _push-permission_ to the repo by our
+heroku account. There is a nifty make target for deploying, just write:
+
+```bash
+make deploy
+```
