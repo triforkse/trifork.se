@@ -33,7 +33,7 @@ on it see the LICENSE file.
 ## The Handbook
 
 Compilation of our handbook is handled a little specially. Since we cannot compile the handbook into
-all the formats required on deployment we have to check all the formatted versions in as well.
+all the formats required on deployment, we have to check all the formatted versions in as well.
 To ensure the different version are never out of sync with the master file (e.i. `handbook.md`) a git
 hook enforces that the handbook.{ext} must be newer than `handbook.md`.
 
