@@ -2,34 +2,65 @@
 
 You work at Trifork and this is your handbook. The handbook details how we work together,
 which processes we have established, and tools we prefer to work with.
-The handbook is a living document and will be updated often. Our business is constantly changing and this document should reflect that.
-s
-The handbook is Open-Source and hand can be freely distributed to your friends and and our clients, just remember to say
-where it came from. If you think parts of the handbook is outdated please do not hesitate to send us a pull-request on
-GitHub.
+But before we get too much into details you should first understand the purpose of this book
 
-If you are looking for specific technical topics like recommended frameworks in NodeJS or Java, this is not the place
-for it. The handbook is general topics about out way of working with each other and our clients. You are welcome to
-make a dedicated handbook for technical topics. Just add them to our github account and link to them in the handbook.
+Just like the world around us, our business is constantly changing and the way we work should reflect that.
+The handbook is a living document and should be updated often. You should always question its contains but try to
+follow the guide lines when there is not reason not to do so.
 
-There are a few MUST do items as well. They are there in the interest of keeping our standards high and ensure
-conformity with our in house tools and deployment environments. They are all very general and unrestricted to ensure
-Low Governance.
+We have made handbook Open-Source and you can freely distributed to your friends and our clients. The reason we did
+this was that we believe that be best way to work together is through transparency — The more our clients, team mates, and
+potential employees know what to expect, the better.
 
-This is a living document. You should always question its contains but follow to it when possible. Any choices you must
-be well founded and documented in your project documentation.
+If you think parts of the handbook is outdated please do not hesitate to send us a pull-request on
+[GitHub](https://github.com/triforkse/trifork.se).
 
-At times customers will have specific requirements like e.g. Java version or MySQL rather than PostgreSQL. Try to
-convince them of the error of their ways - but in the end - the customer is always right. But attempt to help them to
-evolve.
+#### What the handbook IS
 
-The handbook's purpose is rather Trifork's current recommended practices for our projects and the technologies we work
-with the most. We have made it public so others may benefit as well.
+The handbook is an introduction to people (both technical and non-technical) to concepts we work with in our day-to-day
+business. It also an introduction to our internal tools, e.g. for time registration and calendar.
+We describe the most common meeting types and it also meant act as a handy look-up reference e.g. for a checklist when 
+setting up a new project.
 
-If you want to use another technology than those found here, you are encouraged to do so, but don't base your entire
-application on it or any crucial  components. Instead consider using trial technologies as non-central components and
-spikes.
+#### What the handbook IS NOT
 
+The handbook is __not__ about specific technical topics, e.g. recommended frameworks in Java or C#.
+It will not tell you what Ruby libraries to use, or how to configure PostgreSQL. Any language or framework specific
+guides should be added to our GitHub account separately from this document.
+
+## How we work
+
+What it really boils down to is that we believe that to produce good software we have to empower our employees and our clients.
+
+We have a culture where it is usually better to ask forgiveness that permission — because it gets the job done.
+That of course does not mean you should throw
+caution to the wind, but rather think for yourself. You do after all work here because you are an intelligent
+individual, right? 
+
+At Trifork we are all about transparency. That means we don't hide negative stuff, we "call a spade a spade" and don't
+beat around the bush.
+
+This means our client's should know when an error occurs, the level maintainability and technical debt in the codebase,
+workaround and general suboptimal stuff. No piece of software is ever perfect, and this fact is better faced head on.
+Having a client or Project Manager that is well-informed and in the loop, enables them to make the
+right decision and is always the best way to go.
+
+### Consulting
+
+We make most of our money building products for our clients. In that sense we are not your run-of-the-mill consultants
+since we do very little on-site, six month, "Body Shopping" assignments. We do most our work at our office, allowing
+us to be efficient and work with collective knowledge of our colleagues at our immediate disposal.
+
+No matter the assignment the goal is always to produce something great. We want to help our clients make the right
+choices. We are on the forefront of technology, usually knowing what is just
+over the hill, while our clients are not.
+
+This can be a huge benefit for our client's, and is one of the main reasons that they pick us to help
+them push the envelope. We are there to help them produce great software.
+
+### Our Own Products
+
+TODO
 
 ## Empowering Developers
 
@@ -39,28 +70,9 @@ Environment. Having free hands to pick and choose fosters creativity an ensures 
 forefront of technology. On the other hand it also has a tendency to generate a lot of fragmentation and hard to
 collaborate across teams. Therefore this Handbook.
 
-## Sales
-
-### Fixed-Price vs Weekly
-
-We prefer not making Fixed-Price contracts. It puts the client and us against each other right from the start of a
-project. You can end up arguing over "what it said in the initial contract" while the project has evolved. To be able to
-work in a flexible and agile manner working on projects on a week-by-week model, allows both to focus on what they really
-want. It is impossible to know every phaset of a project and there are always new idea and realizations that happen
-along the way.
-
-### Contracts
-
-Usually the kind of projects we take on are:
-
-- Project Design
-  We help the client plan and evolve
-
-- Nothing to v1
-  These projects usually
-- Maintain an existing project in a transitional period
-- Analysis Report, e.g. Code Quality Review, Agile Process Review
-- Aid an existing dev team until their hire someone of their own
+If you want to use another technology than those found here, you are encouraged to do so, but don't base your entire
+application on it or any crucial  components. Instead consider using trial technologies as non-central components and
+spikes.
 
 
 ## Planning
@@ -243,23 +255,43 @@ Even though we have an "Open Door" policy and you should always come to the mana
 and let them know if something is wrong, it is important that we also remember to talk on a regular basis.
 That way small issues don't become big problems.
 
+### Company Credit Card
+
+If you have a lot of expenses you can get a company credit card. We use Eurocard Gold for our employee cards. You
+will still have to enter the expenses in our [Time Tracking System](#time-tracking) but the money will not be
+transferred from your account for 60 days after your purchase. This allows our payroll team to reimburse you before
+the money is ever deducted. You should ask your manager for a Eurocard form if you wish to apply for a card.
+The card can also be used as a personal credit card in conjunction and has a few benefits e.g. travel insurance.
+
+## Sales
+
+### Fixed-Price vs Weekly
+
+We prefer not making Fixed-Price contracts. It puts the client and us against each other right from the start of a
+project. You can end up arguing over "what it said in the initial contract" while the project has evolved. To be able to
+work in a flexible and agile manner working on projects on a week-by-week model, allows both to focus on what they really
+want. It is impossible to know every facet of a project and there are always new idea and realizations that happen
+along the way.
+
+### Contracts
+
+Usually the kind of projects we take on are:
+
+- Project Design
+  We help the client plan and evolve
+
+- Nothing to v1
+  These projects usually
+- Maintain an existing project in a transitional period
+- Analysis Report, e.g. Code Quality Review, Agile Process Review
+- Aid an existing dev team until their hire someone of their own
+
+
+
 
 ### Morning Meeting
 
 TODO
-
-### Databases
-
-Don't use NoSQL if you don't need it.
-Don't use Hadoop if you don't have massive data calculations (256 GB plus memory requirements) SEE don't be hadooped.
-Choose your database very carefully, and make sure it's functional properties is exactly what you need for the task at hand.
-Design your database schema for your use cases.
-
-- Riak 2
-- PostgreSQL NoSQL
-- Neo4J
-- Hadoop 2
-- Datomic
 
 
 ## Developer Setup
@@ -274,9 +306,17 @@ this case look into alternative solutions like [TrueCrypt](https://www.grc.com/m
 We encrypt our disks to keep our data (and our customer's data) safe from prying eyes. Having your disk encrypted
 is the best way to ensure your data is not easily stolen.
 
-### VPN
+### Slack
 
 TODO
+
+### Skype
+
+TODO
+
+### VPN
+
+If you are 
 
 ### Email
 
@@ -406,7 +446,7 @@ Notable Examples: GPLv3, Copyleft
 
 #### Open Source
 
-
+TODO
 
 ### Logging
 
@@ -441,16 +481,9 @@ Avoid log and throw anti pattern
 
 TODO
 
-### Web Developent
+### Sending Email and SMS
 
-Use nginx over Apache2
-Serve static resources from a cookie less subdomain.
-Use Site Wide Encryption with SSL
-Use perfect forward secrecy
-Prefer RESTful architecture REST has nothing to do with CRUD or Structured URLs
-through they are often mixed up with these concepts!
-Consider creating EventSourcing APIs over CRUD APIs
-Don't do SOAP
+TODO
 
 ## Design & UX
 
@@ -509,13 +542,33 @@ TODO
 
 TODO
 
-#### Expenses
+### Traveling (Booking)
 
-TODO
+Sometimes you may need to travel abroad either do you an company event, a project or conference.
 
-### Traveling
+Normally you will find the tickets and hotels yourself. This way out get a trip that suits you.
+We fly in coach, it is cheaper and we would much rather spend the money someway else, e.i. buying you a new phone.
+If you fly with SAS we have a company membership code that will give you a discount.
+You can get the code from you manager. For hotels find something comfortable, not too far away, and reasonably priced.
 
-TODO
+You can either pay with you [Eurocard](#company-credit-card) or ask you manager to pay using the Corporate Credit Card.
+Paying with these cards gives you an additional travel insurance.
+
+
+### Expenses 
+
+You can use your company credit card to delay the expenses being withdrawn from your account until the
+company has reimbursed you. 
+
+While traveling you expenses are covered by the company. Anything not related the assignment, say Theatre Tickets,
+Sightseeing Trips or visits to the pub, you pay for yourself. But anything else is covered by the company. 
+
+You must always enter your expenses in our Time Registration System. You will find expenses under the tab "Vouchers"
+at the top of the page.
+
+The amount you enter should always be in your local currency (what your salary is paid out in).
+You should specify the amount that was listed in your bank statement to ensure that exchange rates are correct and that
+any conversion costs are included. Often if you pay in a foreign currency the credit card company will add a fee. 
 
 
 ### Agile Processes
@@ -531,6 +584,38 @@ development boils down to:
 
 All these components are important to ensure a good project.
 
+
+### Team Retrospective
+
+Every other week the different development teams have a joined meeting. In Scrum terminology it is called
+"The Scrum of Scrums" but we think of it more as an Office Retrospective. The purpose of the meeting is to achieve
+common goals that may be too big for a single team. We also use the time to share experiences, e.g. what works and what
+doesn't, and generally try to improve the way we work together.
+
+1. The meeting starts with any general messages from management. A facilitator is picked who will control the meeting
+   making sure we stay on track. 
+
+2. Then each participant goes up to the whiteboard and on a timeline plots their mood has been over past two weeks.
+   Any significant events, e.g. a meet-up event or releases, are noted.
+   This is a great way of gathering information for the subsequent discussions. No one should use more than a
+   minute for this.
+
+3. The team then needs a few topics to discuss. Some topics might have arisen from the timeline exercise others may
+   just be suggested. Any topic from previous meetings that are still relevant are put as candidates again. Using 
+   "Dot Voting" the team then agrees on 2 topics to discuss for the remainder of the meeting. All topics are written 
+   down in the [Team Log](#team-log) for future reference.
+
+4. The two topics are then treated using one of the many methods for processing a topic.
+   There are many good resources online for creative was of processing a topic as well as many books, like "Agile 
+   Retrospective". One method that we have found especially good in the past is The 7 Hats Method.
+
+5. The meeting should take no more than an hour in total and should result in a set of S.M.A.R.T.
+   Goals that will make sure that our good intentions actually get realised.
+
+
+### Team Log
+
+TODO
 
 ### Legacy Code
 

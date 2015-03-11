@@ -21,7 +21,7 @@ gulp.task('handbook', function (e) {
     },
     {
       ext: "pdf",
-      writer: "beamer"
+      writer: "latex"
     },
     {
       ext: "docx",
@@ -29,7 +29,7 @@ gulp.task('handbook', function (e) {
     }];
 
   formats.forEach(function (f) {
-    var child = spawn("pandoc", ["--toc", "-f", "markdown", "-t", f.writer, "-o", "handbook." + f.ext, "handbook.md"], {cwd: process.cwd() + "/public"}),
+    var child = spawn("pandoc", ["--toc", "-f", "markdown", "--latex-engine=xelatex", "-t", f.writer, "-o", "handbook." + f.ext, "handbook.md"], {cwd: process.cwd() + "/public"}),
       stdout = '',
       stderr = '';
 
