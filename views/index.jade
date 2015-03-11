@@ -22,9 +22,9 @@ block content
       include ../public/img/think-software.svg
 
   .segment#first-segment.segment--secondary(ng-class="{'segment--expanded': expanded1}")
-    h1.segment__heading So, who is Trifork?
+    h1.segment__heading Who we are
     p.segment__lead
-      | We are a software company and a group of passionate individuals. We are passionat about software development
+      | We are a software company and a group of enthusiastic individuals. We are passionate about software development
       | and about building products that make other people's lives easier. At Trifork we believe that the key to
       | producing good software is having a team of good people.
 
@@ -40,7 +40,8 @@ block content
     p.segment__lead
       | Trifork specializes in creating state of the art Mobile Apps, and we are masters of web technology, like AngularJS and ReactJS.
       | We do data visualization, interactivity design, system integrations as well as agile certification and training for programmers.
-      | In our Customer Innovation sessions we help our clients realize the posibilities and pin-point the needs and priorities.
+      | In our Customer Innovation sessions we help our clients realize the posibilities and pin-point their needs and
+      | priorities.
 
     .u-text-center
       a.read-more-link.segment__button(href="//trifork.com/Industries/#all", target="_black" ng-mouseover="maxedOut(true);graphHover = true"
@@ -53,8 +54,10 @@ block content
   .segment.segment--secondary
     h1.segment__heading GOTO; Conferences
     p.segment__lead
-      | Our GOTO; conferences are designed for software developers, IT architects, product owners, agilists and project managers.
-      | Last year we had more than 5'000 attendees. Our Dev Tracks include emerging languages, concurrent and distributed systems,
+      | Our GOTO; conferences are aimed at software developers, IT architects, product owners, agilists and project
+      | managers.
+      | Last year, we had more than 5'000 attendees. Our Dev Tracks include emerging languages, concurrent and
+      | distributed systems,
       | new database technologies, front-end web, and security.
       | Our Strategy Tracks include agile techniques, UX, progressive enhancement, team dynamics, and archetecture topics.
 
@@ -68,8 +71,10 @@ block content
     .container
       h1.segment__heading Featured Conference Sessions
       p.segment__lead
-        | Here is a small selection some of the sessions at previous conferences. You can find many more
-        | on our YouTube channel.
+        | Here is a small selection of some of the sessions at previous conferences. You can find many more
+        |  on our&nbsp;
+        a(href="https://www.youtube.com/user/GotoConferences", target="_blank") YouTube channel
+        | .
   ul.thumbnail-list
     mixin video(youtubeId, imageId, title, speaker)
       li.thumbnail-list__item
