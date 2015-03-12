@@ -39,7 +39,7 @@ setting up a new project.
 The handbook is __not__ about specific technical topics, e.g. recommended frameworks in Java or C#.
 It will not tell you what Ruby libraries to use, or how to configure PostgreSQL. Any language or framework specific
 guides should be added to our GitHub account separately from this document.
-
+ 
 ## How we work
 
 What it really boils down to is that we believe that to produce good software we have to empower our employees and our clients.
@@ -159,11 +159,29 @@ TODO: JIRA, Trello, etc.
 
 ## Knowledge Sharing
 
+At Trifork we dedicate time to learn, improve and evolve. We all want to become better at what we do, and luckily we are
+surrounded with intelligent people that can teach us stuff. Now, if we don't learn from each other we end up doing the
+same mistakes over and over not even knowing that there are better ways to do it.
+
+Everyone aim should aim to spend at least 10% of their time teaching others. This is an investment, but one we cannot
+afford not to do! We need to pull everyone up to our high level of quality and professionalism.
+
+Teaching can mean many things, and there are many ways to help others become better. First of just doing Pair 
+Programming is a very productive and fun learning experience. You could also, write a blog entry do a Tech Talk, 
+contribute to the handbook, write a language guide or framework guide for the company, or prepare a GOTO; Night.
+
+In this section we describe some of the ways we can help each other improve.
+
 ### Tech Lunches
 
 TODO
 
 ### Hacking Retreats
+
+TODO
+
+
+### GOTO; Nights
 
 TODO
 
