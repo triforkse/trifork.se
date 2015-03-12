@@ -53,14 +53,16 @@ mixin top-menu
 mixin main-menu(hidden)
   if hidden
     .top-menu(ng-class="{'top-menu--expanded': topMenuExpanded}", id="top-menu", nav-top-menu='#first-segment')&attributes(attributes)
-      +top-menu-button
-      +menu-dropdown
+      .top-menu__button-group
+        +top-menu-button
+        +menu-dropdown
       .top-menu__container
         a.top-menu__logo(href="/", alt="Home")
         nav.top-menu__nav
           +main-menu-items
   else
     +top-menu(id="top-menu")&attributes(attributes)
-      +top-menu-button
-      +menu-dropdown
+      .top-menu__button-group
+        +top-menu-button
+        +menu-dropdown
       +main-menu-items

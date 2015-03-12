@@ -7,8 +7,9 @@ block content
         a.top-menu__logo(href="/", alt="Home")
         nav.top-menu__nav
           +menu-item("javascript:;", "Table of Contents <span class='icon-down-open'></span>")(ng-click="showToc = !showToc")
-          button.top-menu__button(ng-click="showDownload = !showDownload")
-            | Download
+          .top-menu__button-group
+            button.top-menu__button(ng-click="showDownload = !showDownload")
+              | Download
             ul.top-menu__dropdown(ng-h)
               mixin link(format, text)
                 li.top-menu__dropdown-item
