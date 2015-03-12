@@ -1,3 +1,15 @@
+---
+title:
+- type: main
+  text: The Trifork Handbook
+creator:
+- role: author
+  text: Thomas Anagrius
+language: en 
+cover-image: img/handbook-cover.png
+rights: © 2015 Trifork AB, MIT
+---
+
 # Trifork Handbook
 
 You work at Trifork and this is your handbook. The handbook details how we work together,
