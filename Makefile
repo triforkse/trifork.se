@@ -13,7 +13,7 @@ setup:
 	@echo "\nDone! Check the README.md for dependencies that must be manually installed.\n"
 
 run:
-	gulp dev
+	./node_modules/.bin/gulp dev
 
 test:
 	$(MOCHA)

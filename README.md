@@ -9,9 +9,10 @@ on it see the LICENSE file.
 
 ## Developer Setup
 
-1. Make sure you have [NodeJS](http://nodejs.org/) installed.
-   Make sure you have [Gulp](http://gulpjs.com/) installed.
-   Make sure you have [Pandoc](http://johnmacfarlane.net/pandoc/) installed.
+1. - Make sure you have [NodeJS](http://nodejs.org/) installed.
+   - Make sure you have [Gulp](http://gulpjs.com/) installed.
+   - Make sure you have [Pandoc](http://johnmacfarlane.net/pandoc/) installed.
+   - Make sure you have a LaTeX compiler, like [BasicTex](https://tug.org/mactex/morepackages.html) for Mac users.
 
 2. Run these commands and you will be up and running:
 

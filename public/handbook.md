@@ -491,6 +491,84 @@ Avoid log and throw anti pattern
 
 ### Makefiles
 
+Makefiles are a great was to document common tasks in your project. Make is ubiquitous on all nix systems and it 
+therefore a good way to install dependencies and set up a project.
+
+When you take over a project from another developer, the `Makefile` is a key piece of documentation on how to get start 
+and interact with the codebase.
+
+Using an informal interface (i.e. a naming convention) for the `make` targets it allows us to build up infrastructure 
+and scripts around `Makefiles` that work across projects.
+
+In many cases you can store `bash` or `python` scripts that contain the actual code to be executed from the make 
+targets, but having them be executed from the `Makefile` serves as documentation for new developers. In many
+cases you will even call external build systems like `Grunt` or `Maven` from your `Makefile`. The makefile does not
+replace these tools, instead it ensures that we have a consistent way of interacting with project, no matter if they
+are e.g. Java or Python.
+
+The informal interface is described below.
+
+#### Target Naming Convention
+
+Your project should normally contain the following targets. You may of course have many more, 
+
+```
+make setup
+```
+
+The `setup` target bootstrap a project.
+It installs dependencies, sets up `git hooks`, creates databases, log files, etc.
+The idea is that when ever a new developer clones the project, he can run `make setup` and
+be ready to start developing.
+
+This is of course not always possible to install all dependencies, and any additional setup
+steps must be documented in the [`README.md`](#documentation) file.
+
+```
+make run
+```
+
+The `run` target compiles and starts a running instance of project. This is not always doable
+e.g. for iOS projects it may not make sense, but in the cases where you are developing a web-service
+or have some sort of `REPL` this is where you would do it. Usually you will also make this the
+`all` (default) target of the `Makefile` so developers can just write `make` to get going.
+
+```
+make test
+```
+
+The `test` target is another important element. You can run your projects unit and/or integration tests.
+
+```
+make ci
+```
+
+The `ci` (as in Continuous Integration) target allows us to use a pre-configured job template on our
+[CI Server](#continuous-integration). Here is an example of how the target will usually work:
+
+1. clean
+2. compile
+3. test
+4. create a deployable
+5. create a git tag 
+
+Depending on your project you may not do points 4 and 5.
+
+You can check out our website's `Makefile` if you want [an example](http://github.com/triforkse/trifork.se/).
+
+```
+make deploy
+```
+
+Again depending on your project having a `deploy` task may not make sense. In other cases it may be used to
+deploy to a staging or production server. Deployment should always be easy and painless. Having a `make` target
+for it, ensures that you doing frequently and "the next guy" actually maintain it.
+
+If you are doing continuous deployment, `deploy` could also be called from the `ci` target.
+
+
+### Web Development
+
 TODO
 
 ### Sending Email and SMS
@@ -498,6 +576,8 @@ TODO
 TODO
 
 ## Design & UX
+
+TODO
 
 ### Working with Designers
 
@@ -550,6 +630,8 @@ TODO
 
 ### Time Tracking
 
+TODO
+
 #### Hours
 
 TODO
@@ -558,14 +640,16 @@ TODO
 
 Sometimes you may need to travel abroad either do you an company event, a project or conference.
 
-Normally you will find the tickets and hotels yourself. This way out get a trip that suits you.
-We fly in coach, it is cheaper and we would much rather spend the money someway else, e.i. buying you a new phone.
+Normally you will find the tickets and hotels yourself. This way out get a trip that suits you. We fly in coach,
+it is cheaper and we would much rather spend the money someway else, e.i. buying you a new phone.
 If you fly with SAS we have a company membership code that will give you a discount.
-You can get the code from you manager. For hotels find something comfortable, not too far away, and reasonably priced.
+You can get the code from you manager. 
+
+For hotels find something comfortable and reasonably priced and do yourself a favour and make sure breakfast
+is included.
 
 You can either pay with you [Eurocard](#company-credit-card) or ask you manager to pay using the Corporate Credit Card.
 Paying with these cards gives you an additional travel insurance.
-
 
 ### Expenses 
 
@@ -578,9 +662,9 @@ Sightseeing Trips or visits to the pub, you pay for yourself. But anything else 
 You must always enter your expenses in our Time Registration System. You will find expenses under the tab "Vouchers"
 at the top of the page.
 
-The amount you enter should always be in your local currency (what your salary is paid out in).
-You should specify the amount that was listed in your bank statement to ensure that exchange rates are correct and that
-any conversion costs are included. Often if you pay in a foreign currency the credit card company will add a fee. 
+The amount you enter should always be in your local currency (what your salary is paid out in). You should specify the
+amount that was listed in your bank statement to ensure that exchange rates are correct and that any conversion costs
+are included. Often if you pay in a foreign currency the credit card company will add a fee.
 
 
 ### Agile Processes
@@ -607,15 +691,15 @@ doesn't, and generally try to improve the way we work together.
 1. The meeting starts with any general messages from management. A facilitator is picked who will control the meeting
    making sure we stay on track. 
 
-2. Then each participant goes up to the whiteboard and on a timeline plots their mood has been over past two weeks.
+2. Then each participant goes up to the whiteboard and on a time-line plots their mood has been over past two weeks.
    Any significant events, e.g. a meet-up event or releases, are noted.
-   This is a great way of gathering information for the subsequent discussions. No one should use more than a
-   minute for this.
+   This is a great way of gathering information for the subsequent discussions. No one should use more than a minute
+   for this.
 
-3. The team then needs a few topics to discuss. Some topics might have arisen from the timeline exercise others may
-   just be suggested. Any topic from previous meetings that are still relevant are put as candidates again. Using 
-   "Dot Voting" the team then agrees on 2 topics to discuss for the remainder of the meeting. All topics are written 
-   down in the [Team Log](#team-log) for future reference.
+3. The team then needs a few topics to discuss. Some topics might have arisen from the time-line exercise others may
+   just be suggested. Any topic from previous meetings that are still relevant are put as candidates again.
+   Using [Dot Voting] the team then agrees on 2 topics to discuss for the remainder of the meeting. All topics are 
+   written down in the [Team Log](#team-log) for future reference.
 
 4. The two topics are then treated using one of the many methods for processing a topic.
    There are many good resources online for creative was of processing a topic as well as many books, like "Agile 
