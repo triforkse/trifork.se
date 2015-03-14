@@ -502,7 +502,7 @@ keep Trifork attribution.
 ### Git Repo Hosting
 
 Trifork uses GitHub for both our Open Source projects and some of Closed Source projects. For most our projects
-we use out in-house code server at [code.trifork.com](code.trifork.com). It is important that you make sure that
+we use out in-house code server at [code.trifork.com](http://code.trifork.com/). It is important that you make sure that
 the project's client is okay with hosting anything on GitHub before you create (even a private) repo on GitHub.
 
 
