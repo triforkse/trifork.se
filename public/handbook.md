@@ -293,6 +293,7 @@ transferred from your account for 60 days after your purchase. This allows our p
 the money is ever deducted. You should ask your manager for a Eurocard form if you wish to apply for a card.
 The card can also be used as a personal credit card in conjunction and has a few benefits e.g. travel insurance.
 
+
 ## Sales
 
 ### Fixed-Price vs Weekly
@@ -315,8 +316,6 @@ Usually the kind of projects we take on are:
 - Maintain an existing project in a transitional period
 - Analysis Report, e.g. Code Quality Review, Agile Process Review
 - Aid an existing dev team until their hire someone of their own
-
-
 
 
 ### Morning Meeting
@@ -342,16 +341,34 @@ TODO
 
 ### Skype
 
-TODO
+We use [Skype](http://www.skype.com/) almost every day for communication, phone calls, screen and file sharing.
+You should set up a special company account. We use the naming convention `<initials>trifork` for our accounts — which
+makes it really easy to find others.
+
+You can add Skype credit and put it into our system as an [expense](#expenses).
+
 
 ### VPN
 
-If you are 
+If you are not at the office network and want access one of our servers like code.trifork.com which are not in the DMZ,
+you will need to connect to our network with a VPN connection.
+
+How you set up the connection will depend on your OS. You should set up a `IPSec` connection to:
+
+```
+Server: vpn.trifork.com
+Username: <your initials>
+Password: <should prompt every time you connect>
+```
+
+Our server requires that you put in a "shared secret", i.e. a group password. You can find the shared secret as well
+as several step-by-step guides for connecting by going to wall.trifork.com and searching for "VPN".
+
 
 ### Email
 
 We use an Exchange Server for our email. In your [Welcome Email](#your-first-day) you will have received information
-on how to log into [Confluence](#confluence). There you can find information on how to setup your Mail Client. Just
+on how to log into [Confluence](#confluence-the-wall-). There you can find information on how to setup your Mail Client. Just
 use the search function and search for "email".
 
 When you send emails for work you should always use your company email address. It is also a good idea to include a
@@ -371,12 +388,12 @@ for contact information in other peoples emails all the time and you should retu
 
 Just like with [Email]
 
-### Confluence
+### Confluence (The Wall)
 
 We use a Confluence server for storing internal information that cannot be public disclosed in the handbook.
 You can find information about anything from wifi credentials to VPN settings.
 
-We also use Confluence as our internal  Blog / News / Notice Boards.
+We also use Confluence as our internal Blog / News / Notice Boards.
 
 ## Development
 
@@ -428,22 +445,6 @@ You are strongly encouraged to make a Make target called "ci-package"
 You are encouraged to tag all build versions in git. See semantic versioning.
 
 
-### GitHub
-
-We share our Open-Source project's on GitHub. We are strong believers in paying it forward to the Open-Source
-community.
-
-Anytime your make a useful component that others may find useful as well, go ahead and share it on GitHub.
-Remember that you are representing our company and should keep the standard high, documentation good, and
-code clean and well tested.
-
-You can get your existing GitHub account associated with Trifork's GitHub organization. That allows you to create
-repositories under Trifork's organization page. We want to keep the list of repositories clean and up-to-date,
-so you should talk to someone and make sure that your stuff is ready before you publish it to the masses.
-
-You are free to create _closed repo's_ as needed, but we tend to keep most repositories on our in-house git servers.
-
-
 ### Software Licenses
 
 Software Licenses can be seem bit of a jungle to navigate at first. There are many different licenses even many versions
@@ -455,13 +456,14 @@ and make the right choices for them. This also holds for our own products and Op
 
 Generally you can divide the most common licenses into two categories:
 
-#### Proprietary
+#### Proprietary License
 
 The publisher of the software retains ownership of the software which is somehow licensed to the user. These are seldom
 used in our software and can usually never be distributed as part of an open-source solution. They are usually paid
 copies so you will probably not include this type of component by accident.
 
-#### Free Software
+
+#### Free Software License
 
 These licences are can require that any software, derivative of the software that incorporates a material under the
 license also be distributed under the same licence, in essence also making it Free Software.
@@ -473,10 +475,36 @@ use free software as long as you don't try to sell it.
 
 Notable Examples: GPLv3, Copyleft
 
-
-#### Open Source
+#### Open Source License
 
 TODO
+
+
+### Contributing to Open Source
+
+We use Open Source software every day and on all our projects. We could not live without it. Therefore we also encourage
+our developers to pay it forward and contribute to the open source community.
+
+There are several ways to contribute, one is send patches to other people's projects. You can and should do this freely.
+Sometimes our projects yield useful libraries and utilities that are worth sharing. You can release these on our GitHub
+account, but they have to be of high quality, have a good name, and especially good documentation — there is no idea in
+sharing if no one knows how to use it!
+
+If you have a piece of code that you think merits becoming open-source, step one is to speak with your manager and get
+some time allocated to ensuring its quality. Then you should submit it to our GitHub account and link to it from our
+website.
+
+Remember you are representing Trifork with your software. Copyright should remain Trifork's even though we are making it
+open source. We use the MIT License for our open source projects. It allows people to do what they want as long as they
+keep Trifork attribution.
+
+
+### Git Repo Hosting
+
+Trifork uses GitHub for both our Open Source projects and some of Closed Source projects. For most our projects
+we use out in-house code server at [code.trifork.com](code.trifork.com). It is important that you make sure that
+the project's client is okay with hosting anything on GitHub before you create (even a private) repo on GitHub.
+
 
 ### Logging
 
@@ -485,6 +513,7 @@ Use Rolling Logs
 
 Use semantic logging patterns (LINK?)
 Avoid log and throw anti pattern
+
 
 ### Documentation
 
@@ -650,6 +679,18 @@ TODO
 
 TODO
 
+### Expenses
+
+If you have expenses due to work they will be covered by the company.
+You can use either your private debit card/credit card or your [company credit](#company-credit-card) to pay.
+
+You must always enter your expenses in our [Time Registration System](#time-tracking).
+You will find expenses under the tab "Vouchers" at the top of the page.
+
+The amount you enter should always be in your local currency (what your salary is paid out in). You should specify the
+amount that was listed in your bank statement to ensure that exchange rates are correct and that any conversion costs
+are included. Often if you pay in a foreign currency the credit card company will add a fee.
+
 #### Hours
 
 TODO
@@ -669,20 +710,10 @@ is included.
 You can either pay with you [Eurocard](#company-credit-card) or ask you manager to pay using the Corporate Credit Card.
 Paying with these cards gives you an additional travel insurance.
 
-### Expenses 
-
-You can use your company credit card to delay the expenses being withdrawn from your account until the
-company has reimbursed you. 
+### Traveling (Expenses)
 
 While traveling you expenses are covered by the company. Anything not related the assignment, say Theatre Tickets,
-Sightseeing Trips or visits to the pub, you pay for yourself. But anything else is covered by the company. 
-
-You must always enter your expenses in our Time Registration System. You will find expenses under the tab "Vouchers"
-at the top of the page.
-
-The amount you enter should always be in your local currency (what your salary is paid out in). You should specify the
-amount that was listed in your bank statement to ensure that exchange rates are correct and that any conversion costs
-are included. Often if you pay in a foreign currency the credit card company will add a fee.
+Sightseeing Trips or visits to the pub, you pay for yourself. But anything else is covered by the company.
 
 
 ### Agile Processes
