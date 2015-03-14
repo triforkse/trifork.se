@@ -259,3 +259,7 @@ $(document).ready(function() {
   });
 
 });
+
+// Fonts
+
+try { Typekit.load(); } catch (e) {}

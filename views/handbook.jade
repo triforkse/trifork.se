@@ -6,7 +6,7 @@ block content
       .top-menu__container
         a.top-menu__logo(href="/", alt="Home")
         nav.top-menu__nav
-          +menu-item("javascript:;", "Table of Contents <span class='icon-down-open'></span>")(ng-click="showToc = !showToc")
+          +menu-item("#_", "Table of Contents <span class='icon-down-open'></span>")(ng-click="showToc = !showToc")
           .top-menu__button-group
             button.top-menu__button(ng-click="showDownload = !showDownload")
               | Download

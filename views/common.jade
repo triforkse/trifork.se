@@ -33,7 +33,7 @@ mixin top-menu-button
 mixin dropdown-item(data)
   if data.type === "onclick"
     li.top-menu__dropdown-item
-      a(href="javascript:;", ng-click!=data.link)!= data.text
+      a(href="#_", ng-click!=data.link)!= data.text
   else
     li.top-menu__dropdown-item
       a(href!=data.link)!= data.text

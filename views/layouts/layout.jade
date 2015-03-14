@@ -13,12 +13,10 @@ html(ng-app="triforkse")
     script(src="/libs/lodash/lodash.min.js")
     script(src="/libs/angularjs/angular.min.js")
     script(src="/libs/d3/d3.js")
+    script(src="//use.typekit.net/uek3wnc.js")
+
     script(src="/js/app.js")
     script(src="/js/notify.js")
-
-    script(src="//use.typekit.net/uek3wnc.js")
-    script
-      | try { Typekit.load(); } catch (e) {}
   body(ng-cloak, ng-controller="ApplicationController")
 
     block content
