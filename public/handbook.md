@@ -677,15 +677,15 @@ TODO
 
 ### Time Tracking
 
-We do our time reporting through the internal tool [Tidsreg](tidsreg.trifork.com).
+We do our time reporting through the internal tool [Tidsreg](http://tidsreg.trifork.com).
 For each project that we have, there should be a corresponding row were you input the amount of time (in hours)
 spent on that project per day.
 
 #### Project categories
-Projects are grouped by Customer -> Project Name -> Sub Category. Working hours spent on tasks or general office
+Projects are grouped by `Customer -> Project Name -> Sub Category`. Working hours spent on tasks or general office
 duties not connected to a specific project should be filed under internal time ("Intern Tid"), e.g,
 
-Trifork AB -> Internal Time -> Non-billable.
+`Trifork AB -> Internal Time -> Non-billable`.
 
 For internal time, please make sure you divide your hours into sub-tasks if you've spent a "significant" amount of time on
 different assignments. See the section "Custom Description" below for more info.
@@ -693,7 +693,7 @@ different assignments. See the section "Custom Description" below for more info.
 For client-facing projects it is very important that you report Billable time as billable. There should exist such
 a subcategory under each project name. For example:
 
-Trifork GmbH -> Welath Analysis Tool -> Wealth Analysis Tool -> Analysis -> Billable
+`Trifork GmbH -> Wealth Analysis Tool -> Wealth Analysis Tool -> Analysis -> Billable`
 
 failing to do so means that we as a company will not get compensated (by the customer) for the work you have done.
 Of course, equally important is that you not report non-billable time as billable.
