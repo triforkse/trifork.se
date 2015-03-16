@@ -19,6 +19,7 @@ on it see the LICENSE file.
    ```bash
    make setup
    make run
+   # Open your browser on http://localhost:9090/
    ```
 
 3. Some settings are done through environment variable to not include them in the source code.

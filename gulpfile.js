@@ -59,6 +59,8 @@ gulp.task('handbook', function (e) {
 gulp.task('dev', function () {
   gulp.watch('public/handbook.md', ['handbook']);
 
+  gutil.log("Website running at: http://localhost:9090/");
+  
   nodemon({script: 'server.js', ext: 'js'})
     .on('change', ['lint'])
     .on('restart', function () {
