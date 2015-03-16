@@ -675,9 +675,55 @@ TODO
 
 TODO
 
-### Time Tracking
+### Time Tracking (Tidsreg)
 
-TODO
+We do our time reporting through the internal tool [Tidsreg](tidsreg.trifork.com).
+For each project that we have, there should be a corresponding row were you input the amount of time (in hours)
+spent on that project per day.
+
+#### Project categories
+Projects are grouped by Customer -> Project Name -> Sub Category. Working hours spent on tasks or general office
+duties not connected to a specific project should be filed under internal time ("Intern Tid"), e.g,
+
+Trifork AB -> Internal Time -> Non-billable.
+
+For internal time, please make sure you divide your hours into sub-tasks if you've spent a "significant" amount of time on
+different assignments. See the section "Custom Description" below for more info.
+
+For client-facing projects it is very important that you report Billable time as billable. There should exist such
+a subcategory under each project name. For example:
+
+Trifork GmbH -> Welath Analysis Tool -> Wealth Analysis Tool -> Analysis -> Billable
+
+failing to do so means that we as a company will not get compensated (by the customer) for the work you have done.
+Of course, equally important is that you not report non-billable time as billable.
+
+See the next section for instructions on how to add/find the correct project to your Tidsreg.
+
+
+#### Finding / Adding a Project to Tidsreg
+A new project can be added if it isn't listed in the Tidsreg table yet.
+On the top of the page there is a drop down-menu / search field that can be used to find the missing project 
+(that is, as soon as the project manager has had time to create it). Use the "shuffle"-icon on the far right to
+toggle between the search field and drop down-menu functionality.
+
+Typing e.g "Intern tid" or "Internal time" in the search field should give you a list of options to choose from.
+
+##### Custom Description
+For all new project entries you can add a custom description through the link "edit voucher text" appearing immediately the project name.
+
+This is useful especially when adding small "Internal Time"-tasks where you can 
+more specifically define what you were doing, e.g "trifork.se website" or "GOTO night preparation" etc.
+
+
+##### Long-term projects
+By default, projects are added on a per-week basis. This means that once a new week starts, you would have to go through
+the process of re-adding your projects to Tidsreg (as described in the previous section).
+
+If instead you would like to have a project persist for a longer time, you can do so by clicking the little star icon that
+appears to the left of each project name. A filled star means that the project will "stick around" whereas an outlined
+star will make it dissappear by the end of the week.
+
 
 ### Expenses
 
