@@ -5,3 +5,4 @@
 *.map
 /tmp/
 .DS_Store
+/*.iml
