@@ -675,7 +675,7 @@ TODO
 
 TODO
 
-### Time Tracking (Tidsreg)
+### Time Tracking
 
 We do our time reporting through the internal tool [Tidsreg](tidsreg.trifork.com).
 For each project that we have, there should be a corresponding row were you input the amount of time (in hours)
@@ -702,6 +702,7 @@ See the next section for instructions on how to add/find the correct project to 
 
 
 #### Finding / Adding a Project to Tidsreg
+
 A new project can be added if it isn't listed in the Tidsreg table yet.
 On the top of the page there is a drop down-menu / search field that can be used to find the missing project 
 (that is, as soon as the project manager has had time to create it). Use the "shuffle"-icon on the far right to
@@ -717,6 +718,7 @@ more specifically define what you were doing, e.g "trifork.se website" or "GOTO 
 
 
 ##### Long-term projects
+
 By default, projects are added on a per-week basis. This means that once a new week starts, you would have to go through
 the process of re-adding your projects to Tidsreg (as described in the previous section).
 
@@ -736,10 +738,6 @@ You will find expenses under the tab "Vouchers" at the top of the page.
 The amount you enter should always be in your local currency (what your salary is paid out in). You should specify the
 amount that was listed in your bank statement to ensure that exchange rates are correct and that any conversion costs
 are included. Often if you pay in a foreign currency the credit card company will add a fee.
-
-#### Hours
-
-TODO
 
 ### Traveling (Booking)
 
