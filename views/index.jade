@@ -90,7 +90,7 @@ block content
   ul.thumbnail-list
     mixin video(youtubeId, imageId, title, speaker)
       li.thumbnail-list__item
-        a(href="//www.youtube.com/watch?v=#{youtubeId}", title="#{title}")
+        a(href="//www.youtube.com/watch?v=#{youtubeId}", title="#{title}", target="_blank")
           img.thumbnail-list__thumbnail(src="/img/videos/#{imageId}.jpg")
         .thumbnail-list__title #{title}
         .thumbnail-list__speaker #{speaker}
