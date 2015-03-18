@@ -1,0 +1,46 @@
+.big-numbers
+  margin-top space-unit
+
+.big-number--top-right
+  position absolute
+  bottom space-unit
+  right 0
+  z-index 3
+
+  @media screen and (max-width screen-sm-max)
+    position relative
+    display block
+    margin (space-unit*2) auto 0
+
+.big-number
+  display inline-block
+  min-width 100px
+  text-align center
+  transition all 0.5s
+  cursor default
+
+.big-numbers:hover .big-number
+  opacity 0.5
+
+.big-numbers:hover .big-number:hover
+  transform scale(1.3)
+  opacity 1
+
+.big-numbers--M .big-number__value
+  font-size 50px
+
+.big-number__value
+  font-size 90px
+
+.big-number__label
+  color #FFF
+  font-size 16px
+
+.big-number--1
+  color #c87a37
+
+.big-number--2
+  color #c8662d
+
+.big-number--3
+  color #743f1e
