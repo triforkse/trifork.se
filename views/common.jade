@@ -6,12 +6,12 @@ mixin menu-click-item(handler, text)
 
 
 - var menuData = [];
-- var menuItem = function(link, text, type) {return { link: link, text: text, type: type}; };
-- menuData[0] = menuItem("/events", "Tech Events");
-- menuData[1] = menuItem("gotoClientWork()", "Client Projects", "onclick")
+- var menuItem = function(link, text, type) { return { link: link, text: text, type: type}; };
+- menuData[0] = menuItem("/events", "Community Events");
+- menuData[1] = menuItem("gotoClientWork()", "Client Projects", "onclick");
 - menuData[2] = menuItem("/handbook", "The Handbook");
-- menuData[3] = menuItem("/jobs", "Career")
-- menuData[4] = menuItem("/contact", "Contact")
+- menuData[3] = menuItem("/jobs", "Jobs");
+- menuData[4] = menuItem("/contact", "Contact");
 
 mixin data-menu-item(data)
   if data.type === "onclick"
@@ -23,6 +23,9 @@ mixin data-menu-item(data)
 mixin main-menu-items
   for d in menuData
     +data-menu-item(d)
+  div.top-menu__left-link
+    span.icon-globe.animate-spin
+    a.top-menu__link(href="//www.trifork.com", target="_blank") Global Site
 
 
 mixin top-menu-button
