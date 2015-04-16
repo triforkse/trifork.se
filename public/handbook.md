@@ -172,6 +172,11 @@ In this section, we describe some of the ways we can help each other improve.
 
 ### Tech Lunches
 
+We keep track of upcoming Tech Lunches on a Trello board. People can suggest topics and vote for topics that
+they would like to hear about.
+
+![Trello Tech Lunches](img/handbook/techlunch.png)
+
 TODO
 
 ### Hacking Retreats
