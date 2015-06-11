@@ -22,8 +22,7 @@ on it see the LICENSE file.
    # Open your browser on http://localhost:9090/
    ```
 
-3. Some settings are done through environment variable to not include them in the source code.
-   You should add the following to your `.bashrc`, `.zshrc` or `.profile` depending on your setup:
+3. Some setgulpto your `.bashrc`, `.zshrc` or `.profile` depending on your setup:
 
    ```bash
    export TF_MEETUP_API_KEY="[...]" # Where [...] is our API key from meetup.com

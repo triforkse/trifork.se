@@ -405,25 +405,32 @@ We also use Confluence as our internal Blog / News / Notice Boards.
 
 ### Testing
 
-#### Tests are First-Class Citizens
+#### Our statement
 
-We strongly encourage writing tests. Writing tests helps you produce better code. Every project should have automatic
-tests. See continuous integration.
+We strongly encourage writing tests. Writing tests helps you and especially others to produce better and maintainable code. Every project should have automatic
+testing enabled. See continuous integration.
 
-Test when it is appropriate, and test only what needs testing. If you are new to testing, you should adopt Test Driven
-Development or a variation thereof, e.g. BDD.
+In an ideal world at least every central component, features of high business value or which have a high impact when failing are fully tested.
+In reality it seems to depend on the project pressure, the mood, experience and assertiveness of the current developers and project managers. 
+But let us stay on the bright sight and let us tell some words about testing in 
+general which hopefully change your point view :)
 
-Writing good tests is as hard as any other part of creating quality software. Having lots of tests does not mean your
-software is great. Testing the your software can help make your software stable. Knowing what to test and what may not
-need testing is a skill that is learned by study and practice and it takes time. Here are a few good resources with
-general concepts:
+Testing ensures not only the correctness of your code - it facilitates the ongoing 
+development and maintenance which is not necessarily done by the original developer (which might be YOU). 
+Even if you assume that your code is error-free and will never be touched again 
+especially in an agile development or project business you never know for sure. 
+Testing is about proving that your code is testable! Nothing is as annoying and disappointing as to want to write tests only to find out 
+that the code is not testable and writing tests would require a significant additional effort which is not arguable to project management. 
+Who is responsible for that? We think that it's your responsibility to make sure that your code is testable! The following developer who will get 
+in touch with your project (maybe in the near future) will thank you for an usable test foundation.
 
-* http://sturgill.github.io/2013/04/15/tests-are-overhyped/
-* https://news.ycombinator.com/item?id=5554600
-
-The major benefit of writing tests while you develop—rather than after the fact—is that it produces testable
-code. Testable code tends to be better code because it is usually modular, has a clean and easy to use interface, and
-interacts only with few other parts of the code base (low coupling).
+Writing good - clean, maintainable and extensible tests is as hard as any other part of creating quality software. You might even say writing good tests 
+is harder because implementation details are changing - good tests last for much longer than their original target implementation. 
+But knowing how to write 'good' tests especially which don't create an overhead when refactoring the target implementation 
+and which are easy to understand and to extend is very hard and is a skill that is learned by study and practice and it takes time. To speed up the learning curve 
+is doable in a very easy way: Just do it right from the beginning :)  The major benefit of writing 'good' tests while you develop rather than after the fact is that it produces testable
+code.Testable Code tends to be better code because it is usually modular, has a clean and easy to use interface,and
+interacts only with few other parts of the code base... 
 
 
 ### Continuous Integration
