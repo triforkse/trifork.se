@@ -5,9 +5,9 @@ title:
 creator:
   - role: author
     text: Thomas Anagrius
-language: en 
+language: en
 cover-image: img/handbook-cover.png
-rights: © 2015 Trifork AB, MIT 
+rights: © 2015 Trifork AB, MIT
 ---
 
 # Trifork Handbook
@@ -29,7 +29,7 @@ If you think parts of the handbook are outdated, please do not hesitate to send 
 
 The handbook is an introduction for people (both technical and non-technical) to the concepts we work with in our day-to-day
 business. It is also an introduction to our internal tools, e.g. time registration, calendar, etc.
-It describes the most common meeting types, and also acts as a handy look-up reference e.g. for a checklist when 
+It describes the most common meeting types, and also acts as a handy look-up reference e.g. for a checklist when
 setting up a new project.
 
 #### What the handbook _is not_
@@ -37,14 +37,14 @@ setting up a new project.
 The handbook is _not_ about specific technical topics, e.g. recommended frameworks in Java or C#.
 It will not tell you what Ruby libraries to use, or how to configure PostgreSQL. Any language– or framework-specific
 guides should be added to our GitHub account separately from this document.
- 
+
 ## How we work
 
 What it really boils down to, is that we believe that to produce good software, we have to empower our employees and our clients.
 
 We have a culture where it is usually better to ask forgiveness than permission—because it gets the job done. This of course does not mean you should throw
 caution to the wind, but rather think for yourself. You do after all work here because you are an intelligent
-individual, right? 
+individual, right?
 
 At Trifork, we are all about transparency. That means we don't hide negative stuff, we "call a spade a spade" and don't
 beat around the bush.
@@ -93,32 +93,32 @@ spikes, at least until their benefits are proven.
 1. Find and Eliminate Risk
 
   - Defining and testing a set of hypotheses
-  
+
   This is important, in that it allows us to follow what we saw and learnt,
   rather than simply following assumptions or common beliefs about the customers.
-  
+
   - Doing Research
-  
+
   Information-Gathering / Interviews / Sketches / Artefacts
 
   Cognitive vs. Emotional Empathy
-   
+
   Emotional
-  
+
   This is often the most radical in its effect on executives and as a source of insight.
-  
+
   This, combined with the Client's Hypothesis leads to insight.
-  
+
 2. Design
 
   The question is "How do we build something fantastic?"
-  
+
   Innovation Workshop
   - Bring in customers.
   - Stakeholders.
-  
+
   We are now confident that we are solving the right problem; we set a limited amount of time and start to develop a solution.
-  
+
 3. Prototyping
 
    Paper or HTML?
@@ -128,13 +128,13 @@ spikes, at least until their benefits are proven.
   - Slower
   - Scales
   - Working at a distance
-    
+
     Paper
   - Abstract
   - Focus on features
   - Quick
-    
-  
+
+
 
 ### Work Pace
 
@@ -164,8 +164,8 @@ same mistakes over and over, not even knowing that there are better ways to do i
 Everyone's aim should aim to spend at least 10% of their time teaching others. This is an investment, but one we cannot
 afford not to make! We need to pull everyone up to our high level of quality and professionalism.
 
-Teaching can mean many things, and there are many ways to help others become better. First off, just doing pair 
-programming is a very productive and fun learning experience. You could also write a blog entry, do a Tech Talk, 
+Teaching can mean many things, and there are many ways to help others become better. First off, just doing pair
+programming is a very productive and fun learning experience. You could also write a blog entry, do a Tech Talk,
 contribute to this Handbook, write a language guide or framework guide for the company, or prepare a GOTO; Night.
 
 In this section, we describe some of the ways we can help each other improve.
@@ -405,32 +405,30 @@ We also use Confluence as our internal Blog / News / Notice Boards.
 
 ### Testing
 
-#### Our statement
-
 We strongly encourage writing tests. Writing tests helps you and especially others to produce better and maintainable code. Every project should have automatic
 testing enabled. See continuous integration.
 
 In an ideal world at least every central component, features of high business value or which have a high impact when failing are fully tested.
-In reality it seems to depend on the project pressure, the mood, experience and assertiveness of the current developers and project managers. 
-But let us stay on the bright sight and let us tell some words about testing in 
+In reality it seems to depend on the project pressure, the mood, experience and assertiveness of the current developers and project managers.
+But let us stay on the bright sight and let us tell some words about testing in
 general which hopefully change your point view :)
 
-Testing ensures not only the correctness of your code - it facilitates the ongoing 
-development and maintenance which is not necessarily done by the original developer (which might be YOU). 
-Even if you assume that your code is error-free and will never be touched again 
-especially in an agile development or project business you never know for sure. 
-Testing is about proving that your code is testable! Nothing is as annoying and disappointing as to want to write tests only to find out 
-that the code is not testable and writing tests would require a significant additional effort which is not arguable to project management. 
-Who is responsible for that? We think that it's your responsibility to make sure that your code is testable! The following developer who will get 
+Testing ensures not only the correctness of your code - it facilitates the ongoing
+development and maintenance which is not necessarily done by the original developer (which might be YOU).
+Even if you assume that your code is error-free and will never be touched again
+especially in an agile development or project business you never know for sure.
+Testing is about proving that your code is testable! Nothing is as annoying and disappointing as to want to write tests only to find out
+that the code is not testable and writing tests would require a significant additional effort which is not arguable to project management.
+Who is responsible for that? We think that it's your responsibility to make sure that your code is testable! The following developer who will get
 in touch with your project (maybe in the near future) will thank you for an usable test foundation.
 
-Writing good - clean, maintainable and extensible tests is as hard as any other part of creating quality software. You might even say writing good tests 
-is harder because implementation details are changing - good tests last for much longer than their original target implementation. 
-But knowing how to write 'good' tests especially which don't create an overhead when refactoring the target implementation 
-and which are easy to understand and to extend is very hard and is a skill that is learned by study and practice and it takes time. To speed up the learning curve 
+Writing good - clean, maintainable and extensible tests is as hard as any other part of creating quality software. You might even say writing good tests
+is harder because implementation details are changing - good tests last for much longer than their original target implementation.
+But knowing how to write 'good' tests especially which don't create an overhead when refactoring the target implementation
+and which are easy to understand and to extend is very hard and is a skill that is learned by study and practice and it takes time. To speed up the learning curve
 is doable in a very easy way: Just do it right from the beginning :)  The major benefit of writing 'good' tests while you develop rather than after the fact is that it produces testable
 code.Testable Code tends to be better code because it is usually modular, has a clean and easy to use interface,and
-interacts only with few other parts of the code base... 
+interacts only with few other parts of the code base...
 
 
 ### Continuous Integration
@@ -539,16 +537,16 @@ Avoid log and throw anti-pattern
 
 ### Makefiles
 
-Makefiles are a great was to document common tasks in your project. Make is ubiquitous on all *nix systems and it 
+Makefiles are a great was to document common tasks in your project. Make is ubiquitous on all *nix systems and it
 therefore a good way to install dependencies and set up a project.
 
-When you take over a project from another developer, the `Makefile` is a key piece of documentation on how to get started 
+When you take over a project from another developer, the `Makefile` is a key piece of documentation on how to get started
 and interact with the codebase.
 
-Using an informal interface (i.e. a naming convention) for the `make` targets allows us to build up infrastructure 
+Using an informal interface (i.e. a naming convention) for the `make` targets allows us to build up infrastructure
 and scripts around `Makefiles` that work across projects.
 
-In many cases you can store `bash` or `python` scripts that contain the actual code to be executed from the make 
+In many cases you can store `bash` or `python` scripts that contain the actual code to be executed from the make
 targets, but having them be executed from the `Makefile` serves as documentation for new developers. In many
 cases, you will even call external build systems like `grunt` or `mvn` from your `Makefile`. The makefile does not
 replace these tools, instead it ensures that we have a consistent way of interacting with the project, no matter if they
@@ -598,7 +596,7 @@ The `ci` (as in Continuous Integration) target allows us to use a pre-configured
 2. compile
 3. test
 4. create a deployable
-5. create a git tag 
+5. create a git tag
 
 Depending on your project you may not need or be able to do points 4 and 5.
 
@@ -705,7 +703,7 @@ See the next section for instructions on how to add/find the correct project to 
 #### Finding / Adding a Project to Tidsreg
 
 A new project can be added if it isn't listed in the Tidsreg table yet.
-On the top of the page there is a drop down-menu / search field that can be used to find the missing project 
+On the top of the page there is a drop down-menu / search field that can be used to find the missing project
 (that is, as soon as the project manager has had time to create it). Use the "shuffle"-icon on the far right to
 toggle between the search field and drop down-menu functionality.
 
@@ -714,7 +712,7 @@ Typing e.g "Intern tid" or "Internal time" in the search field should give you a
 ##### Custom Description
 For all new project entries you can add a custom description through the link "edit voucher text" appearing immediately the project name.
 
-This is useful especially when adding small "Internal Time"-tasks where you can 
+This is useful especially when adding small "Internal Time"-tasks where you can
 more specifically define what you were doing, e.g "trifork.se website" or "GOTO night preparation" etc.
 
 
@@ -747,7 +745,7 @@ Sometimes you may need to travel abroad either due to a company event, a project
 Normally, you will find the tickets and hotels yourself. This way you get a trip that suits you. We fly in coach,
 it is cheaper and we would much rather spend the money somewhere else, e.g. buying you a new phone.
 If you fly with SAS, we have a company membership code that will give you a discount.
-You can get the code from your manager. 
+You can get the code from your manager.
 
 For hotels, find something comfortable and reasonably priced and do yourself a favour and make sure breakfast
 is included.
@@ -783,7 +781,7 @@ common goals that may be too big for a single team. We also use the time to shar
 doesn't, and generally try to improve the way we work together.
 
 1. The meeting starts with any general messages from management. A facilitator is picked who will control the meeting,
-   making sure we stay on track. 
+   making sure we stay on track.
 
 2. Each participant then goes up to the whiteboard, and on a time-line plots how their mood has been over past two weeks.
    Any significant events, e.g. a meet-up event or releases, are noted.
@@ -792,11 +790,11 @@ doesn't, and generally try to improve the way we work together.
 
 3. The team then needs a few topics to discuss. Some topics might have arisen from the time-line exercise, others may
    just be suggested. Any topic from previous meetings that are still relevant are put as candidates again.
-   Using [Dot Voting] the team then agrees on 2 topics to discuss for the remainder of the meeting. All topics are 
+   Using [Dot Voting] the team then agrees on 2 topics to discuss for the remainder of the meeting. All topics are
    written down in the [Team Log](#team-log) for future reference.
 
 4. The two topics are then treated using one of the many methods for processing a topic.
-   There are many good resources online for creative was of processing a topic as well as many books, such as _Agile 
+   There are many good resources online for creative was of processing a topic as well as many books, such as _Agile
    Retrospective_. One method that we have found especially good in the past is The 7 Hats Method.
 
 5. The meeting should take no more than an hour in total and should result in a set of S.M.A.R.T.
