@@ -1,0 +1,673 @@
+---
+id: amf
+firstname: André
+lastname: Fischer
+roles:
+  - Developer
+office: Stockholm
+
+languages:
+  - English (Native)
+  - German (Native)
+  - Swiss-German (Native)
+  - French (Native)
+  - Swedish (Fluent)
+  - Bulgarian (Conversational)
+  - Italian (Low)
+
+technologies:
+  - name: Java
+    experience: 4
+    last_use: 2015
+    interest: 8
+
+  - name: Clojure
+    experience: 2
+    last_use: 2015
+    interest: 8
+
+  - name: Mesos
+    experience: 1
+    last_use: -
+    interest: 4
+
+  - name: Docker
+    experience: 1
+    interest: 7
+    last_use: -
+
+  - name: AngularJS
+    experience: 7
+    interest: 0
+    last_use: 2015
+
+  - name: Flask
+    experience: 0
+    interest: 1
+    last_use: -
+
+  - name: Python
+    experience: 6
+    last_use: 2014
+    interest: 3
+
+  - name: Go
+    experience: 2
+    last_use: 2015
+    interest: 0
+
+  - name: Mercurial
+    experience: 3
+    last_use: 2012
+    interest: 0
+
+  - name: Git
+    experience: 7
+    last_use: 2015
+    interest: 8
+
+  - name: ReactJS
+    experience: 8
+    last_use: 2015
+    interest: 10
+    teach: true
+
+  - name: Datomic
+    experience: 1
+    last_use: -
+    interest: 6
+
+  - name: PostgreSQL
+    experience: 4
+    last_use: 2012
+    interest: 4
+
+  - name: Neo4J
+    experience: 2
+    last_use: 2015
+    interest: 9
+
+  - name: Scrum
+    experience: 7
+    last_use: 2015
+    interest: 8
+
+  - name: Ruby
+    experience: 6
+    last_use: 2013
+    interest: 2
+
+  - name: BackboneJS
+    experience: 5
+    last_use: 2012
+    interest: 1
+
+  - name: Tomcat
+    experience: 4
+    last_use: 2015
+    interest: 0
+
+  - name: DB2
+    experience: 0
+    interest: 1
+    last_use: -
+
+  - name: Jetty
+    experience: 4
+    last_use: 2015
+    interest: 4
+
+  - name: Swift
+    experience: 3
+    last_use: 2015
+    interest: 1
+
+  - name: iOS
+    experience: 1
+    last_use: -
+    interest: 4
+
+  - name: Android
+    experience: 4
+    last_use: 2015
+    interest: 9
+
+  - name: R
+    experience: 1
+    last_use: -
+    interest: 1
+
+  - name: Rust
+    experience: 1
+    last_use: -
+    interest: 6
+
+  - name: Julia
+    experience: 0
+    last_use: -
+    interest: 1
+
+  - name: PHP
+    experience: 8
+    last_use: 2014
+    interest: 5
+
+  - name: Google Analytics
+    experience: 5
+    last_use: 2014
+    interest: 3
+
+  - name: .NET
+    experience: 4
+    last_use: 2010
+    interest: 3
+
+  - name: Unity 3D
+    experience: 3
+    last_use: 2012
+    interest: 8
+
+  - name: DirectX
+    experience: 1
+    last_use: -
+    interest: 6
+
+  - name: OpenGL
+    experience: 1
+    last_use: -
+    interest: 6
+
+  - name: Haskell
+    experience: 2
+    last_use: 2015
+    interest: 7
+
+  - name: Jersey
+    experience: 3
+    last_use: 2015
+    interest: 5
+
+  - name: CoffeeScript
+    experience: 7
+    last_use: 2014
+    interest: 5
+
+  - name: TypeScript
+    experience: 3
+    last_use: 2015
+    interest: 6
+
+  - name: Kanban
+    experience: 5
+    last_use: 2015
+    interest: 5
+
+  - name: Oracle
+    experience: 7
+    last_use: 2012
+    interest: 2
+
+  - name: MongoDB
+    experience: 7
+    last_use: 2015
+    interest: 9
+
+  - name: C#
+    experience: 4
+    last_use: 2012
+    interest: 2
+
+  - name: VB.NET
+    experience: 7
+    last_use: 2009
+    interest: 1
+
+  - name: Jenkins
+    experience: 5
+    last_use: 2015
+    interest: 7
+
+  - name: TravisCI
+    experience: 1
+    last_use: -
+    interest: 7
+
+  - name: SVN
+    experience: 8
+    last_use: 2012
+    interest: 0
+
+  - name: 3D programming
+    experience: 5
+    last_use: 2013
+    interest: 9
+
+  - name: Physics Simulation
+    experience: 5
+    last_use: 2011
+    interest: 8
+
+  - name: Box2D
+    experience: 0
+    last_use: -
+    interest: 6
+
+  - name: ObjectiveC
+    experience: 4
+    last_use: 2013
+    interest: 6
+
+  - name: C
+    experience: 5
+    last_use: 2007
+    interest: 2
+
+  - name: C++
+    experience: 5
+    last_use: 2007
+    interest: 2
+
+  - name: Boost
+    experience: 0
+    last_use: -
+    interest: 1
+
+  - name: Groovy
+    experience: 1
+    last_use: -
+    interest: 1
+
+  - name: Linux Kernel
+    experience: 0
+    last_use: -
+    interest: 1
+
+  - name: Web Programming
+    experience: 10
+    last_use: 2015
+    interest: 8
+    teach: true
+
+  - name: Internet of Things
+    experience: 1
+    last_use: -
+    interest: 8
+
+  - name: WebSockets
+    experience: 7
+    last_use: 2015
+    interest: 8
+
+  - name: Peer2Peer
+    experience: 1
+    last_use: -
+    interest: 5
+
+  - name: Web Security
+    experience: 7
+    last_use: 2015
+    interest: 7
+
+  - name: CSS
+    experience: 6
+    last_use: 2015
+    interest: 5
+
+  - name: SASS
+    experience: 6
+    last_use: 2015
+    interest: 5
+
+  - name: PostCSS
+    experience: 5
+    last_use: 2015
+    interest: 7
+
+  - name: Meteor
+    experience: 9
+    last_use: 2015
+    interest: 10
+    teach: true
+
+  - name: CouchDB
+    experience: 0
+    last_use: -
+    interest: 1
+
+  - name: Riak
+    experience: 0
+    last_use: -
+    interest: 8
+
+  - name: Elastic Search
+    experience: 2
+    last_use: 2014
+    interest: 8
+
+  - name: Kibana
+    experience: 2
+    last_use: 2015
+    interest: 4
+
+  - name: Teaching
+    experience: 6
+    last_use: 2014
+    interest: 8
+
+  - name: Pascal
+    experience: 9
+    last_use: 2005
+    interest: 2
+
+  - name: MySQL
+    experience: 8
+    last_use: 2014
+    interest: 3
+
+  - name: NoSQL
+    experience: 7
+    last_use: 2015
+    interest: 8
+
+  - name: Windows Forms
+    experience: 3
+    last_use: 2011
+    interest: 1
+
+  - name: Struts 2
+    experience: 2
+    last_use: 2015
+    interest: 0
+
+  - name: HTML5
+    experience: 8
+    last_use: 2015
+    interest: 8
+    teach: true
+
+  - name: Flash
+    experience: 3
+    last_use: 2005
+    interest: 0
+
+  - name: Coldfusion
+    experience: 1
+    last_use: 1999
+    interest: 0
+
+  - name: COBOL
+    experience: 4
+    last_use: 1986
+    interest: 0
+
+  - name: JNI
+    experience: 0
+    last_use: -
+    interest: 1
+
+  - name: J2EE
+    experience: 3
+    last_use: 2012
+    interest: 1
+
+  - name: Google Maps API
+    experience: 5
+    last_use: 2014
+    interest: 6
+
+  - name: Spring Core
+    experience: 0
+    last_use: -
+    interest: 1
+
+  - name: Spring MVC
+    experience: 0
+    last_use: -
+    interest: 1
+
+  - name: String Boot
+    experience: 0
+    last_use: -
+    interest: 1
+
+  - name: Ring
+    experience: 0
+    last_use: -
+    interest: 1
+
+  - name: Software Testing
+    experience: 6
+    last_use: 2015
+    interest: 9
+    teach: true
+
+  - name: Selenium
+    experience: 4
+    last_use: 2015
+    interest: 8
+
+  - name: NightwatchJS
+    experience: 4
+    last_use: 2015
+    interest: 8
+
+  - name: jMock
+    experience: 0
+    last_use: -
+    interest: 6
+
+  - name: Play framework
+    experience: 0
+    last_use: -
+    interest: 3
+
+  - name: SLF4J
+    experience: 0
+    last_use: -
+    interest: 1
+
+  - name: Photoshop
+    experience: 6
+    last_use: 2013
+    interest: 1
+
+  - name: Illustrator
+    experience: 7
+    last_use: 2010
+    interest: 4
+
+  - name: Mathematics
+    experience: 7
+    last_use: 2015
+    interest: 6
+
+  - name: Crypto Currency
+    experience: 1
+    last_use: -
+    interest: 6
+
+  - name: Embedded Systems
+    experience: 4
+    last_use: 2005
+    interest: 4
+
+  - name: Bash Scripting
+    experience: 5
+    last_use: 2015
+    interest: 4
+
+  - name: Lua
+    experience: 6
+    last_use: 2015
+    interest: 1
+
+  - name: Erlang
+    experience: 3
+    last_use: 2015
+    interest: 5
+
+  - name: Dependency Injection
+    experience: 7
+    last_use: 2015
+    interest: 5
+
+  - name: Elm
+    experience: 0
+    last_use: -
+    interest: 1
+
+  - name: Coq
+    experience: 0
+    last_use: -
+    interest: 1
+
+  - name: Chef
+    experience: 4
+    last_use: 2014
+    interest: 1
+
+  - name: Puppet
+    experience: 3
+    last_use: 2014
+    interest: 1
+
+  - name: Ansible
+    experience: 0
+    last_use: -
+    interest: 5
+
+  - name: Kubernetes
+    experience: 1
+    last_use: 2015
+    interest: 9
+
+  - name: Amazon Web Services
+    experience: 7
+    last_use: 2015
+    interest: 8
+
+  - name: Symphony
+    experience: 0
+    last_use: -
+    interest: 1
+
+  - name: Microsoft Azure
+    experience: 3
+    last_use: 2014
+    interest: 7
+
+  - name: Heroku
+    experience: 8
+    last_use: 2015
+    interest: 8
+
+  - name: Modulus.io
+    experience: 9
+    last_use: 2015
+    interest: 8
+
+  - name: Icon Fonts
+    experience: 7
+    last_use: 2015
+    interest: 6
+
+  - name: Windows Driver Programming
+    experience: 0
+    last_use: -
+    interest: 0
+
+  - name: RESTful API Design
+    experience: 8
+    last_use: 2015
+    interest: 8
+    teach: true
+
+  - name: GraphQL
+    experience: 0
+    last_use: -
+    interest: 7
+
+  - name: RabbitMQ
+    experience: 3
+    last_use: 2014
+    interest: 4
+
+  - name: Om
+    experience: 0
+    last_use: -
+    interest: 1
+
+  - name: Hadoop
+    experience: 0
+    last_use: -
+    interest: 1
+
+  - name: NodeJS
+    experience: 9
+    last_use: 2015
+    interest: 8
+
+  - name: Deep Learning Algorithms
+    experience: 1
+    last_use: -
+    interest: 8
+
+  - name: D
+    experience: 0
+    last_use: -
+    interest: 1
+
+  - name: WebGL
+    experience: 4
+    last_use: 2013
+    interest: 8
+
+  - name: Virtual Reality
+    experience: 1
+    last_use: 2011
+    interest: 9
+
+  - name: Nginx
+    experience: 6
+    last_use: 2015
+    interest: 2
+
+  - name: Apache 2
+    experience: 7
+    last_use: 2014
+    interest: 2
+
+  - name: Game Programming
+    experience: 5
+    last_use: 2008
+    interest: 9
+
+  - name: AI Programming
+    experience: 2
+    last_use: 2005
+    interest: 8
+
+  - name: Trifork T3
+    experience: 0
+    last_use: -
+    interest: 1
+
+  - name: Robotics
+    experience: 4
+    last_use: 2010
+    interest: 10
+
+  - name: Trifork P2
+    experience: 0
+    last_use: -
+    interest: 1
+
+  - name: Darcs
+    experience: 0
+    last_use: -
+    interest: 1
+
+  - name: QR Codes
+    experience: 6
+    last_use: 2014
+    interest: 4
