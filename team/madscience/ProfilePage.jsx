@@ -63,7 +63,7 @@ export default class ProfilePage extends React.Component {
     let tech = _.sortBy(e.technologies, t => {
       const value = t[order];
       if (typeof value === 'string') return ("" + value).toLowerCase()
-      else return value;
+      else return (value !== null) ? value : -1;
     });
 
     const sortDirection = this.props.query.direction || 'dsc';
