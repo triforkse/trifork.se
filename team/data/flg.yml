@@ -19,15 +19,15 @@ technologies:
     teach: true
 
   - name: Clojure
-    experience: 8
+    experience: 6
     last_use: 2015
     interest: 9
     teach: true
 
   - name: Mesos
-    experience: 5
+    experience: 6
     last_use: 2015
-    interest: 8
+    interest: 9
 
   - name: Docker
     experience: 6
@@ -37,14 +37,9 @@ technologies:
 
   - name: AngularJS
     experience: 9
-    interest: 4
+    interest: 5
     last_use: 2015
     teach: true
-
-  - name: Flask
-    experience: 4
-    interest: 5
-    last_use: 2014
 
   - name: Python
     experience: 6
@@ -56,30 +51,18 @@ technologies:
     last_use: 2015
     interest: 4
 
-  - name: Macurial
-    experience: 4
-    last_use: 2014
-    interest: 2
-
   - name: Git
-    experience: 9
+    experience: 7
     last_use: 2015
-    interest: 8
-    teach: true
-
-  - name: ReactJS
-    experience: 9
-    last_use: 2015
-    interest: 10
-    teach: true
+    interest: 4
 
   - name: Datomic
-    experience: 7
+    experience: 6
     last_use: 2015
     interest: 6
 
   - name: PostgreSQL
-    experience: 6
+    experience: 7
     last_use: 2014
     interest: 6
 
@@ -89,104 +72,38 @@ technologies:
     interest: 9
 
   - name: Scrum
-    experience: 7
+    experience: 8
     last_use: 2015
     interest: 8
 
   - name: Ruby
-    experience: 9
+    experience: 4
     last_use: 2014
-    interest: 3
-    teach: true
-
-  - name: BackboneJS
-    experience: 7
-    last_use: 2012
-    interest: 3
+    interest: 9
 
   - name: Tomcat
     experience: 7
     last_use: 2015
     interest: 3
 
-  - name: DB2
-    experience: 0
-    interest: 1
-
-  - name: Jetty
-    experience: 7
-    last_use: 2015
-    interest: 3
-
-  - name: Swift
-    experience: 6
-    last_use: 2015
-    interest: 9
-    teach: true
-
   - name: iOS
-    experience: 9
-    last_use: 2014
+    experience: 1
     interest: 9
-    teach: true
 
   - name: Android
-    experience: 3
-    last_use: 2012
-    interest: 4
+    experience: 1
+    interest: 9
 
   - name: R
     experience: 1
-    last_use: 2013
     interest: 6
 
   - name: Rust
     experience: 3
-    last_use: 2015
     interest: 8
-
-  - name: Julia
-    experience: 1
-    last_use: 2015
-    interest: 8
-
-  - name: PHP
-    experience: 2
-    last_use: 2007
-    interest: 1
 
   - name: Google Analytics
     experience: 6
-    last_use: 2015
-    interest: 5
-
-  - name: .NET
-    experience: 4
-    last_use: 2011
-    interest: 3
-
-  - name: Unity 3D
-    experience: 7
-    last_use: 2012
-    interest: 8
-
-  - name: DirectX
-    experience: 3
-    last_use: 2009
-    interest: 6
-
-  - name: OpenGL
-    experience: 7
-    last_use: 2014
-    interest: 7
-
-  - name: Haskall
-    experience: 2
-    last_use: 2015
-    interest: 7
-
-  - name: Jersey
-    experience: 9
     last_use: 2015
     interest: 5
 
@@ -196,483 +113,49 @@ technologies:
     interest: 5
     teach: true
 
-  - name: TypeScript
-    experience: 4
-    last_use: 2013
-    interest: 4
-    teach: true
-
   - name: Kanban
-    experience: 5
+    experience: 8
     last_use: 2014
     interest: 5
-
-  - name: Oracle
-    experience: 4
-    last_use: 2008
-    interest: 2
 
   - name: MongoDB
     experience: 6
     last_use: 2015
-    interest: 2
-
-  - name: C#
-    experience: 6
-    last_use: 2013
-    interest: 2
-
-  - name: VB.NET
-    experience: 4
-    last_use: 2005
-    interest: 1
+    interest: 6
 
   - name: Jenkins
     experience: 7
     last_use: 2015
     interest: 6
 
-  - name: TravisCI
-    experience: 6
-    last_use: 2015
-    interest: 5
-
-  - name: SVN
-    experience: 8
-    last_use: 2014
-    interest: 2
-
-  - name: 3D programming
-    experience: 8
-    last_use: 2013
-    interest: 7
-
-  - name: Physics Simulation
-    experience: 6
-    last_use: 2012
-    interest: 8
-
-  - name: Box2D
-    experience: 4
-    last_use: 2012
-    interest: 8
-
-  - name: ObjectiveC
-    experience: 9
-    last_use: 2015
-    interest: 7
-    teach: true
-
   - name: C
-    experience: 8
+    experience: 5
     last_use: 2011
-    interest: 4
+    interest: 8
 
   - name: C++
-    experience: 8
+    experience: 4
     last_use: 2011
-    interest: 5
-
-  - name: Boost
-    experience: 7
-    last_use: 2011
-    interest: 5
+    interest: 8
 
   - name: Groovy
-    experience: 5
+    experience: 7
     last_use: 2015
-    interest: 4
-
-  - name: Linux Kernel
-    experience: 2
-    last_use: 2007
-    interest: 2
+    interest: 8
 
   - name: Web Programming
-    experience: 10
+    experience: 9
     last_use: 2010
     interest: 8
     teach: true
-
-  - name: Internet of Things
-    experience: 3
-    last_use: 2014
-    interest: 8
-
-  - name: WebSockets
-    experience: 7
-    last_use: 2015
-    interest: 8
-    teach: true
-
-  - name: Peer2Peer
-    experience: 3
-    last_use: 2012
-    interest: 5
 
   - name: Web Security
-    experience: 9
+    experience: 6
     last_use: 2015
     interest: 7
-    teach: true
 
   - name: CSS
-    experience: 10
-    last_use: 2015
-    interest: 5
-    teach: true
-
-  - name: SASS
-    experience: 10
-    last_use: 2015
-    interest: 4
-    teach: true
-
-  - name: PostCSS
-    experience: 8
-    last_use: 2015
-    interest: 7
-    teach: true
-
-  - name: Meteor
-    experience: 8
-    last_use: 2015
-    interest: 5
-    teach: true
-
-  - name: CouchDB
-    experience: 0
-    last_use: 2013
-    interest: 1
-
-  - name: Riak
-    experience: 7
-    last_use: 2013
-    interest: 8
-
-  - name: Elastic Search
     experience: 6
     last_use: 2015
-    interest: 6
-
-  - name: Kibana
-    experience: 6
-    last_use: 2015
-    interest: 4
-
-  - name: Teaching
-    experience: 6
-    last_use: 2013
     interest: 5
 
-  - name: Pascal
-    experience: 2
-    last_use: 2006
-    interest: 5
-
-  - name: MySQL
-    experience: 8
-    last_use: 2014
-    interest: 3
-
-  - name: NoSQL
-    experience: 7
-    last_use: 2015
-    interest: 8
-
-  - name: Windows Forms
-    experience: 3
-    last_use: 2015
-    interest: 3
-
-  - name: Struts 2
-    experience: 6
-    last_use: 2015
-    interest: 2
-
-  - name: HTML5
-    experience: 10
-    last_use: 2015
-    interest: 7
-    teach: true
-
-  - name: Flash
-    experience: 4
-    last_use: 2004
-    interest: 2
-
-  - name: Coldfusion
-    experience: 1
-    last_use: 2000
-    interest: 1
-
-  - name: Cobold
-    experience: 0
-    interest: 1
-
-  - name: JNI
-    experience: 3
-    last_use: 2006
-    interest: 3
-
-  - name: J2EE
-    experience: 9
-    last_use: 2015
-    interest: 2
-
-  - name: Google Maps API
-    experience: 5
-    last_use: 2015
-    interest: 5
-
-  - name: Spring Core
-    experience: 9
-    last_use: 2015
-    interest: 4
-
-  - name: Spring MVC
-    experience: 8
-    last_use: 2015
-    interest: 4
-
-  - name: String Boot
-    experience: 8
-    last_use: 2015
-    interest: 4
-
-  - name: Ring
-    experience: 9
-    last_use: 2014
-    interest: 6
-
-  - name: Software Testing
-    experience: 10
-    last_use: 2015
-    interest: 9
-    teach: true
-
-  - name: Selenium
-    experience: 7
-    last_use: 2015
-    interest: 6
-
-  - name: NightwatchJS
-    experience: 4
-    last_use: 2015
-    interest: 5
-
-  - name: jMock
-    experience: 1
-    last_use: 2015
-    interest: 6
-
-  - name: Play framework
-    experience: 4
-    last_use: 2012
-    interest: 3
-
-  - name: SLF4J
-    experience: 9
-    last_use: 2015
-    interest: 7
-
-  - name: Photoshop
-    experience: 8
-    last_use: 2015
-    interest: 5
-
-  - name: Illustrator
-    experience: 7
-    last_use: 2015
-    interest: 5
-
-  - name: Matematics
-    experience: 7
-    last_use: 2015
-    interest: 6
-
-  - name: Crypto Currency
-    experience: 7
-    last_use: 2014
-    interest: 8
-
-  - name: Embedded Systems
-    experience: 3
-    last_use: 2005
-    interest: 3
-
-  - name: Bash Scripting
-    experience: 7
-    last_use: 2015
-    interest: 5
-
-  - name: Lua
-    experience: 6
-    last_use: 2014
-    interest: 6
-
-  - name: Erlang
-    experience: 3
-    last_use: 2014
-    interest: 5
-
-  - name: Dependency Injection
-    experience: 9
-    last_use: 2015
-    interest: 5
-
-  - name: Elm
-    experience: 2
-    last_use: 2015
-    interest: 6
-
-  - name: Coq
-    experience: 1
-    last_use: 2015
-    interest: 7
-
-  - name: Chef
-    experience: 6
-    last_use: 2013
-    interest: 5
-
-  - name: Puppet
-    experience: 4
-    last_use: 2013
-    interest: 5
-
-  - name: Anisble
-    experience: 7
-    last_use: 2015
-    interest: 5
-
-  - name: Kubernetes
-    experience: 1
-    last_use: 2015
-    interest: 8
-
-  - name: Amazon Web Services
-    experience: 8
-    last_use: 2015
-    interest: 5
-
-  - name: Symphony
-    experience: 1
-    last_use: 2015
-    interest: 1
-
-  - name: Microsoft Azure
-    experience: 1
-    last_use: 2014
-    interest: 3
-
-  - name: Heroku
-    experience: 8
-    last_use: 2015
-    interest: 5
-
-  - name: Icon Fonts
-    experience: 9
-    last_use: 2015
-    interest: 5
-
-  - name: Windows Driver Programming
-    experience: 0
-    last_use: 2015
-    interest: 1
-
-  - name: RESTful API Design
-    experience: 10
-    last_use: 2015
-    interest: 7
-    teach: true
-
-  - name: GraphQL
-    experience: 1
-    last_use: 2015
-    interest: 7
-
-  - name: RabbitMQ
-    experience: 3
-    last_use: 2012
-    interest: 5
-
-  - name: Om
-    experience: 8
-    last_use: 2015
-    interest: 8
-
-  - name: Hadoop
-    experience: 2
-    last_use: 2013
-    interest: 6
-
-  - name: NodeJS
-    experience: 9
-    last_use: 2015
-    interest: 8
-
-  - name: Deep Learning Algorithms
-    experience: 1
-    last_use: 2014
-    interest: 7
-
-  - name: D
-    experience: 2
-    last_use: 2008
-    interest: 2
-
-  - name: WebGL
-    experience: 5
-    last_use: 2014
-    interest: 7
-
-  - name: Virtual Reality
-    experience: 1
-    last_use: 2010
-    interest: 9
-
-  - name: Nginx
-    experience: 8
-    last_use: 2015
-    interest: 6
-
-  - name: Apach 2
-    experience: 7
-    last_use: 2015
-    interest: 3
-
-  - name: Game Programming
-    experience: 8
-    last_use: 2012
-    interest: 10
-
-  - name: AI Programming
-    experience: 2
-    last_use: 2009
-    interest: 8
-
-  - name: Trifork T3
-    experience: 4
-    last_use: 2011
-    interest: 1
-
-  - name: Robotics
-    experience: 1
-    last_use: 2007
-    interest: 10
-
-  - name: Trifork P2
-    experience: 1
-    last_use: 2010
-    interest: 2
-
-  - name: Darcs
-    experience: 5
-    last_use: 2007
-    interest: 5
-
-  - name: QR Codes
-    experience: 6
-    last_use: 2013
-    interest: 4
