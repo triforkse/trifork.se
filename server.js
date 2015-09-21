@@ -11,7 +11,8 @@ var express = require('express')
   , datetime = require('./lib/datetime')
   , meetup = require('./lib/meetup')
   , bodyParser = require('body-parser')
-  , viewHelpers = require('./lib/view_helpers');
+  , viewHelpers = require('./lib/view_helpers')
+  , team = require('./lib/team');
 
 
 var app = express();
@@ -22,11 +23,13 @@ app.set('dev', (process.env.TF_ENV || "production"));
 // Keep track of OWASP for more.
 
 app.use(function(req, res, next) {
-  res.header('X-XSS-Protection', 1);
-  res.header('X-Frame-Options', 'SAMEORIGIN');
+  // FIXME: Reenable security.
+  // res.header('X-XSS-Protection', 1);
+  // res.header('X-Frame-Options', 'SAMEORIGIN');
+
   // We cannot use Google Maps with we do not enable "unsafe-eval"
   // since it uses document.write which is not CSP compatible.
-  res.header('Content-Security-Policy', "script-src 'self' http://use.typekit.net https://*.google.com https://*.googleapis.com https://*.gstatic.com 'unsafe-eval'");
+  // res.header('Content-Security-Policy', "script-src https://*.facebook.com http://*.facebook.com https://*.fbcdn.net http://*.fbcdn.net *.facebook.net *.google-analytics.com *.virtualearth.net *.google.com 127.0.0.1:* *.spotilocal.com:* 'unsafe-inline' 'unsafe-eval' https://*.akamaihd.net http://*.akamaihd.net *.atlassolutions.com; script-src 'self' https://fb.me http://localhost:8080 http://use.typekit.net https://*.google.com https://*.googleapis.com https://*.gstatic.com 'unsafe-eval'");
   next();
 });
 
@@ -66,6 +69,12 @@ app.set('view engine', 'jade');
 app.use(express.static(__dirname + '/public'));
 
 app.use('/libs', express.static(__dirname + '/bower_components'));
+
+app.use('/team', express.static(__dirname + '/team'));
+
+app.get('/team-data', function (req, res) {
+  res.json(team.getAllEmployees());
+});
 
 app.get('/', function (req, res) {
   res.render('index',

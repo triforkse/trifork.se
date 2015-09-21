@@ -8,7 +8,7 @@ setup:
 	@echo "\nInstalling Git Remote for Deployment.\n"
 	-git remote add heroku git@heroku.com:triforkse.git
 	@echo "\nInstalling automatic dependencies.\n"
-	npm install -d
+	npm install
 	./node_modules/.bin/bower install
 	@echo "\nDone! Check the README.md for dependencies that must be manually installed.\n"
 
