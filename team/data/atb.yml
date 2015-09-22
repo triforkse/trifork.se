@@ -1,41 +1,47 @@
 ---
-id: asu
-firstname: Alexander
-lastname: Sundström
+id: atb
+firstname: Amina
+lastname: Tabassum
 roles:
   - Developer
-  - Intern
 office: Stockholm
 
 languages:
-  - English (High)
-  - Swedish (Native)
+  - English (Fluent)
+  - Hindi (Native)
+  - Swedish (Low)
 
 technologies:
   - name: Java
-    experience: 8
+    experience: 6
     last_use: 2015
-    interest: 9
+    interest: 10
 
   - name: Clojure
-    experience: 0
+    experience: 2
+    last_use: 2015
+    interest: 5
 
   - name: Mesos
     experience: 0
+    interest: 8
 
   - name: Docker
-    experience: 0
+    experience: 2
+    interest: 7
+    last_use: 2014
 
   - name: AngularJS
-    experience: 6
-    interest: 8
+    experience: 7
+    interest: 5
     last_use: 2015
 
   - name: Flask
     experience: 0
 
   - name: Python
-    experience: 1
+    experience: 3
+    last_use: 2014
     interest: 6
 
   - name: Go
@@ -45,42 +51,43 @@ technologies:
     experience: 0
 
   - name: Git
-    experience: 8
+    experience: 6
+    last_use: 2015
+    interest: 7
+
+  - name: ReactJS
+    experience: 0
+
+  - name: Datomic
+    experience: 1
+    interest: 4
+
+  - name: PostgreSQL
+    experience: 4
     last_use: 2015
     interest: 5
 
-  - name: ReactJS
-    experience: 1
-    last_use: 2015
-    interest: 8
-
-  - name: Datomic
-    experience: 0
-
-  - name: PostgreSQL
-    experience: 0
-
   - name: Neo4J
-    experience: 3
-    last_use: 2015
-    interest: 9
+    experience: 1
+    interest: 7
 
   - name: Scrum
-    experience: 5
+    experience: 4
     last_use: 2015
-    interest: 8
+    interest: 4
 
   - name: Ruby
-    experience: 0
+    experience: 2
+    last_use: 2014
     interest: 3
 
   - name: BackboneJS
     experience: 0
 
   - name: Tomcat
-    experience: 6
+    experience: 5
     last_use: 2015
-    interest: 3
+    interest: 7
 
   - name: DB2
     experience: 0
@@ -88,19 +95,19 @@ technologies:
   - name: Jetty
     experience: 5
     last_use: 2015
-    interest: 5
+    interest: 7
 
   - name: Swift
     experience: 1
-    last_use: 2015
-    interest: 9
+    interest: 7
 
   - name: iOS
-    experience: 0
-    interest: 9
+    experience: 1
+    interest: 4
 
   - name: Android
-    experience: 1
+    experience: 4
+    last_use: 2014
     interest: 9
 
   - name: R
@@ -113,63 +120,70 @@ technologies:
     experience: 0
 
   - name: PHP
-    experience: 0
-    interest: 3
+    experience: 3
+    last_use: 2013
+    interest: 2
 
   - name: Google Analytics
-    experience: 0
+    experience: 3
+    last_use: 2014
+    interest: 7
 
   - name: .NET
     experience: 1
-    last_use: 2014
-    interest: 4
+    interest: 5
 
   - name: Unity 3D
     experience: 1
-    interest: 4
+    interest: 6
 
   - name: DirectX
-    experience: 0
+    experience: 1
+    interest: 5
 
   - name: OpenGL
-    experience: 0
+    experience: 1
+    interest: 5
 
   - name: Haskell
     experience: 0
 
   - name: Jersey
-    experience: 5
+    experience: 4
     last_use: 2015
-    interest: 5
+    interest: 7
 
   - name: CoffeeScript
-    experience: 0
+    experience: 2
+    last_use: 2014
+    interest: 3
 
   - name: TypeScript
-    experience: 0
+    experience: 2
+    last_use: 2014
+    interest: 3
 
   - name: Kanban
-    experience: 1
-    last_use: 2015
-    interest: 5
+    experience: 3
+    last_use: 2014
+    interest: 4
 
   - name: Oracle
     experience: 0
 
   - name: MongoDB
-    experience: 1
-    interest: 3
+    experience: 0
 
   - name: C#
-    experience: 5
-    last_use: 2014
-    interest: 5
+    experience: 2
+    last_use: 2013
+    interest: 4
 
   - name: VB.NET
     experience: 0
 
   - name: Jenkins
-    experience: 5
+    experience: 4
     last_use: 2015
     interest: 5
 
@@ -177,84 +191,85 @@ technologies:
     experience: 0
 
   - name: SVN
-    experience: 0
+    experience: 6
+    last_use: 2014
+    interest: 5
 
   - name: 3D programming
     experience: 1
-    interest: 6
+    interest: 5
 
   - name: Physics Simulation
     experience: 1
-    interest: 4
+    interest: 8
 
   - name: Box2D
+    experience: 0
+
+  - name: ObjectiveC
     experience: 1
     interest: 4
 
-  - name: ObjectiveC
-    experience: 0
-    interest: 7
-
   - name: C
-    experience: 0
+    experience: 5
+    last_use: 2013
+    interest: 3
 
   - name: C++
-    experience: 0
-    interest: 5
+    experience: 5
+    last_use: 2013
+    interest: 3
 
   - name: Boost
     experience: 0
 
   - name: Groovy
-    experience: 0
+    experience: 1
+    interest: 6
 
   - name: Linux Kernel
-    experience: 0
+    experience: 1
+    interest: 2
 
   - name: Web Programming
-    experience: 9
+    experience: 7
     last_use: 2015
     interest: 7
 
   - name: Internet of Things
     experience: 1
-    interest: 9
+    interest: 8
 
   - name: WebSockets
-    experience: 2
-    last_use: 2015
-    interest: 3
+    experience: 0
 
   - name: Peer2Peer
+    experience: 7
+    last_use: 2012
+    interest: 7
+
+  - name: Web Security
     experience: 2
+    last_use: 2015
+    interest: 7
+
+  - name: CSS
+    experience: 7
     last_use: 2015
     interest: 3
 
-  - name: Web Security
-    experience: 5
-    last_use: 2015
-    interest: 5
-
-  - name: CSS
-    experience: 9
-    last_use: 2015
-    interest: 5
-
   - name: SASS
-    experience: 6
+    experience: 7
     last_use: 2015
-    interest: 5
+    interest: 4
 
   - name: PostCSS
-    experience: 4
-    last_use: 2015
-    interest: 5
+    experience: 0
 
   - name: Meteor
     experience: 2
     last_use: 2015
-    interest: 7
-    teach: true
+    interest: 6
 
   - name: CouchDB
     experience: 0
@@ -269,27 +284,26 @@ technologies:
     experience: 0
 
   - name: Teaching
-    experience: 10
-    last_use: 2014
-    interest: 7
+    experience: 1
+    interest: 1
 
   - name: Pascal
     experience: 0
 
   - name: MySQL
     experience: 7
-    last_use: 2015
-    interest: 4
+    interest: 6
 
   - name: NoSQL
     experience: 1
-    interest: 3
+    interest: 6
 
   - name: Windows Forms
-    experience: 0
+    experience: 1
+    interest: 3
 
   - name: Struts 2
-    experience: 3
+    experience: 6
     last_use: 2015
     interest: 2
 
@@ -299,44 +313,48 @@ technologies:
     interest: 5
 
   - name: Flash
-    experience: 0
+    experience: 1
+    interest: 2
 
   - name: Coldfusion
     experience: 0
-    interest: 0
 
   - name: COBOL
     experience: 0
 
   - name: JNI
-    experience: 0
+    experience: 1
+    interest: 5
 
   - name: J2EE
     experience: 6
     last_use: 2015
-    interest: 4
+    interest: 8
 
   - name: Google Maps API
-    experience: 0
+    experience: 6
+    last_use: 2014
+    interest: 7
 
   - name: Spring Core
-    experience: 0
+    experience: 1
+    interest: 7
 
   - name: Spring MVC
-    experience: 0
+    experience: 1
+    interest: 7
 
   - name: String Boot
-    experience: 0
-    last_use: 2015
-    interest: 4
+    experience: 1
+    interest: 7
 
   - name: Ring
     experience: 0
 
   - name: Software Testing
-    experience: 6
+    experience: 4
     last_use: 2015
-    interest:  8
+    interest: 8
 
   - name: Selenium
     experience: 4
@@ -347,46 +365,53 @@ technologies:
     experience: 0
 
   - name: jMock
-    experience: 0
+    experience: 1
+    interest: 8
 
   - name: Play framework
     experience: 0
 
-  - name: SLF J
-    experience: 0
+  - name: SLF4J
+    experience: 2
+    interest: 0
 
   - name: Photoshop
-    experience: 4
-    last_use: 2014
+    experience: 1
     interest: 2
 
   - name: Illustrator
-    experience: 0
+    experience: 1
+    interest: 2
 
   - name: Matematics
-    experience: 7
-    last_use: 2015
-    interest: 6
+    experience: 4
+    interest: 4
 
   - name: Crypto Currency
-    experience: 0
+    experience: 1
+    interest: 3
 
   - name: Embedded Systems
-    experience: 0
+    experience: 5
+    last_use: 2012
+    interest: 6
 
   - name: Bash Scripting
-    experience: 0
+    experience: 3
+    last_use: 2015
+    interest: 4
 
   - name: Lua
     experience: 0
 
   - name: Erlang
-    experience: 0
+    experience: 1
+    interest: 3
 
   - name: Dependency Injection
-    experience: 5
+    experience: 6
     last_use: 2015
-    interest: 4
+    interest: 8
 
   - name: Elm
     experience: 0
@@ -401,38 +426,41 @@ technologies:
     experience: 0
 
   - name: Anisble
-    experience:  0
+    experience: 0
 
   - name: Kubernetes
     experience: 0
 
   - name: Amazon Web Services
-    experience: 0
+    experience: 3
+    last_use: 2015
+    interest: 6
 
   - name: Symphony
     experience: 0
 
   - name: Microsoft Azure
-    experience: 3
-    last_use: 2015
-    interest: 1
+    experience: 1
+    interest: 3
 
   - name: Heroku
-    experience: 0
+    experience: 2
+    last_use: 2015
+    interest: 5
 
   - name: Icon Fonts
-    experience: 3
+    experience: 6
     last_use: 2015
-    interest: 2
+    interest: 4
 
   - name: Windows Driver Programming
-    experience: 0
+    experience: 1
+    interest: 1
 
   - name: RESTful API Design
-    experience: 5
+    experience: 4
     last_use: 2015
     interest: 6
-    teach: true
 
   - name: GraphQL
     experience: 0
@@ -447,13 +475,13 @@ technologies:
     experience: 0
 
   - name: NodeJS
-    experience: 5
+    experience: 4
     last_use: 2015
     interest: 5
 
   - name: Deep Learning Algorithms
     experience: 1
-    interest: 4
+    interest: 6
 
   - name: D
     experience: 0
@@ -463,35 +491,40 @@ technologies:
 
   - name: Virtual Reality
     experience: 1
-    interest: 7
+    interest: 6
 
   - name: Nginx
-    experience: 0
+    experience: 3
+    last_use: 2015
+    interest: 4
 
   - name: Apach 2
-    experience: 0
+    experience: 2
+    last_use: 2015
+    interest: 4
 
   - name: Game Programming
-    experience: 5
-    last_use: 2014
+    experience: 1
     interest: 5
 
   - name: AI Programming
-    experience: 0
+    experience: 1
+    interest: 6
 
   - name: Trifork T3
     experience: 0
 
   - name: Robotics
     experience: 1
-    interest: 5
+    interest: 7
 
   - name: Trifork P2
-    experience: 0
+    experience: 1
+    interest: 2
 
   - name: Darcs
     experience: 0
 
   - name: QR Codes
-    experience: 1
-    interest: 3
+    experience: 2
+    interest: 5

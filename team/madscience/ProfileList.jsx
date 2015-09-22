@@ -11,7 +11,7 @@ export default class ProfileList extends React.Component {
       return (
         <div style={{textAlign: 'center', width: 900, margin: '50px auto 0'}}>
           <img src="/img/science-logo.jpg" alt="" />
-          <h1>Mad Science</h1>
+          <h1>Talent Tree</h1>
           <div>
             The tool for <b>finding the right person for the job</b><br/>
             and <b>the right job for the person</b>

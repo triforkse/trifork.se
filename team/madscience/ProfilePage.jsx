@@ -36,7 +36,7 @@ class Meter extends React.Component {
       '#55FF00',
       '#00FF00',
       '#00CC00'
-    ]
+    ];
 
     const v = this.props.value;
 
@@ -44,7 +44,7 @@ class Meter extends React.Component {
     barStyle.width = (v / 10 * 100);
     barStyle.backgroundColor = colors[v - 1];
 
-    return <div style={styles.wrapper}>
+    return <div title={this.props.title} style={styles.wrapper}>
       <div style={styles.num}>{v}</div>
       <div style={styles.container}>
         <div style={barStyle}></div>
@@ -66,6 +66,8 @@ export default class ProfilePage extends React.Component {
       else return (value !== null) ? value : -1;
     });
 
+    tech = _.filter(tech, t => t.experience);
+
     const sortDirection = this.props.query.direction || 'dsc';
     if (sortDirection === 'dsc') {
       tech.reverse();
@@ -75,6 +77,32 @@ export default class ProfilePage extends React.Component {
       const direction = (order === property && sortDirection !== 'asc') ? 'asc' : 'dsc';
       return <Link to="profile" params={{id: e.id}} query={{direction, sort: property}}>{title}</Link>
     };
+
+    const interestLevels = [
+      'I would rather find a new place to work than work with this.',
+      'This does not match me and prefer not to work with it.',
+      'It is okay but I not to work with it.',
+      'I would not pick it myself, but I am okay with it.',
+      'I am nautral and would be okay working with it.',
+      'I would like to work with this.',
+      'I think it is would be great to work with.',
+      'I prefer to work with this.',
+      'I would love to work with this.',
+      'I think it would be fantastic to work with this.'
+    ];
+
+    const experienceLevels = [
+      'I have heard of this.',
+      'I read documentation and/or blogs on this topic.',
+      'I have played around with this a bit.',
+      'I think I have a good basis for working with this.',
+      'I have some experice with this but don\'t feel completly comfortable.',
+      'I have some experice with this and feel comfortable with it.',
+      'I feel I have a quite fair grasp of this.',
+      'I feel I have a very good grasp of this.',
+      'I feel very comfortable working with this and could teach others.',
+      'I have a lot of experice and I could teach this at a university level.'
+    ];
 
     return (
       <div>
@@ -108,8 +136,8 @@ export default class ProfilePage extends React.Component {
               <tr key={t.name}>
                 <td>{t.name}</td>
                 <td>{t.last_use || '-'}</td>
-                <td><Meter value={t.interest} /></td>
-                <td><Meter value={t.experience} /></td>
+                <td><Meter title={interestLevels[t.interest - 1]} value={t.interest} /></td>
+                <td><Meter title={experienceLevels[t.experience - 1]} value={t.experience} /></td>
                 <td style={{textAlign: "center"}}>{t.teach && '✓'}</td>
               </tr>
             ))}

@@ -183,7 +183,7 @@ technologies:
     last_use: 2014
     interest: 7
 
-  - name: Haskall
+  - name: Haskell
     experience: 2
     last_use: 2015
     interest: 7
@@ -388,6 +388,11 @@ technologies:
     last_use: 2015
     interest: 3
 
+  - name: Elixir
+    experience: 5
+    last_use: 2013
+    interest: 8
+
   - name: Struts 2
     experience: 6
     last_use: 2015
@@ -409,7 +414,7 @@ technologies:
     last_use: 2000
     interest: 1
 
-  - name: Cobold
+  - name: COBOL
     experience: 0
     interest: 1
 

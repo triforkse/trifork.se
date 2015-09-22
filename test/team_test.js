@@ -5,7 +5,7 @@ describe('team', function () {
 
   it('finds all employees using #getAllEmployees', function () {
     var employees = team.getAllEmployees();
-    expect(employees.length).to.eq(6);
+    expect(employees.length).to.eq(7);
   });
 
   it("finds a single employee using #getEmployeeById", function () {
