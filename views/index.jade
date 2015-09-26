@@ -1,107 +1,110 @@
 extend layouts/layout
 
 block content
-  +main-menu(true)
+  #frontpage
+    +main-menu(true)
 
-  .segment.segment--primary.segment--frontpage
-    .segment__menu
-      nav.top-menu__nav.top-menu__nav--inverse
-        +main-menu-items
-    .logo-icon--transparent(frontpage-logo)
-      include ../public/img/trifork.svg
-    h1.segment__heading Hire us to help you plan, design, and build your product.
-    p.segment__lead
-      | We help you make your software project a success.
-      br
-      | We reduce your risk and
-      | focus on building the right thing, keeping the project on track<br>
-      | with a solid process and frequent iterations.
-    button.segment__bottom-icon(nav-scroll-to="#first-segment")
-      .icon-down-open
-    .think-software.think-software--frontpage.u-hidden-xs
-      include ../public/img/think-software.svg
-
-  .segment#first-segment.segment--secondary(ng-class="{'segment--expanded': expanded1}")
-    h1.segment__heading Who we are
-    p.segment__lead
-      | We are a software company and a group of enthusiastic individuals. We are passionate about software development
-      | and about building products that make other people's lives easier. At Trifork we believe that the key to
-      | producing good software is having a team of good people.
-
-    .u-text-center
-      a.read-more-link.read-more-link--expandable.segment__button(href="/jobs", segment-expand,
-      container="#first-segment" ng-model="expanded1")
-        | Meet the Stockholm Office
-
-
-      .big-numbers.big-numbers--M.big-number--top-right
-        .big-number.big-number--1
-          .big-number__value 20
-          .big-number__label Offices
-
-        .big-number.big-number--2
-          .big-number__value 360
-          .big-number__label Employees
-
-        .big-number.big-number--3
-          .big-number__value 9
-          .big-number__label Countries
-
-  .segment
-    h1.segment__heading What we do
-    p.segment__lead
-      | Trifork specializes in creating state of the art Mobile Apps, and we are masters of web technology, like AngularJS and ReactJS.
-      | We do data visualization, interactivity design, system integrations as well as agile certification and training for programmers.
-      | In our Customer Innovation sessions we help our clients realize the posibilities and pin-point their needs and
-      | priorities.
-
-    .u-text-center
-      a.read-more-link.segment__button(href="//trifork.com/Industries/#all", target="_black" ng-mouseover="maxedOut(true);graphHover = true"
-      ng-mouseout="maxedOut(false); graphHover = false")
-        | Go to Case Studies
-
-    svg(ng-class="{'frontpageTeamGraph--active': graphHover}")#frontpageTeamGraph(team-graph, maxed-out="maxedOut")
-
-
-  .segment.segment--secondary
-    h1.segment__heading GOTO; Conf Stockholm
-    p.segment__lead
-      | The GOTO; conference is a multi-disciplinary software conference for developers, builders and agilists.
-      br
-      b In 2016 GOTO; Conference is coming to Stockholm for the first time.
-      br
-      | Last year, we had more than 4'000 attendees in Europe. GOTO; brings together speakers from across the globe
-      | building tomorrow's technology. We cover subjects such as emerging languages, alternative databases,
-      | security, concurrency, distributed systems, and the web.
-
-    .u-text-center.link-list
-      a.link-list__link(href="/goto-conference-stockholm") GOTO; Stockholm
-      a.link-list__link(href="http://gotocon.com/") GOTO; Global Site
-      a.link-list__link(href="https://www.youtube.com/user/GotoConferences") GOTO; YouTube Channel
-      a.link-list__link(href="http://www.meetup.com/goto-night-stockholm/") GOTO; Nights Stockholm
-
-
-  .segment.segment--half.segment--bg-img.segment--frontpage-goto.segment--left-shadowed
-    .container
-      h1.segment__heading Featured Conference Sessions
+    .segment.segment--primary.segment--frontpage
+      .segment__menu
+        nav.top-menu__nav.top-menu__nav--inverse
+          +main-menu-items
+      .logo-icon--transparent(frontpage-logo)
+        include ../public/img/trifork.svg
+      h1.segment__heading Hire us to help you plan, design, and build your product.
       p.segment__lead
-        | Here is a small selection of some of the sessions at previous conferences. You can find many more
-        |  on our&nbsp;
-        a(href="https://www.youtube.com/user/GotoConferences", target="_blank") YouTube channel
-        | .
-  ul.thumbnail-list
-    mixin video(youtubeId, imageId, title, speaker)
-      li.thumbnail-list__item
-        a(href="//www.youtube.com/watch?v=#{youtubeId}", title="#{title}", target="_blank")
-          img.thumbnail-list__thumbnail(src="/img/videos/#{imageId}.jpg")
-        .thumbnail-list__title #{title}
-        .thumbnail-list__speaker #{speaker}
+        | We help you make your software project a success.
+        br
+        | We reduce your risk and
+        | focus on building the right thing, keeping the project on track<br>
+        | with a solid process and frequent iterations.
+      button.segment__bottom-icon(nav-scroll-to="#first-segment")
+        .icon-down-open
+      .think-software.think-software--frontpage.u-hidden-xs
+        include ../public/img/think-software.svg
 
-    +video("MTawgp3SKy8", "david", "ClojureScript: Lisp's Revenge", "David Nolan")
-    +video("7OSkB4BCx00", "jjj", "UX Techniques", "Janne Jul Jensen")
-    +video("qI_g07C_Q5I", "mf", "Introduction to NoSQL", "Martin Fowler")
-    +video("GpXsQ-NIKXY", "func", "Functional Principles", "Jessica Kerr")
-    +video("Sg2BjFQnr9s", "live", "Live Coding for Performances", "Andrew Sorensen")
-    +video("mrHjHdyRDNY", "linda", "Professional Productivity", "Linda Rising")
+    .segment#first-segment.segment--secondary(ng-class="{'segment--expanded': expanded1}")
+      h1.segment__heading Who we are
+      p.segment__lead
+        | We are a software company and a group of enthusiastic individuals. We are passionate about software development
+        | and about building products that make other people's lives easier. At Trifork we believe that the key to
+        | producing good software is having a team of good people.
 
-  include includes/footer
+      .u-text-center
+        a.read-more-link.read-more-link--expandable.segment__button(href="/jobs", segment-expand,
+        container="#first-segment" ng-model="expanded1")
+          | Meet the Stockholm Office
+
+
+        .big-numbers.big-numbers--M.big-number--top-right
+          .big-number.big-number--1
+            .big-number__value 20
+            .big-number__label Offices
+
+          .big-number.big-number--2
+            .big-number__value 360
+            .big-number__label Employees
+
+          .big-number.big-number--3
+            .big-number__value 9
+            .big-number__label Countries
+
+    .segment
+      h1.segment__heading What we do
+      p.segment__lead
+        | Trifork specializes in creating state of the art Mobile Apps, and we are masters of web technology, like AngularJS and ReactJS.
+        | We do data visualization, interactivity design, system integrations as well as agile certification and training for programmers.
+        | In our Customer Innovation sessions we help our clients realize the posibilities and pin-point their needs and
+        | priorities.
+
+      .u-text-center
+        a.read-more-link.segment__button(href="//trifork.com/Industries/#all", target="_black" ng-mouseover="maxedOut(true);graphHover = true"
+        ng-mouseout="maxedOut(false); graphHover = false")
+          | Go to Case Studies
+
+      svg(ng-class="{'frontpageTeamGraph--active': graphHover}")#frontpageTeamGraph(team-graph, maxed-out="maxedOut")
+
+    .segment.segment--secondary.segment--line
+
+    .segment.segment--secondary.segment--boxed.segment--bg-img
+      h1.segment__heading GOTO; Software Conference in Stockholm
+      p.segment__lead
+        | Our GOTO; conferences are multi-disciplinary software conferences for developers, leaders and agilists.
+        br
+        b In 2016 GOTO; Conference is coming to Stockholm for the first time.
+        br
+        | Last year, we had more than 4'000 attendees in Europe. GOTO; brings together speakers from across the globe
+        | building tomorrow's technology. We cover subjects such as emerging languages, alternative databases,
+        | security, concurrency, distributed systems, and the web.
+
+      .u-text-center.link-list
+        a.link-list__link(href="/goto-conference-stockholm") GOTO; Stockholm
+        a.link-list__link(href="http://gotocon.com/") GOTO; Global Site
+        a.link-list__link(href="https://www.youtube.com/user/GotoConferences") GOTO; YouTube Channel
+        a.link-list__link(href="http://www.meetup.com/goto-night-stockholm/") GOTO; Nights Stockholm
+
+
+    #goto-segment.segment.segment--half.segment--secondary
+      .container
+        h1.segment__heading Featured Talks
+        p.segment__lead.segment__lead--compact
+          | Here is a small selection of some of the sessions at previous conferences. You can find many more
+          |  on our&nbsp;
+          a(href="https://www.youtube.com/user/GotoConferences", target="_blank") YouTube channel
+          | .
+
+    ul.thumbnail-list
+      mixin video(youtubeId, imageId, title, speaker)
+        li.thumbnail-list__item
+          a(href="//www.youtube.com/watch?v=#{youtubeId}", title="#{title}", target="_blank")
+            img.thumbnail-list__thumbnail(src="/img/videos/#{imageId}.jpg")
+          .thumbnail-list__title #{title}
+          .thumbnail-list__speaker #{speaker}
+
+      +video("MTawgp3SKy8", "david", "ClojureScript: Lisp's Revenge", "David Nolan")
+      +video("7OSkB4BCx00", "jjj", "UX Techniques", "Janne Jul Jensen")
+      +video("qI_g07C_Q5I", "mf", "Introduction to NoSQL", "Martin Fowler")
+      +video("GpXsQ-NIKXY", "func", "Functional Principles", "Jessica Kerr")
+      +video("Sg2BjFQnr9s", "live", "Live Coding for Performances", "Andrew Sorensen")
+      +video("mrHjHdyRDNY", "linda", "Professional Productivity", "Linda Rising")
+
+    include includes/footer
