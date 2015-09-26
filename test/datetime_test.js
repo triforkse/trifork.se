@@ -1,6 +1,6 @@
-var chai = require('chai')
-  , should = chai.should()
-  , datetime = require("../lib/datetime");
+var chai = require('chai'),
+  should = chai.should(),
+  datetime = require("../lib/datetime");
 
 
 describe('datetime', function () {

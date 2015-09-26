@@ -1,5 +1,5 @@
-var expect = require('chai').expect
-  , handbook = require('../lib/handbook'),
+var expect = require('chai').expect,
+  handbook = require('../lib/handbook'),
   _ = require('lodash');
 
 describe('handbook', function () {

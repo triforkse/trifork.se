@@ -1,6 +1,6 @@
-var expect = require('chai').expect
-  , sinon = require('sinon')
-  , cache = require("../lib/cache").cache;
+var expect = require('chai').expect,
+  sinon = require('sinon'),
+  cache = require("../lib/cache").cache;
 
 
 describe('cache', function () {
