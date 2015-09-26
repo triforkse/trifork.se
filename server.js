@@ -85,6 +85,12 @@ app.get('/contact', function (req, res) {
   );
 });
 
+app.get('/goto-conference-stockholm', function (req, res) {
+  res.render('goto',
+    {title: 'GOTO Conference in Stockholm'}
+  );
+});
+
 app.get('/handbook', function (req, res) {
   var handbookData = handbook.content();
   var handbookHtml = handbook.html(handbookData);
@@ -192,8 +198,10 @@ app.post('/email', function (req, res) {
 });
 
 // Redirect old URLs to new ones, to make the crawlers happy.
+
 // TODO: Consider doing this in a nginx config instead so,
 // the request does not make it all the way to the app.
+
 var redirects = [
   ["/events", "/goto-nights-stockholm"]
 ];

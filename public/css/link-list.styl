@@ -37,7 +37,11 @@
   text-decoration none
   transition transform 0.1s, color 0.5s
 
-.link-list__link:hover:before
+.segment .link-list__link:hover:before
+  transform: rotate(15deg)
+  color color-primary
+
+.segment--secondary .link-list__link:hover:before
   transform: rotate(15deg)
   color white
 
@@ -76,6 +80,5 @@
   text-decoration none
   transition transform 0.1s, color 0.5s
 
-.pretty-link:hover:before
-  transform: rotate(15deg)
-  color white
+.link-list--compact
+  margin-top (space-unit / 2)

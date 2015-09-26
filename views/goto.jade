@@ -1,17 +1,80 @@
 extends layouts/page-with-menu
 
 block page-content
-  .segment.segment--header
-    .content
-      h1.segment__heading GOTO Stockholm
+  #goto-page
+    .segment.segment--header-half
+      .content
+        h1#title.segment__heading <img id="goto-logo" src="img/goto-logo.png" alt="GOTO" /> <span id="stockholm">Stockholm 2016</span>
+        p.segment__lead
+          b In 2016 the GOTO; Software Conference is coming to Stockholm — and we couldn't be more exited!
+
+    .segment.segment--bg-img.segment--boxed
+      h1.segment__heading Why you should go to GOTO
       p.segment__lead
+        | GOTO; is a software conference where world renowned developer,
+        | industry leaders, builders and researchers are brought together to talk about
+        | tomorrow's technology. We focus on new languages,
+        | concurrency, distributed systems, emerging database, security,
+        | automation, robotics, agile processes, leadership, web tech and much, much more.
+        | Join us in 2016 and help your company keeping ahead of the curve.
+
+    .segment.segment--half.segment--secondary.segment--no-bottom
+      .container
+        h1.segment__heading Past Speakers
+        p.segment__lead
+          | Here are a few of our many speakers from previous conferences. You can find many more at:
+          .u-text-center.link-list.link-list--compact
+            a.link-list__link(href="https://www.youtube.com/user/GotoConferences", target="_blank") Our Global Conference Website
+            a(style="color: white") or
+            a.link-list__link(href="https://www.youtube.com/user/GotoConferences") The GOTO; YouTube Channel
+
+    ul.thumbnail-list.thumbnail-list--small
+      mixin speaker(imageId, speaker, title)
+        li.thumbnail-list__item
+          img.thumbnail-list__thumbnail(src="/img/speakers/#{imageId}")
+          .thumbnail-list__title #{title}
+          .thumbnail-list__speaker #{speaker}
+
+      +speaker("anders_hejlsberg.gif", "Creator of C#", "Anders Hejlsberg")
+      +speaker("martin_fowler.png", "Author & Technologist", "Martin Fowler")
+      +speaker("david_nolen.png", "King of ClojureScript", "David Nolan")
+      +speaker("dave_thomas.jpg", "Author & Technologist", "Dave Thomas")
+      +speaker("jez_humble.gif", "Continuous Delivery Expert", "Jez Humble")
+      +speaker("douglas_crockford.png", "Developer of JavaScript", "Douglas Crockford")
+      +speaker("jose_valim.png", "Creator of Elixir", "José Valim")
+      +speaker("michael_nygard.png", "Author of 'Release It!'", "Michael T. Nygard")
+      +speaker("ola_bini.jpg", "Creator of JRuby'", "Ola Bini")
+      +speaker("scott_hanselman.gif", "Creator of JRuby'", "Scott Hanselman")
+      +speaker("adrian_cockcroft.gif", "Netflix, Cloud Architect'", "Adrian Cockcroft")
+
+    .segment.segment--half#training
+      h1.segment__heading Advanced Training and Agile Certification
+      p.segment__lead
+        | The conference itself will be followed by an optional three days of training.
+        | We provide hands-on training in programming languages e.g. Swift, web-frameworks
+        | e.g <b>React</b> and <b>AngularJS</b> and Certification as <b>Scrum Master</b>, <b>Product Owner</b> etc.
+        | We also have platform courses for <b>Docker</b>, <b>iOS</b>, <b>Android</b>, <b>Riak</b>, <b>Spring Core</b>, <b>Neo4j</b>
+        | and many more for both advanced users and beginners.
         br
-        | GOTO; is a software confernece where world renound, developer,
-        | leaders, thinkers and researchers are brought together to look at
-        | tomorrow's technology. We focus on everything from new languages,
-        | concurrency, distributed systems, trending database to security,
-        | process, leadership and web tech.
         br
-        | In 2016 the GOTO; is coming to Stockholm — and we couldn't
-        | be more exited!
-         
+        | The full list of Training Courses and Teachers will be published in the coming months.
+      img(id="stockholm-outline", src="/img/stockholm.png", alt="")
+
+    .segment.segment--half.segment--secondary(style="background-color:#3E3936")
+      .container
+        h1.segment__heading When / Where / Price
+        p.segment__lead
+          | No venue selected yet, and program is not determined. You can get an idea of
+          | what is in store by checking out our other conferences in places like
+
+        .u-text-center.link-list.link-list--compact
+          a.link-list__link(href="http://gotocon.com/goto-london-2015") GOTO; London
+          a.link-list__link(href="http://gotocon.com/cph-2015") GOTO; Copenhagen
+          a.link-list__link(href="http://gotocon.com/chicago-2015") GOTO; Chicago
+          a.link-list__link(href="http://gotocon.com/berlin-2015") GOTO; Berlin
+
+        p.segment__lead.segment__lead--compact
+          | We have only just started planning GOTO; Stockholm so the details are not
+          | in place yet. Keep an eye on this space and our global conference site!
+
+        p.segment__lead.segment__lead--compact More Details Coming Soon. Stay Tuned...

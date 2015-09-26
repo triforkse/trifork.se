@@ -1,46 +1,49 @@
 extends layouts/page-with-menu
 
 block page-content
+  #event-page
+    .segment.segment--header.segment--header-half
+      .content
+        h1.segment__heading Community Events
+        p.segment__lead
+          | We love being a part of communities that share their ideas, techniques,
+          | and war stories. We have benefited immensely over the years by reading and watching the materials of others.
+          | In return, it only seems fair to contribute back what we've learned.
 
-  .segment.segment--header
-    .content
-      h1.segment__heading Community Events
-      p.segment__lead
-        | We love being a part of communities that share their ideas, techniques,
-        | and war stories. We have benefited immensely over the years by reading and watching the materials of others.
-        | In return, it only seems fair to contribute back what we've learned.
-
-  .segment.segment--secondary
-    .container
+    .segment.segment--secondary.segment--bg-img.segment--boxed
       h1.segment__heading GOTO; Night Meetups
       p.segment__lead
-        | In Stockholm we have over the past year held regular meetups with topics similar to
-        | those at our GOTO; Conferences. You can think of them as a small taste of what to expect
-        | at the conferences.
+        | In Stockholm we have over the past years held regular meetups with topics similar to
+        | those at our <a href="/goto-conference-stockholm">GOTO; Conferences</a>.
+        | You can think of them as a small taste of what to expect at the conferences.
 
+    .segment.segment--secondary
+      .container
+        h2.segment__section-heading Upcoming Events in Stockholm
 
-      h2.segment__section-heading Upcoming Events in Stockholm
+        mixin event(title, description, date, url, done)
+          li.jumbo-list__item
+            .jumbo-list__datetime
+              b Time<br>
+              != format_date(date)
+              br
+              br
+              b Place<br>
+              | Ferkens Gränd 3<br>
+              | Gamla Stan<br>
+              | 111 30 Stockholm
+            h3.jumbo-list__header!= title
+            p.jumbo-list__text!= description
+            unless done
+              .u-text-center
+                a.read-more-link(href="#{url}") Book your seat now!
 
-      mixin event(title, description, date, url, done)
-        li.jumbo-list__item
-          .jumbo-list__datetime
-            b Time<br>
-            != format_date(date)
-            br
-            br
-            b Place<br>
-            | Ferkens Gränd 3<br>
-            | Gamla Stan<br>
-            | 111 30 Stockholm
-          h3.jumbo-list__header!= title
-          p.jumbo-list__text!= description
-          unless done
-            .u-text-center
-              a.read-more-link(href="#{url}") Book your seat now!
+        ul.jumbo-list
+          if events.length === 0
+            .jumbo-list__empty-label
+              b No Events Currently Planned
+          for event in events
+            +event(event.name, event.description, event.time, event.event_url, false)
 
-      ul.jumbo-list
-        if events.length === 0
-          .jumbo-list__empty-label
-            b No Events Currently Planned
-        for event in events
-          +event(event.name, event.description, event.time, event.event_url, false)
+          .u-text-center.link-list
+            a.link-list__link(href="//www.meetup.com/GOTO-Night-Stockholm/") Visit out Meetup.com group

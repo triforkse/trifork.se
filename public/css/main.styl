@@ -67,6 +67,14 @@ font-m()
   font-size 22px
   font-weight 400
 
+font-sb()
+  font-size 14px
+  font-weight 700
+
+font-s()
+  font-size 14px
+  font-weight 400
+
 /*
  * Store the main color and
  * background color as variables
@@ -112,6 +120,7 @@ color-warn = color-goto
 
 @import "pages/frontpage"
 @import "pages/events"
+@import "pages/goto"
 
 @import util
 
@@ -150,6 +159,10 @@ svg
 footer
   text-align center
   color color-text-inverse
+
+strong
+  font-weight 700
+  color color-primary
 
 .read-more-link
   border solid 1px color-primary

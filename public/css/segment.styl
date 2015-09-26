@@ -70,6 +70,9 @@
   a:hover
     color lighten(color-primary, 20%)
 
+.segment__lead--compact
+  margin-top space-unit
+
 .segment--secondary
   background-color color-bg-dark-secondary
 
@@ -78,6 +81,10 @@
 
 .segment--secondary .segment__lead
   color darken(color-text-inverse, 20%)
+
+.segment--line
+  height (space-unit / 4)
+  padding 0
 
 // FIXME: MOVE TO OWN FILE
 
@@ -130,6 +137,18 @@ container-width = 1100px
   background-repeat: no-repeat
   background-position: center
   background-size cover
+
+.segment--boxed .segment__heading
+  color color-text-inverse
+  text-shadow 0 0 5px #000
+
+.segment--boxed .segment__lead
+  background-color rgba(0,0,0,0.7);
+  color white
+  padding 10px
+
+.segment--no-bottom
+  padding-bottom 0
 
 .segment--left-shadowed
   text-align left
