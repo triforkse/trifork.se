@@ -85,6 +85,12 @@ app.get('/contact', function (req, res) {
   );
 });
 
+app.get('/goto-conference-stockholm', function (req, res) {
+  res.render('goto',
+    {title: 'GOTO Conference in Stockholm'}
+  );
+});
+
 app.get('/handbook', function (req, res) {
   var handbookData = handbook.content();
   var handbookHtml = handbook.html(handbookData);
@@ -117,7 +123,7 @@ app.get('/handbook.md', function (req, res) {
   res.sendFile("public/handbook.md");
 });
 
-app.get('/events', function (req, res) {
+app.get('/goto-nights-stockholm', function (req, res) {
   var render = function (events) {
     res.render('events',
       {
@@ -191,5 +197,19 @@ app.post('/email', function (req, res) {
   }
 });
 
+// Redirect old URLs to new ones, to make the crawlers happy.
+
+// TODO: Consider doing this in a nginx config instead so,
+// the request does not make it all the way to the app.
+
+var redirects = [
+  ["/events", "/goto-nights-stockholm"]
+];
+
+redirects.forEach(function(options) {
+  app.get(options[0], function(req, res) {
+    res.redirect(301, "http://trifork.se" + options[1]);
+  });
+});
 
 app.listen(app.get('port'));

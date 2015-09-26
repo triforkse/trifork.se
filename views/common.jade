@@ -7,11 +7,12 @@ mixin menu-click-item(handler, text)
 
 - var menuData = [];
 - var menuItem = function(link, text, type) { return { link: link, text: text, type: type}; };
-- menuData[0] = menuItem("/events", "Community Events");
-- menuData[1] = menuItem("gotoClientWork()", "Client Projects", "onclick");
-- menuData[2] = menuItem("/handbook", "The Handbook");
-- menuData[3] = menuItem("/jobs", "Jobs");
-- menuData[4] = menuItem("/contact", "Contact");
+- menuData[0] = menuItem("/goto-nights-stockholm", "Community Events");
+- menuData[1] = menuItem("/goto-conference-stockholm", "GOTO; Conference");
+- menuData[2] = menuItem("gotoClientWork()", "Client Projects", "onclick");
+- menuData[3] = menuItem("/handbook", "The Handbook");
+- menuData[4] = menuItem("/jobs", "Jobs");
+- menuData[5] = menuItem("/contact", "Contact");
 
 mixin data-menu-item(data)
   if data.type === "onclick"
