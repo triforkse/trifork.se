@@ -3,7 +3,7 @@ extends layouts/page-with-menu
 block page-content
   #goto-page
     script(src="/js/pages/goto.js")
-    .segment.segment--header-half
+    .segment.segment--header-half.zigzag
       .content
         img(src="/img/balloon.svg", alt="", id="balloon")
         #header
@@ -11,7 +11,7 @@ block page-content
           p.segment__lead
             b In 2016 the GOTO; Software Conference is coming to Stockholm — and we couldn't be more exited!
 
-    .segment.segment--bg-img.segment--boxed
+    .segment.segment--bg-img.segment--boxed#image
       h1.segment__heading Why you should go to GOTO
       p.segment__lead
         | GOTO; is a software conference where world renowned developer,
@@ -23,7 +23,7 @@ block page-content
 
     .segment.segment--half.segment--secondary.segment--no-bottom
       .container
-        h1.segment__heading Past Speakers
+        h1.segment__heading Some of our Speakers
         p.segment__lead
           | Here are a few of our many speakers from previous conferences. You can find many more at:
           .u-text-center.link-list.link-list--compact
@@ -51,7 +51,7 @@ block page-content
       +speaker("adrian_cockcroft.gif", "Netflix, Cloud Architect", "Adrian Cockcroft")
 
     .segment.segment--half#training
-      h1.segment__heading Advanced Training and Agile Certification
+      h1.segment__heading Training Courses and Agile Certification
       p.segment__lead
         | The conference itself will be followed by an optional three days of training.
         | We provide hands-on training in programming languages e.g. Swift, web-frameworks

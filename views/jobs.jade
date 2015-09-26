@@ -9,7 +9,7 @@ block page-content
       | We think Trifork is a great place to work. That's why we work here! :-)
 
   .thumbnail-list
-    for i in [1,2,3,4,5,6,7,8]
+    for i in [1,2,3,4,5,6,7,8,9,10]
       .thumbnail-list__item
         img(src="/img/office/#{i}.jpg").thumbnail-list__thumbnail
 
@@ -88,11 +88,11 @@ block page-content
             img(src="/img/tech/#{img}.png").img-list__img
             div.img-list__text
               | #{text}
-        +tech("clojure", "Clojure & Datomic")
-        +tech("objc", "Objective-C & Swift for iOS")
-        +tech("html5", "HTML5 & JS like ReactJS")
-        +tech("postgresql", "PostgreSQL")
         +tech("docker", "Docker, Mesos and Kubernetes")
+        +tech("clojure", "Clojure & Datomic")
+        +tech("html5", "HTML5 & JS like ReactJS")
+        +tech("objc", "Objective-C & Swift for iOS")
+        +tech("postgresql", "PostgreSQL")
         +tech("python", "Django & Python Scripting")
         +tech("erlang", "Erlang & XMPP")
         +tech("java", "Java, Spring & Gradle")

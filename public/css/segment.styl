@@ -1,7 +1,6 @@
 .segment
   padding (space-unit * 3) 10px
   position relative
-  overflow hidden
 
 .segment--offset
   margin-top top-menu-height
@@ -83,8 +82,11 @@
   color darken(color-text-inverse, 20%)
 
 .segment--line
-  height (space-unit / 4)
-  padding 0
+  min-height (space-unit / 4)
+  padding space-unit * 2
+
+.segment--none
+  padding 1px
 
 // FIXME: MOVE TO OWN FILE
 
