@@ -5,7 +5,7 @@ block content
     .top-menu.top-menu--alternative(ng-class="{'top-menu--expanded': showDownload}")
       .top-menu__container
         a.top-menu__logo(href="/", alt="Home")
-        nav.top-menu__nav
+        nav.top-menu__nav.top-menu__nav--always
           +menu-item("#_", "Table of Contents <span class='icon-down-open'></span>")(ng-click="showToc = !showToc")
           .top-menu__button-group
             button.top-menu__button(ng-click="showDownload = !showDownload")

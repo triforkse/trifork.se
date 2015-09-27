@@ -57,12 +57,13 @@ top-menu-height = 70px
   font-size 18px
   font-default()
 
-  @media screen and (max-width: screen-sm-max)
-    display none
+  &:not(.top-menu__nav--always)
+    @media screen and (max-width: screen-sm-max)
+      display none
 
 .top-menu__link
   display inline-block
-  margin 0 20px
+  margin 0 16px
   line-height top-menu-height
   color color-link-inverse
   text-decoration none
@@ -96,7 +97,7 @@ top-menu-height = 70px
   top 0
   bottom 0
   min-width top-menu-height
-  background-color black
+  background-color transparent
   color white
   border none
   cursor pointer
@@ -144,7 +145,7 @@ top-menu-height = 70px
   display inline-block
   margin 0 20px
   position absolute
-  right (space-unit/2)
+  right (space-unit / 2)
   color white
 
 .top-menu__left-link .top-menu__link

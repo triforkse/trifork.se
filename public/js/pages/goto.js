@@ -12,6 +12,7 @@ $(document).ready(function() {
   var WIND = NORMAL_WIND;
 
   var cancel = null;
+  var timeout = null;
 
   function update() {
     var p = balloon.position();
@@ -35,8 +36,9 @@ $(document).ready(function() {
   }
 
   balloon.on('click touchstart', function() {
+    if (timeout) clearTimeout(timeout);
     setSpeed(FAST_SPEED, FAST_WIND, 10);
-    setTimeout(function() { setSpeed(NORMAL_SPEED, NORMAL_WIND, 0); }, 2000);
+    timeout = setTimeout(function() { setSpeed(NORMAL_SPEED, NORMAL_WIND, 0); }, 2000);
   });
 
   restart();
