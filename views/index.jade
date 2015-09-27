@@ -59,12 +59,19 @@ block content
         | creative process and work iteratively to make sure we are building exactly what you need.
       p.segment__lead
         | But most importantly we take care of the entire process from your Product Idea to
-        | your Actual Product. <b>Requirements, Planning, Design, Development, Project Management</b>.
+        | your Actual Product. <b>Requirements, Planning, Design, Development, Project Management and Hosting</b>.
 
-      .u-text-center
-        a.read-more-link.segment__button(href="//trifork.com/Industries/#all", target="_black" ng-mouseover="maxedOut(true);graphHover = true"
-        ng-mouseout="maxedOut(false); graphHover = false")
-          | Go to Case Studies
+      #case-studies(ng-init="graphHover = false")
+        #signal-controls
+          label(for="raw")
+            input#raw(type="radio", name="signal", ng-click="maxedOut(false)", ng-value="false", ng-model="graphHover")
+            | Raw Data
+          label(for="analysis")
+            input#analysis(type="radio", name="signal", ng-click="maxedOut(true)", ng-value="true", ng-model="graphHover")
+            | Filtered Data
+        a.read-more-link(href="//trifork.com/Industries/#all", target="_blank" ng-mouseover="maxedOut(true);graphHover = true"
+          ng-mouseout="maxedOut(false); graphHover = false")
+            | Go to Case Studies
 
       svg(ng-class="{'frontpageTeamGraph--active': graphHover}")#frontpageTeamGraph(team-graph, maxed-out="maxedOut")
 
@@ -87,7 +94,7 @@ block content
         a.link-list__link(href="http://www.meetup.com/goto-night-stockholm/") GOTO; Meetups
         a.link-list__link(href="http://gotocon.com/") Global Conference Site
 
-    #goto-segment.segment.segment--secondary
+    #goto-segment.segmenttop-menu__logo.segment--secondary
       .container
         h1.segment__heading Featured Talks
         p.segment__lead.segment__lead--compact

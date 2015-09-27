@@ -30,7 +30,14 @@ top-menu-height = 70px
   display block
   position absolute
   top 35px
+  transition all 1s
   margin-left space-unit
+
+@media screen and (max-width screen-sm-max)
+  .top-menu__logo
+    top 0
+    margin-left 0
+    left 0
 
 .top-menu--alternative .top-menu__logo
   background-image url(/img/logo_dark.svg)
@@ -49,7 +56,6 @@ top-menu-height = 70px
 
 .top-menu__container
   margin 0 space-unit
-  position relative
   text-align center
 
 .top-menu__nav
@@ -131,6 +137,9 @@ top-menu-height = 70px
 
 .top-menu--expanded .top-menu__dropdown
   display block
+
+  @media screen and (min-width screen-md-min)
+    display none
 
 .top-menu__dropdown-item a
   color white

@@ -1,10 +1,15 @@
 .area-chart__area
-  fill color-primary
-  opacity 0.5
+  mask: url(#mask-stripe)
+  fill: color-goto
+  opacity 0.2
   transition fill 1.2s, opacity 1.2s
 
 .area-chart__line
-  stroke darken(color-primary, 20%)
-  stroke-width 2px
+  stroke darken(color-goto, 20%)
+  stroke-width 1px
   fill none
   transition stroke 1.2s
+
+.area-chart__label
+  font-size 9px
+  color color-muted

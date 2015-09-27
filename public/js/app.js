@@ -113,11 +113,13 @@
 
         var svg = d3.select("#frontpageTeamGraph");
         var t = 0;
+        var animationDuration = 200;
+        var updateInterval = 1000;
 
         var MAX_VAL = 500;
 
         var data = _(_.range(200)).map(function(i) {
-          return {x: i, y: Math.random() * MAX_VAL};
+          return {x: i, y: Math.floor(Math.random() * MAX_VAL)};
         }).value();
 
         var clamp = function (v, min, max) {
@@ -134,19 +136,23 @@
           var v = (Math.sin(PI_2 * positionScale + SPEED * t) + 1) / 2;
 
           // Scale the value to pixels.
-          d.y = v * MAX_VAL;
+          d.y = Math.floor(v * MAX_VAL);
         };
 
+        var lastValue = MAX_VAL / 2;
+
         var fNormal = function (d, i) {
-          var newValue = d.y + (Math.random() * 100 - (100 / 2));
-          d.y = clamp(newValue, 0, MAX_VAL);
+          if (i === 0) lastValue = d.y;
+          lastValue = lastValue + (Math.random() * 50 - (50 / 2));
+          lastValue = Math.floor(clamp(lastValue, 0, MAX_VAL));
+          d.y = lastValue;
         };
 
         var f = fNormal;
 
         scope.maxedOut = function (setToMax) {
           clearInterval(timerId);
-          timerId = setInterval(redraw, setToMax ? 100 : 400);
+          timerId = setInterval(redraw, setToMax ? animationDuration / 2 : updateInterval);
 
           if (setToMax) {
             f = fSine;
@@ -203,25 +209,45 @@
           .attr("class", "area-chart__line")
           .attr("d", valueline(data));
 
+        var numbers = svg.selectAll('text')
+          .data(data)
+          .enter()
+          .append('text')
+          .filter(function(d) { return d.x % 5 === 0 })
+          .attr("class", "area-chart__label")
+          .attr("x", function(d) { return x(d.x) - 10; })
+          .attr("y", function(d) { return y(d.y) - 10; })
+          .text(function(d) { return d.y; });
 
-        var redraw = function () {
+        var redraw = function (animate) {
+          if (animate === undefined) animate = true;
+          var duration = animate ? animationDuration : 0;
 
           t = t + 1;
 
           _.forEach(data, f);
 
           area.transition()
+            .duration(duration)
             .attr("d", areaGenerator(data));
 
           line.transition()
+            .duration(duration)
             .attr("d", valueline(data));
+
+          numbers.transition()
+            .duration(duration)
+            .text(function(d) { return d.y; })
+            .attr("x", function(d) { return x(d.x) - 10; })
+            .attr("y", function(d) { return y(d.y) - 10; })
+            .attr('style', function(d) { return 'opacity:' + (d.y / MAX_VAL); })
         };
 
-        var timerId = setInterval(redraw, 100);
+        var timerId = setInterval(redraw, updateInterval);
 
         $(window).on('resize', function () {
           updateBounds();
-          redraw();
+          redraw(false);
         });
       }
     };
