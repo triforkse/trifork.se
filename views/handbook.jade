@@ -10,7 +10,7 @@ block content
           .top-menu__button-group
             button.top-menu__button(ng-click="showDownload = !showDownload")
               | Download
-            ul.top-menu__dropdown(ng-h)
+            ul.top-menu__dropdown.top-menu__dropdown--always
               mixin link(format, text)
                 li.top-menu__dropdown-item
                   a(href="handbook.#{format}", download="Trifork-Handbook.#{format}")!= text
