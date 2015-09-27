@@ -182,11 +182,15 @@ side-padding-size = 20px
   padding (top-menu-height + padding-size) side-padding-size padding-size
 
   @media screen and (max-width: screen-xs-max)
-    padding (top-menu-height + space-unit) side-padding-size padding-size
+    padding (top-menu-height + 100px) side-padding-size (padding-size / 2)
 
 .segment__section-heading
   margin (space-unit * 2) 0
   text-align center
+
+  @media screen and (max-width: screen-xs-max)
+    margin-top 0
+
 
 .segment--secondary .segment__section-heading
   color color-text-inverse
