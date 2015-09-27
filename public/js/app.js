@@ -112,39 +112,51 @@
       link: function (scope, element) {
 
         var svg = d3.select("#frontpageTeamGraph");
-        var change = 200;
+        var t = 0;
+
+        var MAX_VAL = 500;
+
+        var data = _(_.range(200)).map(function(i) {
+          return {x: i, y: Math.random() * MAX_VAL};
+        }).value();
+
+        var clamp = function (v, min, max) {
+          return Math.min(Math.max(v, min), max);
+        };
+
+        var fSine = function(d, i) {
+          var PI_2 = Math.PI * 2;
+          var frequency = 5;
+          var positionScale = i / (data.length - 1) * frequency;
+          var SPEED = -0.25;
+
+          // The value domain is 0..1 so we add 1 and divide by 2.
+          var v = (Math.sin(PI_2 * positionScale + SPEED * t) + 1) / 2;
+
+          // Scale the value to pixels.
+          d.y = v * MAX_VAL;
+        };
+
+        var fNormal = function (d, i) {
+          var newValue = d.y + (Math.random() * 100 - (100 / 2));
+          d.y = clamp(newValue, 0, MAX_VAL);
+        };
+
+        var f = fNormal;
 
         scope.maxedOut = function (setToMax) {
           clearInterval(timerId);
           timerId = setInterval(redraw, setToMax ? 100 : 400);
 
           if (setToMax) {
-            change = 1000;
+            f = fSine;
           }
           else {
-            change = 200;
+            f = fNormal;
           }
 
           redraw();
         };
-
-        var data = [
-          {text: "USD", x: 1, y: 100},
-          {text: "DKK", x: 2, y: 200},
-          {text: "SEK", x: 3, y: 500},
-          {text: "NOK", x: 4, y: 20},
-          {text: "EUR", x: 5, y: 10},
-          {text: "THB", x: 6, y: 150},
-          {text: "RUB", x: 7, y: 200},
-          {text: "GBP", x: 8, y: 10},
-          {text: "CAD", x: 9, y: 20},
-          {text: "AUD", x: 10, y: 10},
-          {text: "BTX", x: 11, y: 50},
-          {text: "GBP", x: 12, y: 10},
-          {text: "CAD", x: 13, y: 20},
-          {text: "AUD", x: 14, y: 10},
-          {text: "BTX", x: 15, y: 50}
-        ];
 
         var x = d3.scale.linear()
           .domain(d3.extent(data, function (d) {
@@ -192,18 +204,11 @@
           .attr("d", valueline(data));
 
 
-        var clamp = function (v, min, max) {
-          return Math.min(Math.max(v, min), max);
-        };
-
         var redraw = function () {
 
-          var MAX_VAL = 500;
+          t = t + 1;
 
-          _.forEach(data, function (d) {
-            var newValue = d.y + (Math.random() * change - (change / 2));
-            d.y = clamp(newValue, 0, MAX_VAL);
-          });
+          _.forEach(data, f);
 
           area.transition()
             .attr("d", areaGenerator(data));
@@ -212,7 +217,8 @@
             .attr("d", valueline(data));
         };
 
-        var timerId = setInterval(redraw, 400);
+        var timerId = setInterval(redraw, 100);
+
         $(window).on('resize', function () {
           updateBounds();
           redraw();
