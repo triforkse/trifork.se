@@ -18,18 +18,6 @@ var app = express();
 app.set('port', (process.env.PORT || 9090));
 app.set('dev', (process.env.TF_ENV || "production"));
 
-// Protect against common attacks.
-// Keep track of OWASP for more.
-
-app.use(function(req, res, next) {
-  res.header('X-XSS-Protection', 1);
-  res.header('X-Frame-Options', 'SAMEORIGIN');
-  // We cannot use Google Maps with we do not enable "unsafe-eval"
-  // since it uses document.write which is not CSP compatible.
-  res.header('Content-Security-Policy', "script-src 'self' http://use.typekit.net https://*.google.com https://*.googleapis.com https://*.gstatic.com 'unsafe-eval'");
-  next();
-});
-
 app.use(bodyParser.json());
 
 // Enable Request Logging
