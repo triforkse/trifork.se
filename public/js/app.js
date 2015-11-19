@@ -270,43 +270,6 @@
 }());
 
 
-$(document).ready(function() {
-  var container = $('#frontpageLogo');
-
-  var ANIMATION_DURATION = 700;
-
-  container.find('g').on('mouseover', function() {
-    d3.select(this)
-      .transition()
-      .duration(ANIMATION_DURATION)
-      .attr('transform', 'translate(0,-20)');
-  });
-
-  container.find('g').on('mouseout', function() {
-    d3.select(this)
-      .transition()
-      .delay(ANIMATION_DURATION)
-      .duration(ANIMATION_DURATION)
-      .attr('transform', 'translate(0,0)');
-  });
-
-  var startAnimation = function() {
-    _.forEach(container.find('g'), function(g, i) {
-      d3.select(g)
-        .transition()
-        .delay(i * (ANIMATION_DURATION / 4))
-        .duration(ANIMATION_DURATION)
-        .attr('transform', 'translate(0,-8)')
-        .transition()
-        .duration(ANIMATION_DURATION)
-        .attr('transform', 'translate(0,0)')
-    });
-  };
-
-  startAnimation();
-  setInterval(startAnimation, 5000);
-
-});
 
 // Fonts
 
