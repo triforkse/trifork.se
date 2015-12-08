@@ -191,7 +191,8 @@ app.post('/email', function (req, res) {
 // the request does not make it all the way to the app.
 
 var redirects = [
-  ["/events", "/goto-nights-stockholm"]
+  ["/events", "/goto-nights-stockholm"],
+  ["/goto/", "/goto-conference-stockholm"]
 ];
 
 redirects.forEach(function(options) {
