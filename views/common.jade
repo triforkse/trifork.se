@@ -8,7 +8,7 @@ mixin menu-click-item(handler, text)
 - var menuData = [];
 - var menuItem = function(link, text, type) { return { link: link, text: text, type: type}; };
 - menuData[0] = menuItem("/goto-nights-stockholm", "Meetups");
-- menuData[1] = menuItem("/goto-conference-stockholm", "GOTO; Conference");
+- menuData[1] = menuItem("http://www.goto-stockholm.com/", "GOTO; Conference");
 - menuData[2] = menuItem("gotoClientWork()", "Client Projects", "onclick");
 - menuData[3] = menuItem("/handbook", "Handbook");
 - menuData[4] = menuItem("/jobs", "Jobs");
@@ -73,5 +73,3 @@ mixin main-menu(hidden)
         a.top-menu__logo(href="/", alt="Home")
         nav.top-menu__nav
           +main-menu-items
-
-

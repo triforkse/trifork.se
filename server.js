@@ -73,12 +73,6 @@ app.get('/contact', function (req, res) {
   );
 });
 
-app.get('/goto-conference-stockholm', function (req, res) {
-  res.render('goto',
-    {title: 'GOTO Conference in Stockholm'}
-  );
-});
-
 app.get('/handbook', function (req, res) {
   var handbookData = handbook.content();
   var handbookHtml = handbook.html(handbookData);
@@ -192,12 +186,14 @@ app.post('/email', function (req, res) {
 
 var redirects = [
   ["/events", "/goto-nights-stockholm"],
-  ["/goto/", "/goto-conference-stockholm"]
+  //["/goto/", "/goto-conference-stockholm"]
+  ["/goto", "http://www.goto-stockholm.com/"],
+  ["/goto-conference-stockholm", "http://www.goto-stockholm.com/"]
 ];
 
 redirects.forEach(function(options) {
   app.get(options[0], function(req, res) {
-    res.redirect(301, "http://trifork.se" + options[1]);
+    res.redirect(301, options[1]);
   });
 });
 
