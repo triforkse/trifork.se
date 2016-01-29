@@ -34,7 +34,7 @@ describe('handbook', function () {
     var sections = handbook.toc(content);
     sections = _.reduce(sections, function (acc, section) {
       acc.push(section.id);
-      return acc.concat(_.pluck(section.subsections, "id"));
+      return acc.concat(_.map(section.subsections, "id"));
     }, []);
 
     for (var i = 0; i < refs.length; i++) {
