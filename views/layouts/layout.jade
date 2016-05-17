@@ -19,6 +19,13 @@ html(ng-app="triforkse")
 
     script(src="/js/app.js")
     script(src="/js/notify.js")
+    script.
+      !function(t,r,i,f,o,R,k){t.GoogleAnalyticsObject=i;t[i]||(t[i]=function(){(t[i].q=t[i].q||[]).push(arguments)});t[i].l=+new Date;R=r.createElement(f);k=r.getElementsByTagName(f)[0];R.src=o;k.parentNode.insertBefore(R,k)}(window,document,'ga','script','//www.google-analytics.com/analytics.js');
+      ga('create', 'UA-42197120-1', 'auto');
+      ga('send', 'pageview');
+
+
+
   body(ng-cloak, ng-controller="ApplicationController")
     a.page-banner(href="/jobs")
       | Now Hiring
