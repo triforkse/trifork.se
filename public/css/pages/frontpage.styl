@@ -28,7 +28,8 @@
 .segment--frontpage
   min-height 510px
   padding-bottom space-unit * 3
-  background linear-gradient(-35deg, color-primary 10%, #EF1526 90%)
+  color white
+  background-image: radial-gradient(circle farthest-side at right bottom,rgb(70, 25, 167),rgb(12, 96, 150) 40%,rgb(6, 15, 60));
 
 .think-software--frontpage
   position absolute
@@ -62,6 +63,9 @@
 .segment__heading
   transition color 0.4s, transform 0.2s
   transform translate(0, 0)
+
+.segment__heading--large
+  font-size: 60px
 
 .segment--expanded .segment__lead,
 .segment--expanded .segment__heading

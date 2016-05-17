@@ -1,48 +1,49 @@
 extends layouts/page-with-menu
 
 block page-content
-  .segment.segment--header-half
-    h1.segment__heading We're Always Hiring
-    p.segment__lead
-      | At Trifork we are always looking for new talent to join in the fun.<br>
-      | You think you've got what it takes or are up for the challenge in making us better, you should call us.<br>
-      | We think Trifork is a great place to work. That's why we work here! :-)
+  .segment.segment--header-half#job-bg(style="background-image:url(/img/job-bg.jpg)")
+    #job-heading
+      h1.segment__heading.segment__heading--large Stop just writing code,<br>and start programming
+      p.segment__lead
+        | At Trifork we are currently looking for new talent to join in the fun.<br>
+        | You think you've got what it takes or are up for the challenge in making us better, you should call us.<br>
+        | We think Trifork is a great place to work. That's why we work here! :-)
+
+
+  .segment.segment--bang
+    .content
+      .column-6
+        :markdown
+          ## What we're looking for
+
+          We are looking for social, outgoing people that consider themselves
+          generalists. You are good at many things and expert at a few things.
+
+          You should be ready to take on challenges in areas you have never delt
+          with before and be ready to plan and host social events, come up with
+          innovative product ideas and make our clients happy.
+
+          You are inquisitive, intelligent, and hungry to learn from
+          your co-workers – and teach others as well.
+
+          We are looking for _full-stack developers_,
+          _conference coordinators_, and _project managers_.
+
+      .column-6
+        h2 Open Positions
+        script(src="https://www.teamtailor.com/widget/jobs.js", charset="utf-8")
+        script(type="text/javascript", src="/js/jobs.js")
+        #teamtailor-jobs-widget
 
   .thumbnail-list
     for i in [1,2,3,4,5,6,7,8,9,10]
       .thumbnail-list__item
         img(src="/img/office/#{i}.jpg").thumbnail-list__thumbnail
 
-
-  .map.u-hidden-xs
-    #map
-    .map__label
-      .map__title Smack Dab in the Middle
-      p
-      | It does not get much more central than the Trifork Office. In Gamla Stan (Old Town)
-      | with the subway a few minutes walk away. The central station one stop away.
-  script(type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFk445Cl7tQmfKQQx0bsXBHjncAx75TrI")
-  script(type="text/javascript", src="/js/map.js")
-
   .segment.content
     .column-6
       :markdown
-        ## What we're looking for
-
-        We are looking for social, outgoing people that consider themselves
-        generalists. You are good at many things and expert at a few things.
-
-        You should be ready to take on challenges in areas you have never delt
-        with before and be ready to plan and host social events, come up with
-        innovative product ideas and make our clients happy.
-
-        You are inquisitive, intelligent, and hungry to learn from
-        your co-workers – and teach others as well.
-
-        We are looking for _full-stack developers_,
-        _conference coordinators_, and _project managers_.
-
-        ### Interested in working at Trifork?
+        ## Interested in working at Trifork?
 
         Send us an [e-mail](mailto:thb@trifork.com) or swing
         by at one of our [Events](/goto-nights-stockholm).
@@ -50,11 +51,9 @@ block page-content
         These events are a great way to learn more about what
         it's like to work with us, and you'll get to meet us in person.
 
-        ### Interview Process
+        ## Interview Process
 
         Don't be afraid to apply! We welcome all applications.
-        You can read more about our [Interview Process](/handbook#interview-process)
-        in our handbook.
 
         If you have heard that our interviews are thorough —
         you heard right — we are _tough but fair_. We think that finding the right people
@@ -65,28 +64,23 @@ block page-content
         We value kind, thoughful, and considerate people. And our interview
         process is designed around finding a good fit for the our current team as well.
 
-        ### Code Retreat
+        ## Code Retreat
 
         A couple of times a year teams rent a car and go out into the wilderness.
         Here people have a chance to work on non-client-related projects,
         hacking on some cool projects together. Some of our most innovative stuff
         have resulted from these trips — and that is great fun is just an added bonus!
 
-        ### Knowledge Sharing
+        ## Knowledge Sharing
 
         At Trifork we believe that it is very important that we always Leaning, Teaching,
         and Evolving. We aim to use roughly 10% of our time for sharing and teaching.
-        For instance we do [Tech Lunches](/handbook#tech-lunches) — informal ad-hoc events
-        here someone from the team teaches the others about a e.g. framework, a new language,
+        For instance we do Tech Lunches — informal ad-hoc events
+        where someone from the team teaches the others about a e.g. framework, a new language,
         a hobby project they have been working on.
 
 
     .column-6
-      h2 The office tour 
-      iframe(width='560', height='315', style='max-width: 100%;', src='http://www.youtube.com/embed/uZSqOMPTyAA', frameborder='0', allowfullscreen='allowfullscreen')
-      p
-        em Quick tour of the office
-
       h2 We choose to work with
       ul.img-list
         mixin tech(img, text)
@@ -97,12 +91,13 @@ block page-content
         +tech("docker", "Docker, Mesos and Kubernetes")
         +tech("clojure", "Clojure & Datomic")
         +tech("html5", "HTML5 & JS like ReactJS")
-        +tech("objc", "Objective-C & Swift for iOS")
+        +tech("elm", "ELM")
         +tech("postgresql", "PostgreSQL")
         +tech("python", "Django & Python Scripting")
-        +tech("erlang", "Erlang & XMPP")
+        +tech("elixir", "Elixir")
+        +tech("erlang", "Erlang")
         +tech("java", "Java, Spring & Gradle")
-        +tech("android", "Android")
+        +tech("golang", "GoLang")
         +tech("riak", "Riak & other NoSQL databases")
 
       :markdown
@@ -117,7 +112,23 @@ block page-content
         We think it is important that we choose the _Right Tool for The Job™_ but to
         do that you have to know all the tools at your disposal!
 
+      h2 The office tour
+      iframe(width='560', height='315', style='max-width: 100%;', src='http://www.youtube.com/embed/uZSqOMPTyAA', frameborder='0', allowfullscreen='allowfullscreen')
+      p
+        em Quick tour of the office
+
     .cf
+
+
+  .map.u-hidden-xs
+    #map
+    .map__label
+      .map__title Smack Dab in the Middle
+      p
+      | It does not get much more central than the Trifork Office. In Gamla Stan (Old Town)
+      | with the subway a few minutes walk away. The central station one stop away.
+  script(type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFk445Cl7tQmfKQQx0bsXBHjncAx75TrI")
+  script(type="text/javascript", src="/js/map.js")
 
     a.read-more-link.read-more-link--centered(href="mailto:stockholm@trifork.com")
       b Want to work for us?

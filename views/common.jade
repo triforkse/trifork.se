@@ -10,9 +10,8 @@ mixin menu-click-item(handler, text)
 - menuData[0] = menuItem("/goto-nights-stockholm", "Meetups");
 - menuData[1] = menuItem("http://www.goto-stockholm.com/", "GOTO; Conference");
 - menuData[2] = menuItem("gotoClientWork()", "Client Projects", "onclick");
-- menuData[3] = menuItem("/handbook", "Handbook");
-- menuData[4] = menuItem("/jobs", "Jobs");
-- menuData[5] = menuItem("/contact", "Contact");
+- menuData[3] = menuItem("/jobs", "Jobs");
+- menuData[4] = menuItem("/contact", "Contact");
 
 mixin data-menu-item(data)
   if data.type === "onclick"
@@ -24,9 +23,9 @@ mixin data-menu-item(data)
 mixin main-menu-items
   for d in menuData
     +data-menu-item(d)
-  div.top-menu__left-link#global-link
-    span.icon-globe.animate-spin
-    a.top-menu__link(href="//www.trifork.com", target="_blank") Global Site
+  //  div.top-menu__left-link#global-link
+        span.icon-globe.animate-spin
+        a.top-menu__link(href="//www.trifork.com", target="_blank") Global Site
 
 
 mixin top-menu-button
