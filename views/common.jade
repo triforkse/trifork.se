@@ -9,9 +9,10 @@ mixin menu-click-item(handler, text)
 - var menuItem = function(link, text, type) { return { link: link, text: text, type: type}; };
 - menuData[0] = menuItem("/goto-nights-stockholm", "Meetups");
 - menuData[1] = menuItem("http://www.goto-stockholm.com/", "GOTO; Conference");
-- menuData[2] = menuItem("gotoClientWork()", "Client Projects", "onclick");
-- menuData[3] = menuItem("/jobs", "Jobs");
-- menuData[4] = menuItem("/contact", "Contact");
+- menuData[3] = menuItem("gotoClientWork()", "Client Projects", "onclick");
+- menuData[4] = menuItem("http://scrum-master.trifork.se/", "Scrum Training");
+- menuData[5] = menuItem("/jobs", "Jobs");
+- menuData[6] = menuItem("/contact", "Contact");
 
 mixin data-menu-item(data)
   if data.type === "onclick"
